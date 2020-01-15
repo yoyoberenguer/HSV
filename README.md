@@ -1,11 +1,11 @@
-# RGB_TO_HSV (WORK IN PROGRESS)
+# RGB_TO_HSV
 ```
-RGB to HSV model conversion
-Cython and C version of following pythonic code: 
+RGB to HSV and HSV to RGB colors system converstion tools.
 
-- colorsys.rgb_to_hsv(r, g, b)
-  Convert the color from RGB coordinates to HSV coordinates.
+This project provides the cython methods and C versions of the 
+HSV conversion algorithms.
 
-- colorsys.hsv_to_rgb(h, s, v)
-  Convert the color from HSV coordinates to RGB coordinates.
+The code is based on the current python COLORSYS library, adapted and improved 
+for a astonishing increase in speed compare to the original model.
+
 ```

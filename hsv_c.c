@@ -8,7 +8,7 @@
 #include <float.h>
 #include <assert.h>
 
-// From a given set of RGB values, determines min and max.
+// From a given set of RGB values, determines min and max values.
 double fmax_rgb_value(double red, double green, double blue);
 double fmin_rgb_value(double red, double green, double blue);
 
@@ -88,12 +88,16 @@ inline double * rgb_to_hsv(double r, double g, double b)
     if (mx == mn)
     {
         h = 0.0;}
+    // The conversion to (int) approximate the final result 
     else if (mx == r){
-        h = (int)(60.0 * ((g-b) * df_) + 360.0) % 360;}
+        // h = (int)(60.0 * ((g-b) * df_) + 360.0) % 360;}
+	h = fmod(60.0 * ((g-b) * df_) + 360.0, 360);}
     else if (mx == g){
-        h = (int)(60.0 * ((b-r) * df_) + 120.0) % 360;}
+        // h = (int)(60.0 * ((b-r) * df_) + 120.0) % 360;}
+	h = fmod(60.0 * ((b-r) * df_) + 120.0, 360);}
     else if (mx == b){
-        h = (int)(60.0 * ((r-g) * df_) + 240.0) % 360;}
+        // h = (int)(60.0 * ((r-g) * df_) + 240.0) % 360;}
+	h = fmod(60.0 * ((r-g) * df_) + 240.0, 360);}
     if (mx == 0){
         s = 0.0;}
     else{

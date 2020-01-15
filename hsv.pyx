@@ -1,29 +1,5 @@
 ###cython: boundscheck=False, wraparound=False, nonecheck=False, optimize.use_switch=True
 
-"""
-MIT License
-
-Copyright (c) 2019 Yoann Berenguer
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
 # CYTHON IS REQUIRED
 try:
     cimport cython
@@ -46,6 +22,7 @@ cdef extern from 'hsv_c.c' nogil:
     double fmin_rgb_value(double red, double green, double blue)
 
 
+
 # ------------------- INTERFACE ----------------------------------------------
 #***********************************************
 #**********  METHOD HSV TO RGB   ***************
@@ -56,7 +33,7 @@ cdef extern from 'hsv_c.c' nogil:
 
 # CYTHON
 def hsv2rgb(h: float, s: float, v: float):
-    cdef float *rgb
+    cdef double *rgb
     rgb = hsv2rgb_c(h, s, v)
     return rgb[0], rgb[1], rgb[2]
 
@@ -65,7 +42,7 @@ def hsv2rgb(h: float, s: float, v: float):
 @cython.wraparound(False)
 @cython.nonecheck(False)
 def rgb2hsv(r: float, g: float, b: float):
-    cdef float *hsv
+    cdef double *hsv
     hsv = rgb2hsv_c(r, g, b)
     return hsv[0], hsv[1], hsv[2]
 
@@ -92,31 +69,28 @@ def hsv_to_rgb_c(r: float, g: float, b: float):
 @cython.wraparound(False)
 @cython.nonecheck(False)
 @cython.cdivision(True)
-cdef float * rgb2hsv_c(double r_, double g_, double b_)nogil:
+cdef double * rgb2hsv_c(double r, double g, double b)nogil:
     """
     Convert RGB color model into HSV
     This method is identical to the python library colorsys.rgb_to_hsv
     
-    :param r_: python float; red in range[0 ... 1.0]
-    :param g_: python float; green in range [0 ... 1.0]
-    :param b_: python float; blue in range [0 ... 1.0]
+    :param r: python float; red in range[0 ... 1.0]
+    :param g: python float; green in range [0 ... 1.0]
+    :param b: python float; blue in range [0 ... 1.0]
     :return: Return HSV values 
     """
-    cdef double r = r_ * ONE_255
-    cdef double g = g_ * ONE_255
-    cdef double b = b_ * ONE_255
     cdef:
         double mx, mn
         double h, df, s, v, df_
-        float *hsv = <float *> malloc(3 * sizeof(float))
+        double *hsv = <double *> malloc(3 * sizeof(double))
         
     mx = fmax_rgb_value(r, g, b)
     mn = fmin_rgb_value(r, g, b)
 
-    df = mx-mn
+    df = mx - mn
     df_ = 1.0/df
     if mx == mn:
-        h = 0
+        h = 0.0
     
     elif mx == r:
         h = (60 * ((g-b) * df_) + 360) % 360  
@@ -125,7 +99,7 @@ cdef float * rgb2hsv_c(double r_, double g_, double b_)nogil:
     elif mx == b:
         h = (60 * ((r-g) * df_) + 240) % 360  
     if mx == 0:
-        s = 0
+        s = 0.0
     else:
         s = df/mx
     v = mx
@@ -139,7 +113,7 @@ cdef float * rgb2hsv_c(double r_, double g_, double b_)nogil:
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-cdef float * hsv2rgb_c(double h, double s, double v)nogil:
+cdef double * hsv2rgb_c(double h, double s, double v)nogil:
     """
     Convert hsv color model to rgb
 
@@ -152,7 +126,7 @@ cdef float * hsv2rgb_c(double h, double s, double v)nogil:
     cdef:
         int i = 0
         double f, p, q, t
-        float *rgb = <float *> malloc(3 * sizeof(float))
+        double *rgb = <double *> malloc(3 * sizeof(double))
 
     if s == 0.0:
         rgb[0] = v

@@ -44,9 +44,10 @@ if __name__ == '__main__':
   red = round(rgb[0] * 255.0)
   green = round(rgb[1] * 255.0)
   blue = round(rgb[2] * 255.0)
-  print("\nC rgb values : red %s, green %s, blue %s " % (red, green, blue))
+  print("\nC rgb values : red %s, green %s, blue %s \n" % (red, green, blue))
 
   N = 1000000
-  print("\nCython rgb2hsv ", timeit.timeit("rgb2hsv(r/255.0, g/255.0, b/255.0)", "from __main__ import rgb2hsv, r, g, b", number = N))
-  print("C rgb_to_hsv_c ", timeit.timeit("rgb_to_hsv_c(r/255.0, g/255.0, b/255.0)", "from __main__ import rgb_to_hsv_c, r, g, b", number = N))
-  print("C rgb_to_hsv_c ", timeit.timeit("rgb_to_hsv(r/255.0, g/255.0, b/255.0)", "from __main__ import rgb_to_hsv, r, g, b", number = N))
+  
+  print("Cython rgb2hsv      ", timeit.timeit("rgb2hsv(r/255.0, g/255.0, b/255.0)", "from __main__ import rgb2hsv, r, g, b", number = N))
+  print("C rgb_to_hsv_c      ", timeit.timeit("rgb_to_hsv_c(r/255.0, g/255.0, b/255.0)", "from __main__ import rgb_to_hsv_c, r, g, b", number = N))
+  print("Colorsys rgb_to_hsv ", timeit.timeit("rgb_to_hsv(r/255.0, g/255.0, b/255.0)", "from __main__ import rgb_to_hsv, r, g, b", number = N))

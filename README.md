@@ -26,11 +26,12 @@ If you change the file hsv_c you will also need to recompile the project
 ```
 ## How to:
 ```
-import the code in your python program:
+import the code in your program:
 
 import HSV
 # This will import the cython version 
 from HSV import hsv2rgb, rgb2hsv
+
 # This will import the C version 
 from HSV import rgb_to_hsv_c, hsv_to_rgb_c
 

@@ -6,7 +6,7 @@ This project provides the cython methods and C versions of the
 HSV conversion algorithms.
 
 The code is based on the current python COLORSYS library, adapted and improved 
-for an astonishing increase in speed compare to the original model.
+for an good increase in speed compare to the original model.
 
 ```
 ## Requirements: 

@@ -41,3 +41,12 @@ if __name__ == '__main__':
 
 
 ```
+## Timing:
+```
+for 1000000 iterations
+- cython   0.5401
+- C        0.5241
+- Pure C   0.1540
+- colorsys 2.1610
+```
+

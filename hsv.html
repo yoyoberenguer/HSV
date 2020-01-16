@@ -410,11 +410,31 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class="cython line score-0">&#xA0;<span class="">032</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">nonecheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">033</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">034</span>: <span class="c"># CYTHON</span></pre>
-<pre class="cython line score-88" onclick='toggleDiv(this)'>+<span class="">035</span>: <span class="k">def</span> <span class="nf">hsv2rgb</span><span class="p">(</span><span class="n">h</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span></pre>
-<pre class='cython code score-88 '>/* Python wrapper */
-static PyObject *__pyx_pw_3hsv_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_3hsv_1hsv2rgb = {"hsv2rgb", (PyCFunction)__pyx_pw_3hsv_1hsv2rgb, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3hsv_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+<pre class="cython line score-79" onclick='toggleDiv(this)'>+<span class="">035</span>: <span class="k">cpdef</span> <span class="nf">hsv2rgb</span><span class="p">(</span><span class="n">h</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span></pre>
+<pre class='cython code score-79 '>static PyObject *__pyx_pw_3HSV_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_hsv2rgb(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  double *__pyx_v_rgb;
+  PyObject *__pyx_r = NULL;
+  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("hsv2rgb", 0);
+/* … */
+  /* function exit code */
+  __pyx_L1_error:;
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_2);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3HSV_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_3HSV_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_h;
   double __pyx_v_s;
   double __pyx_v_v;
@@ -473,49 +493,41 @@ static PyObject *__pyx_pw_3hsv_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_L5_argtuple_error:;
   <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("hsv2rgb", 1, 3, 3, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 35, __pyx_L3_error)</span>
   __pyx_L3_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("hsv.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_hsv2rgb(__pyx_self, __pyx_v_h, __pyx_v_s, __pyx_v_v);
+  __pyx_r = __pyx_pf_3HSV_hsv2rgb(__pyx_self, __pyx_v_h, __pyx_v_s, __pyx_v_v);
 
   /* function exit code */
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_hsv2rgb(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
-  double *__pyx_v_rgb;
+static PyObject *__pyx_pf_3HSV_hsv2rgb(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
   PyObject *__pyx_r = NULL;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("hsv2rgb", 0);
-/* … */
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
+  __pyx_t_1 = __pyx_f_3HSV_hsv2rgb(__pyx_v_h, __pyx_v_s, __pyx_v_v, 0);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
   /* function exit code */
   __pyx_L1_error:;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_2);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("hsv.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
-/* … */
-  __pyx_tuple_ = <span class='py_c_api'>PyTuple_Pack</span>(4, __pyx_n_s_h, __pyx_n_s_s, __pyx_n_s_v, __pyx_n_s_rgb);<span class='error_goto'> if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 35, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_tuple_);
-  <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_tuple_);
-/* … */
-  __pyx_t_4 = PyCFunction_NewEx(&amp;__pyx_mdef_3hsv_1hsv2rgb, NULL, __pyx_n_s_hsv);<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 35, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
-  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_hsv2rgb, __pyx_t_4) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 35, __pyx_L1_error)</span>
-  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_codeobj__2 = (PyObject*)<span class='pyx_c_api'>__Pyx_PyCode_New</span>(3, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_hsv_pyx, __pyx_n_s_hsv2rgb, 35, __pyx_empty_bytes);<span class='error_goto'> if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 35, __pyx_L1_error)</span>
 </pre><pre class="cython line score-0">&#xA0;<span class="">036</span>:     <span class="k">cdef</span> <span class="kt">double</span> *<span class="nf">rgb</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">037</span>:     <span class="n">rgb</span> <span class="o">=</span> <span class="n">hsv2rgb_c</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_rgb = __pyx_f_3hsv_hsv2rgb_c(__pyx_v_h, __pyx_v_s, __pyx_v_v);
+<pre class='cython code score-0 '>  __pyx_v_rgb = __pyx_f_3HSV_hsv2rgb_c(__pyx_v_h, __pyx_v_s, __pyx_v_v);
 </pre><pre class="cython line score-24" onclick='toggleDiv(this)'>+<span class="">038</span>:     <span class="k">return</span> <span class="n">rgb</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="n">rgb</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span> <span class="n">rgb</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span></pre>
 <pre class='cython code score-24 '>  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
   __pyx_t_1 = <span class='py_c_api'>PyFloat_FromDouble</span>((__pyx_v_rgb[0]));<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)</span>
@@ -543,11 +555,31 @@ static PyObject *__pyx_pf_3hsv_hsv2rgb(CYTHON_UNUSED PyObject *__pyx_self, doubl
 <pre class="cython line score-0">&#xA0;<span class="">041</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">042</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">043</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">nonecheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
-<pre class="cython line score-88" onclick='toggleDiv(this)'>+<span class="">044</span>: <span class="k">def</span> <span class="nf">rgb2hsv</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span></pre>
-<pre class='cython code score-88 '>/* Python wrapper */
-static PyObject *__pyx_pw_3hsv_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_3hsv_3rgb2hsv = {"rgb2hsv", (PyCFunction)__pyx_pw_3hsv_3rgb2hsv, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3hsv_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+<pre class="cython line score-79" onclick='toggleDiv(this)'>+<span class="">044</span>: <span class="k">cpdef</span> <span class="nf">rgb2hsv</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span></pre>
+<pre class='cython code score-79 '>static PyObject *__pyx_pw_3HSV_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_rgb2hsv(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  double *__pyx_v_hsv;
+  PyObject *__pyx_r = NULL;
+  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("rgb2hsv", 0);
+/* … */
+  /* function exit code */
+  __pyx_L1_error:;
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_2);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3HSV_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_3HSV_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_r;
   double __pyx_v_g;
   double __pyx_v_b;
@@ -606,49 +638,41 @@ static PyObject *__pyx_pw_3hsv_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_L5_argtuple_error:;
   <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("rgb2hsv", 1, 3, 3, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 44, __pyx_L3_error)</span>
   __pyx_L3_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("hsv.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_2rgb2hsv(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
+  __pyx_r = __pyx_pf_3HSV_2rgb2hsv(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
 
   /* function exit code */
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_2rgb2hsv(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
-  double *__pyx_v_hsv;
+static PyObject *__pyx_pf_3HSV_2rgb2hsv(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
   PyObject *__pyx_r = NULL;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("rgb2hsv", 0);
-/* … */
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
+  __pyx_t_1 = __pyx_f_3HSV_rgb2hsv(__pyx_v_r, __pyx_v_g, __pyx_v_b, 0);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 44, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
   /* function exit code */
   __pyx_L1_error:;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_2);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("hsv.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
-/* … */
-  __pyx_tuple__3 = <span class='py_c_api'>PyTuple_Pack</span>(4, __pyx_n_s_r, __pyx_n_s_g, __pyx_n_s_b, __pyx_n_s_hsv);<span class='error_goto'> if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 44, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_tuple__3);
-  <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_tuple__3);
-/* … */
-  __pyx_t_4 = PyCFunction_NewEx(&amp;__pyx_mdef_3hsv_3rgb2hsv, NULL, __pyx_n_s_hsv);<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 44, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
-  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_rgb2hsv, __pyx_t_4) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 44, __pyx_L1_error)</span>
-  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_codeobj__4 = (PyObject*)<span class='pyx_c_api'>__Pyx_PyCode_New</span>(3, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_hsv_pyx, __pyx_n_s_rgb2hsv, 44, __pyx_empty_bytes);<span class='error_goto'> if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 44, __pyx_L1_error)</span>
 </pre><pre class="cython line score-0">&#xA0;<span class="">045</span>:     <span class="k">cdef</span> <span class="kt">double</span> *<span class="nf">hsv</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">046</span>:     <span class="n">hsv</span> <span class="o">=</span> <span class="n">rgb2hsv_c</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_hsv = __pyx_f_3hsv_rgb2hsv_c(__pyx_v_r, __pyx_v_g, __pyx_v_b);
+<pre class='cython code score-0 '>  __pyx_v_hsv = __pyx_f_3HSV_rgb2hsv_c(__pyx_v_r, __pyx_v_g, __pyx_v_b);
 </pre><pre class="cython line score-24" onclick='toggleDiv(this)'>+<span class="">047</span>:     <span class="k">return</span> <span class="n">hsv</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="n">hsv</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span> <span class="n">hsv</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span></pre>
 <pre class='cython code score-24 '>  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
   __pyx_t_1 = <span class='py_c_api'>PyFloat_FromDouble</span>((__pyx_v_hsv[0]));<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 47, __pyx_L1_error)</span>
@@ -676,11 +700,31 @@ static PyObject *__pyx_pf_3hsv_2rgb2hsv(CYTHON_UNUSED PyObject *__pyx_self, doub
 <pre class="cython line score-0">&#xA0;<span class="">050</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">051</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">052</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">nonecheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
-<pre class="cython line score-58" onclick='toggleDiv(this)'>+<span class="">053</span>: <span class="k">def</span> <span class="nf">rgb_to_hsv_c</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span></pre>
-<pre class='cython code score-58 '>/* Python wrapper */
-static PyObject *__pyx_pw_3hsv_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_3hsv_5rgb_to_hsv_c = {"rgb_to_hsv_c", (PyCFunction)__pyx_pw_3hsv_5rgb_to_hsv_c, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3hsv_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+<pre class="cython line score-49" onclick='toggleDiv(this)'>+<span class="">053</span>: <span class="k">cpdef</span> <span class="nf">rgb_to_hsv_c</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span></pre>
+<pre class='cython code score-49 '>static PyObject *__pyx_pw_3HSV_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_rgb_to_hsv_c(PyObject *__pyx_v_r, PyObject *__pyx_v_g, PyObject *__pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  double *__pyx_v_hsv;
+  PyObject *__pyx_r = NULL;
+  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("rgb_to_hsv_c", 0);
+/* … */
+  /* function exit code */
+  __pyx_L1_error:;
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_5);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_6);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_7);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3HSV_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_3HSV_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_r = 0;
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_b = 0;
@@ -739,46 +783,38 @@ static PyObject *__pyx_pw_3hsv_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__p
   __pyx_L5_argtuple_error:;
   <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("rgb_to_hsv_c", 1, 3, 3, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 53, __pyx_L3_error)</span>
   __pyx_L3_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("hsv.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_4rgb_to_hsv_c(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
+  __pyx_r = __pyx_pf_3HSV_4rgb_to_hsv_c(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
 
   /* function exit code */
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_4rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_r, PyObject *__pyx_v_g, PyObject *__pyx_v_b) {
-  double *__pyx_v_hsv;
+static PyObject *__pyx_pf_3HSV_4rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_r, PyObject *__pyx_v_g, PyObject *__pyx_v_b) {
   PyObject *__pyx_r = NULL;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("rgb_to_hsv_c", 0);
-/* … */
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
+  __pyx_t_1 = __pyx_f_3HSV_rgb_to_hsv_c(__pyx_v_r, __pyx_v_g, __pyx_v_b, 0);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 53, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
   /* function exit code */
   __pyx_L1_error:;
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_5);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_6);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_7);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("hsv.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
-/* … */
-  __pyx_tuple__5 = <span class='py_c_api'>PyTuple_Pack</span>(4, __pyx_n_s_r, __pyx_n_s_g, __pyx_n_s_b, __pyx_n_s_hsv);<span class='error_goto'> if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 53, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_tuple__5);
-  <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_tuple__5);
-/* … */
-  __pyx_t_4 = PyCFunction_NewEx(&amp;__pyx_mdef_3hsv_5rgb_to_hsv_c, NULL, __pyx_n_s_hsv);<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 53, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
-  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_rgb_to_hsv_c, __pyx_t_4) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 53, __pyx_L1_error)</span>
-  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_codeobj__6 = (PyObject*)<span class='pyx_c_api'>__Pyx_PyCode_New</span>(3, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_hsv_pyx, __pyx_n_s_rgb_to_hsv_c, 53, __pyx_empty_bytes);<span class='error_goto'> if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 53, __pyx_L1_error)</span>
 </pre><pre class="cython line score-0">&#xA0;<span class="">054</span>:     <span class="k">cdef</span> <span class="kt">double</span> *<span class="nf">hsv</span></pre>
 <pre class="cython line score-30" onclick='toggleDiv(this)'>+<span class="">055</span>:     <span class="n">hsv</span> <span class="o">=</span> <span class="n">rgb_to_hsv</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></pre>
 <pre class='cython code score-30 '>  __pyx_t_1 = __pyx_<span class='py_c_api'>PyFloat_AsDouble</span>(__pyx_v_r); if (unlikely((__pyx_t_1 == (double)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 55, __pyx_L1_error)</span>
@@ -812,11 +848,31 @@ static PyObject *__pyx_pf_3hsv_4rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self,
 <pre class="cython line score-0">&#xA0;<span class="">059</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">060</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">061</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">nonecheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
-<pre class="cython line score-86" onclick='toggleDiv(this)'>+<span class="">062</span>: <span class="k">def</span> <span class="nf">hsv_to_rgb_c</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span></pre>
-<pre class='cython code score-86 '>/* Python wrapper */
-static PyObject *__pyx_pw_3hsv_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_3hsv_7hsv_to_rgb_c = {"hsv_to_rgb_c", (PyCFunction)__pyx_pw_3hsv_7hsv_to_rgb_c, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3hsv_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+<pre class="cython line score-79" onclick='toggleDiv(this)'>+<span class="">062</span>: <span class="k">cpdef</span> <span class="nf">hsv_to_rgb_c</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span></pre>
+<pre class='cython code score-79 '>static PyObject *__pyx_pw_3HSV_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_hsv_to_rgb_c(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  double *__pyx_v_hsv;
+  PyObject *__pyx_r = NULL;
+  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("hsv_to_rgb_c", 0);
+/* … */
+  /* function exit code */
+  __pyx_L1_error:;
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_2);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3HSV_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_3HSV_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_r;
   double __pyx_v_g;
   double __pyx_v_b;
@@ -875,45 +931,38 @@ static PyObject *__pyx_pw_3hsv_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__p
   __pyx_L5_argtuple_error:;
   <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("hsv_to_rgb_c", 1, 3, 3, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 62, __pyx_L3_error)</span>
   __pyx_L3_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("hsv.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_6hsv_to_rgb_c(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
+  __pyx_r = __pyx_pf_3HSV_6hsv_to_rgb_c(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
 
   /* function exit code */
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
-  double *__pyx_v_hsv;
+static PyObject *__pyx_pf_3HSV_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
   PyObject *__pyx_r = NULL;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("hsv_to_rgb_c", 0);
-/* … */
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
+  __pyx_t_1 = __pyx_f_3HSV_hsv_to_rgb_c(__pyx_v_r, __pyx_v_g, __pyx_v_b, 0);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
   /* function exit code */
   __pyx_L1_error:;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_2);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("hsv.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("HSV.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
-/* … */
-  __pyx_tuple__7 = <span class='py_c_api'>PyTuple_Pack</span>(4, __pyx_n_s_r, __pyx_n_s_g, __pyx_n_s_b, __pyx_n_s_hsv);<span class='error_goto'> if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 62, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_tuple__7);
-  <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_tuple__7);
-/* … */
-  __pyx_t_4 = PyCFunction_NewEx(&amp;__pyx_mdef_3hsv_7hsv_to_rgb_c, NULL, __pyx_n_s_hsv);<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
-  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_hsv_to_rgb_c, __pyx_t_4) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 62, __pyx_L1_error)</span>
-  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
 </pre><pre class="cython line score-0">&#xA0;<span class="">063</span>:     <span class="k">cdef</span> <span class="kt">double</span> *<span class="nf">hsv</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">064</span>:     <span class="n">hsv</span> <span class="o">=</span> <span class="n">hsv_to_rgb</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_hsv = hsv_to_rgb(__pyx_v_r, __pyx_v_g, __pyx_v_b);
@@ -946,7 +995,7 @@ static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self,
 <pre class="cython line score-0">&#xA0;<span class="">070</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">nonecheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">071</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">cdivision</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">072</span>: <span class="k">cdef</span> <span class="kt">double</span> * <span class="nf">rgb2hsv_c</span><span class="p">(</span><span class="n">double</span> <span class="n">r</span><span class="p">,</span> <span class="n">double</span> <span class="n">g</span><span class="p">,</span> <span class="n">double</span> <span class="n">b</span><span class="p">)</span><span class="k">nogil</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
+<pre class='cython code score-0 '>static double *__pyx_f_3HSV_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
   double __pyx_v_mx;
   double __pyx_v_mn;
   double __pyx_v_h;
@@ -1051,7 +1100,7 @@ static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self,
 <pre class="cython line score-0">&#xA0;<span class="">114</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">115</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">nonecheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">116</span>: <span class="k">cdef</span> <span class="kt">double</span> * <span class="nf">hsv2rgb_c</span><span class="p">(</span><span class="n">double</span> <span class="n">h</span><span class="p">,</span> <span class="n">double</span> <span class="n">s</span><span class="p">,</span> <span class="n">double</span> <span class="n">v</span><span class="p">)</span><span class="k">nogil</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
+<pre class='cython code score-0 '>static double *__pyx_f_3HSV_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
   int __pyx_v_i;
   double __pyx_v_f;
   double __pyx_v_p;
@@ -1112,10 +1161,10 @@ static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self,
 <pre class='cython code score-0 '>  __pyx_v_i = __Pyx_mod_long(__pyx_v_i, 6);
 </pre><pre class="cython line score-0">&#xA0;<span class="">144</span>: </pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">145</span>:     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">0</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>  __pyx_t_1 = ((__pyx_v_i == 0) != 0);
-  if (__pyx_t_1) {
+<pre class='cython code score-0 '>  switch (__pyx_v_i) {
+    case 0:
 /* … */
-  }
+    break;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">146</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span></pre>
 <pre class='cython code score-0 '>    (__pyx_v_rgb[0]) = __pyx_v_v;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">147</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span></pre>
@@ -1127,11 +1176,10 @@ static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self,
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">150</span>:         <span class="k">return</span> <span class="n">rgb</span></pre>
 <pre class='cython code score-0 '>    __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
-</pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">151</span>:     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">1</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>  __pyx_t_1 = ((__pyx_v_i == 1) != 0);
-  if (__pyx_t_1) {
+</pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">151</span>:     <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">1</span><span class="p">:</span></pre>
+<pre class='cython code score-0 '>    case 1:
 /* … */
-  }
+    break;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">152</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">q</span></pre>
 <pre class='cython code score-0 '>    (__pyx_v_rgb[0]) = __pyx_v_q;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">153</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span></pre>
@@ -1143,11 +1191,10 @@ static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self,
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">156</span>:         <span class="k">return</span> <span class="n">rgb</span></pre>
 <pre class='cython code score-0 '>    __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
-</pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">157</span>:     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">2</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>  __pyx_t_1 = ((__pyx_v_i == 2) != 0);
-  if (__pyx_t_1) {
+</pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">157</span>:     <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">2</span><span class="p">:</span></pre>
+<pre class='cython code score-0 '>    case 2:
 /* … */
-  }
+    break;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">158</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span></pre>
 <pre class='cython code score-0 '>    (__pyx_v_rgb[0]) = __pyx_v_p;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">159</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span></pre>
@@ -1159,11 +1206,10 @@ static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self,
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">162</span>:         <span class="k">return</span> <span class="n">rgb</span></pre>
 <pre class='cython code score-0 '>    __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
-</pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">163</span>:     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">3</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>  __pyx_t_1 = ((__pyx_v_i == 3) != 0);
-  if (__pyx_t_1) {
+</pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">163</span>:     <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">3</span><span class="p">:</span></pre>
+<pre class='cython code score-0 '>    case 3:
 /* … */
-  }
+    break;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">164</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span></pre>
 <pre class='cython code score-0 '>    (__pyx_v_rgb[0]) = __pyx_v_p;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">165</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">q</span></pre>
@@ -1175,11 +1221,10 @@ static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self,
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">168</span>:         <span class="k">return</span> <span class="n">rgb</span></pre>
 <pre class='cython code score-0 '>    __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
-</pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">169</span>:     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">4</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>  __pyx_t_1 = ((__pyx_v_i == 4) != 0);
-  if (__pyx_t_1) {
+</pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">169</span>:     <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">4</span><span class="p">:</span></pre>
+<pre class='cython code score-0 '>    case 4:
 /* … */
-  }
+    break;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">170</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span></pre>
 <pre class='cython code score-0 '>    (__pyx_v_rgb[0]) = __pyx_v_t;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">171</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span></pre>
@@ -1191,10 +1236,11 @@ static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self,
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">174</span>:         <span class="k">return</span> <span class="n">rgb</span></pre>
 <pre class='cython code score-0 '>    __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
-</pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">175</span>:     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">5</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>  __pyx_t_1 = ((__pyx_v_i == 5) != 0);
-  if (__pyx_t_1) {
+</pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">175</span>:     <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">5</span><span class="p">:</span></pre>
+<pre class='cython code score-0 '>    case 5:
 /* … */
+    break;
+    default: break;
   }
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">176</span>:         <span class="n">rgb</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span></pre>
 <pre class='cython code score-0 '>    (__pyx_v_rgb[0]) = __pyx_v_v;

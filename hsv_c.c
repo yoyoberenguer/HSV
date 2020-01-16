@@ -7,6 +7,7 @@
 #include <math.h>
 #include <float.h>
 #include <assert.h>
+#include <time.h>
 
 // From a given set of RGB values, determines min and max values.
 double fmax_rgb_value(double red, double green, double blue);
@@ -196,8 +197,59 @@ inline double * hsv_to_rgb(double h, double s, double v)
 
 int main ()
 {
+double *ar;
+double *ar1;
+int i, j, k;
+double r, g, b;
+double h, s, v;
 
+int n = 1000000;
+double *ptr;
+clock_t begin = clock();
 
+/* here, do your time-consuming job */
+for (i=0; i<=n; ++i){
+ptr = rgb_to_hsv(25.0/255.0, 60.0/255.0, 128.0/255.0);
+}
+clock_t end = clock();
+double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+printf("\ntotal time %f :", time_spent); 
+
+printf("\nTesting algorithm(s).");
+n = 0;
+for (i=0; i<256; i++){
+    for (j=0; j<256; j++){
+        for (k=0; k<256; k++){
+            ar = rgb_to_hsv((double)i/255, (double)j/255, (double)k/255);
+            h=ar[0];
+            s=ar[1];
+            v=ar[2];
+            ar1 = hsv_to_rgb(h, s, v);
+            r=ar1[0];
+            g=ar1[1];
+            b=ar1[2];
+            //printf("\n\n");
+            //printf("\nrgb : %i %i %i", i, j, k);
+            //printf("\nrgb_to_hsv: %f %f %f", h, s, v);
+            //printf("\nhsv_to_rgb: %f %f %f", round(r * 255.0), round(g * 255.0), round(b * 255.0));
+            /*
+	    if (abs(round(r * 255.0) - (double)i) >0.1){
+                n += 1;
+            }
+            if (abs(round(g * 255.0) - (double)j) > 0.1){
+                
+                n += 1;
+            }
+            if (abs(round(b * 255.0) - (double)k) > 0.1){
+                
+                n += 1;
+
+            }
+	    */
+        } 
+    }
+}
+printf("\nError(s) found. %i ", n);
 
 return 0;
 }

@@ -32,7 +32,7 @@ cdef extern from 'hsv_c.c' nogil:
 @cython.nonecheck(False)
 
 # CYTHON
-def hsv2rgb(h: float, s: float, v: float):
+cpdef hsv2rgb(h: float, s: float, v: float):
     cdef double *rgb
     rgb = hsv2rgb_c(h, s, v)
     return rgb[0], rgb[1], rgb[2]
@@ -41,7 +41,7 @@ def hsv2rgb(h: float, s: float, v: float):
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-def rgb2hsv(r: float, g: float, b: float):
+cpdef rgb2hsv(r: float, g: float, b: float):
     cdef double *hsv
     hsv = rgb2hsv_c(r, g, b)
     return hsv[0], hsv[1], hsv[2]
@@ -50,7 +50,7 @@ def rgb2hsv(r: float, g: float, b: float):
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-def rgb_to_hsv_c(r, g, b):
+cpdef rgb_to_hsv_c(r, g, b):
     cdef double *hsv
     hsv = rgb_to_hsv(r, g, b)
     return hsv[0], hsv[1], hsv[2]
@@ -59,7 +59,7 @@ def rgb_to_hsv_c(r, g, b):
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-def hsv_to_rgb_c(r: float, g: float, b: float):
+cpdef hsv_to_rgb_c(r: float, g: float, b: float):
     cdef double *hsv
     hsv = hsv_to_rgb(r, g, b)
     return hsv[0], hsv[1], hsv[2]
@@ -148,31 +148,31 @@ cdef double * hsv2rgb_c(double h, double s, double v)nogil:
         rgb[2] = p
         free(rgb)
         return rgb
-    if i == 1:
+    elif i == 1:
         rgb[0] = q
         rgb[1] = v
         rgb[2] = p
         free(rgb)
         return rgb
-    if i == 2:
+    elif i == 2:
         rgb[0] = p
         rgb[1] = v
         rgb[2] = t
         free(rgb)
         return rgb
-    if i == 3:
+    elif i == 3:
         rgb[0] = p
         rgb[1] = q
         rgb[2] = v
         free(rgb)
         return rgb
-    if i == 4:
+    elif i == 4:
         rgb[0] = t
         rgb[1] = p
         rgb[2] = v
         free(rgb)
         return rgb
-    if i == 5:
+    elif i == 5:
         rgb[0] = v
         rgb[1] = p
         rgb[2] = q

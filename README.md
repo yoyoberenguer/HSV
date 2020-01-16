@@ -29,6 +29,7 @@ If you change the file hsv_c you will also need to recompile the project
 import the code in your program:
 
 import HSV
+
 # This will import the cython version 
 from HSV import hsv2rgb, rgb2hsv
 
@@ -41,12 +42,12 @@ if __name__ == '__main__':
 
 
 ```
-## Timing:
+## Timings:
 ```
 for 1000000 iterations
-- cython   0.5401
-- C        0.5241
-- Pure C   0.1540
-- colorsys 2.1610
+- cython   0.5401s  5.4e-07 (single)
+- C        0.5241s  5.2e-07 (single) 
+- Pure C   0.1540s  1.5e-07    -
+- colorsys 2.1610s  2.1e-06    -
 ```
 

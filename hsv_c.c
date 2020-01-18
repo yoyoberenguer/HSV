@@ -236,28 +236,37 @@ for (i=0; i<256; i++){
             v=ar[2];
 	        free(ar);
             ar1 = hsv_to_rgb(h, s, v);
-            r=ar1[0];
-            g=ar1[1];
-            b=ar1[2];
+            r = round(ar1[0] * 255.0);
+            g = round(ar1[1] * 255.0);
+            b = round(ar1[2] * 255.0);
    	        free(ar1);
-            //printf("\n\n");
-            //printf("\nrgb : %i %i %i", i, j, k);
-            //printf("\nrgb_to_hsv: %f %f %f", h, s, v);
-            //printf("\nhsv_to_rgb: %f %f %f", round(r * 255.0), round(g * 255.0), round(b * 255.0));
-            /*
-	    if (abs(round(r * 255.0) - (double)i) >0.1){
-                n += 1;
+            // printf("\n\nRGB VALUES:R:%i G:%i B:%i ", i, j, k);
+            // printf("\nRGB VALUES:R:%f G:%f B:%f ", r, g, b);
+            // printf("\n %f, %f, %f ", h, s, v);
+
+            if (abs(i - r) > 0.1) {
+                printf("\n\nRGB VALUES:R:%i G:%i B:%i ", i, j, k);
+                    printf("\nRGB VALUES:R:%f G:%f B:%f ", r, g, b);
+                printf("\n %f, %f, %f ", h, s, v);
+                        n+=1;
+                return -1;
             }
-            if (abs(round(g * 255.0) - (double)j) > 0.1){
-                
-                n += 1;
+            if (abs(j - g) > 0.1){
+                printf("\n\nRGB VALUES:R:%i G:%i B:%i ", i, j, k);
+                    printf("\nRGB VALUES:R:%f G:%f B:%f ", r, g, b);
+                printf("\n %f, %f, %f ", h, s, v);
+                        n+=1;
+                return -1;
             }
-            if (abs(round(b * 255.0) - (double)k) > 0.1){
-                
-                n += 1;
+
+            if (abs(k - b) > 0.1){
+                printf("\n\nRGB VALUES:R:%i G:%i B:%i ", i, j, k);
+                printf("\nRGB VALUES:R:%f G:%f B:%f ", r, g, b);
+                printf("\n %f, %f, %f ", h, s, v);
+                n+=1;
+		        return -1;
 
             }
-	    */
         } 
     }
 }

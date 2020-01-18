@@ -22,49 +22,64 @@ cdef extern from 'hsv_c.c' nogil:
     double fmin_rgb_value(double red, double green, double blue)
 
 
+# ------------------------------------ INTERFACE ----------------------------------------------
 
-# ------------------- INTERFACE ----------------------------------------------
 #***********************************************
 #**********  METHOD HSV TO RGB   ***************
 #***********************************************
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-
-# CYTHON
-cpdef hsv2rgb(h: float, s: float, v: float):
-    cdef double *rgb
+# CYTHON VERSION
+cpdef hsv2rgb(double h, double s, double v):
+    cdef:
+        double *rgb
+        double r, g, b
     rgb = hsv2rgb_c(h, s, v)
-    return rgb[0], rgb[1], rgb[2]
+    r, g, b = rgb[0], rgb[1], rgb[2]
+    free(rgb)
+    return r, g ,b
 
-# CYTHON
+# CYTHON VERSION
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-cpdef rgb2hsv(r: float, g: float, b: float):
-    cdef double *hsv
+cpdef rgb2hsv(double r, double g, double b):
+    cdef:
+        double *hsv
+        double h, s, v
     hsv = rgb2hsv_c(r, g, b)
-    return hsv[0], hsv[1], hsv[2]
+    h, s, v = hsv[0], hsv[1], hsv[2]
+    free(hsv)
+    return h, s, v
 
 # C VERSION
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-cpdef rgb_to_hsv_c(r, g, b):
-    cdef double *hsv
+cpdef rgb_to_hsv_c(double r, double g, double b):
+    cdef:
+        double *hsv
+        double h, s, v
     hsv = rgb_to_hsv(r, g, b)
-    return hsv[0], hsv[1], hsv[2]
+    h, s, v = hsv[0], hsv[1], hsv[2]
+    free(hsv)
+    return h, s, v
 
 # C VERSION
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-cpdef hsv_to_rgb_c(r: float, g: float, b: float):
-    cdef double *hsv
-    hsv = hsv_to_rgb(r, g, b)
-    return hsv[0], hsv[1], hsv[2]
+cpdef hsv_to_rgb_c(double h, double s, double v):
+    cdef:
+        double *rgb
+        double r, g, b
+    rgb = hsv_to_rgb(h, s, v)
+    r, g, b = rgb[0], rgb[1], rgb[2]
+    free(rgb)
+    return r, g, b
 
-#--------------------- CYTHON CODE --------------------------------------
+#------------------------------------- CYTHON CODE --------------------------------------
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
@@ -73,11 +88,20 @@ cdef double * rgb2hsv_c(double r, double g, double b)nogil:
     """
     Convert RGB color model into HSV
     This method is identical to the python library colorsys.rgb_to_hsv
+    * Don't forget to free the memory allocated for hsv values if you are 
+    calling the method without using the cpdef function (see interface section).
+    (Use the same pointer address returned by malloc() to free the block)
     
     :param r: python float; red in range[0 ... 1.0]
     :param g: python float; green in range [0 ... 1.0]
     :param b: python float; blue in range [0 ... 1.0]
     :return: Return HSV values 
+    
+    to convert in % do the following :
+    h = h * 360.0
+    s = s * 100.0
+    v = v * 100.0
+    
     """
     cdef:
         double mx, mn
@@ -106,7 +130,6 @@ cdef double * rgb2hsv_c(double r, double g, double b)nogil:
     hsv[0] = h * ONE_360
     hsv[1] = s
     hsv[2] = v
-    free(hsv)
     return hsv
 
 
@@ -116,6 +139,9 @@ cdef double * rgb2hsv_c(double r, double g, double b)nogil:
 cdef double * hsv2rgb_c(double h, double s, double v)nogil:
     """
     Convert hsv color model to rgb
+    * Don't forget to free the memory allocated for rgb values if you are 
+    calling the method without using the cpdef function (see interface section).
+    (Use the same pointer address returned by malloc() to free the block)
 
     :param h: python float; hue in range [0.0 ... 1.0]
     :param s: python float; saturation   [0.0 ... 1.0] 
@@ -132,7 +158,6 @@ cdef double * hsv2rgb_c(double h, double s, double v)nogil:
         rgb[0] = v
         rgb[1] = v
         rgb[2] = v
-        free(rgb)
         return rgb
 
     i = <int>(h * 6.0)
@@ -146,35 +171,29 @@ cdef double * hsv2rgb_c(double h, double s, double v)nogil:
         rgb[0] = v
         rgb[1] = t
         rgb[2] = p
-        free(rgb)
         return rgb
     elif i == 1:
         rgb[0] = q
         rgb[1] = v
         rgb[2] = p
-        free(rgb)
         return rgb
     elif i == 2:
         rgb[0] = p
         rgb[1] = v
         rgb[2] = t
-        free(rgb)
         return rgb
     elif i == 3:
         rgb[0] = p
         rgb[1] = q
         rgb[2] = v
-        free(rgb)
         return rgb
     elif i == 4:
         rgb[0] = t
         rgb[1] = p
         rgb[2] = v
-        free(rgb)
         return rgb
     elif i == 5:
         rgb[0] = v
         rgb[1] = p
         rgb[2] = q
-        free(rgb)
         return rgb

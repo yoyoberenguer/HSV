@@ -32,14 +32,18 @@ inline double fmax_rgb_value(double red, double green, double blue)
 {
     if (red>green){
         if (red>blue) {
-		    return red;}
+		    return red;
+		}
 		else {
-		    return blue;}
+		    return blue;
+		}
     }
     else if (green>blue){
-	    return green;}
-        else {
-	        return blue;}
+	    return green;
+	}
+    else {
+        return blue;
+    }
 }
 
 // All inputs have to be double precision (python float) in range [0.0 ... 255.0]
@@ -48,14 +52,18 @@ inline double fmin_rgb_value(double red, double green, double blue)
 {
     if (red<green){
         if (red<blue){
-            return red;}
-    else{
-	    return blue;}
+            return red;
+        }
+        else{
+	        return blue;
+	    }
     }
     else if (green<blue){
-	    return green;}
+	    return green;
+	}
     else{
-	    return blue;}
+	    return blue;
+	    }
 }
 
 
@@ -64,6 +72,11 @@ inline double fmin_rgb_value(double red, double green, double blue)
 // all colors inputs have to be double precision (RGB normalized values),
 // (python float) in range [0.0 ... 1.0]
 // outputs is a C array containing 3 values, HSV (double precision)
+// to convert in % do the following:
+// h = h * 360.0
+// s = s * 100.0
+// v = v * 100.0
+
 inline double * rgb_to_hsv(double r, double g, double b)
 {
     // check if all inputs are normalized
@@ -91,29 +104,34 @@ inline double * rgb_to_hsv(double r, double g, double b)
         h = 0.0;}
     // The conversion to (int) approximate the final result 
     else if (mx == r){
-        // h = (int)(60.0 * ((g-b) * df_) + 360.0) % 360;}
-	h = fmod(60.0 * ((g-b) * df_) + 360.0, 360);}
+	    h = fmod(60.0 * ((g-b) * df_) + 360.0, 360);
+	}
     else if (mx == g){
-        // h = (int)(60.0 * ((b-r) * df_) + 120.0) % 360;}
-	h = fmod(60.0 * ((b-r) * df_) + 120.0, 360);}
+	    h = fmod(60.0 * ((b-r) * df_) + 120.0, 360);
+	}
     else if (mx == b){
-        // h = (int)(60.0 * ((r-g) * df_) + 240.0) % 360;}
-	h = fmod(60.0 * ((r-g) * df_) + 240.0, 360);}
+	    h = fmod(60.0 * ((r-g) * df_) + 240.0, 360);
+    }
     if (mx == 0){
-        s = 0.0;}
+        s = 0.0;
+    }
     else{
-        s = df/mx;}
+        s = df/mx;
+    }
     v = mx;
     hsv[0] = h * ONE_360;
     hsv[1] = s;
     hsv[2] = v;
-    free(hsv);
     return hsv;
 }
 
 // Convert HSV color model into RGB (red, green, blue)
 // all inputs have to be double precision, (python float) in range [0.0 ... 1.0]
 // outputs is a C array containing RGB values (double precision) normalized.
+// to convert for a pixel colors
+// r = r * 255.0
+// g = g * 255.0
+// b = b * 255.0
 
 inline double * hsv_to_rgb(double h, double s, double v)
 {
@@ -136,7 +154,6 @@ inline double * hsv_to_rgb(double h, double s, double v)
         rgb[0] = v;
         rgb[1] = v;
         rgb[2] = v;
-	free(rgb);
         return rgb;
     }
 
@@ -152,45 +169,38 @@ inline double * hsv_to_rgb(double h, double s, double v)
         rgb[0] = v;
         rgb[1] = t;
         rgb[2] = p;
-	free(rgb);
         return rgb;
     }
     else if (i == 1){
         rgb[0] = q;
         rgb[1] = v;
         rgb[2] = p;
-	free(rgb);
         return rgb;
     }
     else if (i == 2){
         rgb[0] = p;
         rgb[1] = v;
         rgb[2] = t;
-	free(rgb);
         return rgb;
     }
     else if (i == 3){
         rgb[0] = p;
         rgb[1] = q;
         rgb[2] = v;
-	free(rgb);
         return rgb;
     }
     else if (i == 4){
         rgb[0] = t;
         rgb[1] = p;
         rgb[2] = v;
-	free(rgb);
         return rgb;
     }
     else if (i == 5){
         rgb[0] = v;
         rgb[1] = p;
         rgb[2] = q;
-	free(rgb);
         return rgb;
     }
-    free(rgb);
     return rgb;
 }
 
@@ -224,10 +234,12 @@ for (i=0; i<256; i++){
             h=ar[0];
             s=ar[1];
             v=ar[2];
+	        free(ar);
             ar1 = hsv_to_rgb(h, s, v);
             r=ar1[0];
             g=ar1[1];
             b=ar1[2];
+   	        free(ar1);
             //printf("\n\n");
             //printf("\nrgb : %i %i %i", i, j, k);
             //printf("\nrgb_to_hsv: %f %f %f", h, s, v);

@@ -1,14 +1,18 @@
 import HSV
+
 # This will import the cython version 
 from HSV import hsv2rgb, rgb2hsv
+
 # This will import the C version 
 from HSV import rgb_to_hsv_c, hsv_to_rgb_c
+
 import colorsys
 from colorsys import rgb_to_hsv
+
 import timeit
 
 if __name__ == '__main__':
-    print('TESTING CYTHON VERSION')
+    print('TESTING HSV CYTHON VERSION')
     # ---------- CYTHON VERSION ---------------------------------------------------------
     r, g, b = 25, 60, 128
     print("\nOriginal RGB values red %s, green %s, blue %s " % (r, g, b))
@@ -27,7 +31,7 @@ if __name__ == '__main__':
     blue = round(rgb[2] * 255.0)
     print("Cython rgb values : red %s, green %s, blue %s " % (red, green, blue))
 
-    print('\nTESTING C VERSION')
+    print('\nTESTING HSV C VERSION')
     # ---------- C VERSION -------------------------------------------------------------
     r, g, b = 25, 60, 128
     print("\nOriginal RGB values red %s, green %s, blue %s " % (r, g, b))
@@ -48,9 +52,76 @@ if __name__ == '__main__':
 
     N = 1000000
 
-    print("Cython rgb2hsv      ", timeit.timeit("rgb2hsv(r/255.0, g/255.0, b/255.0)",
-                                                "from __main__ import rgb2hsv, r, g, b", number=N))
-    print("C rgb_to_hsv_c      ", timeit.timeit("rgb_to_hsv_c(r/255.0, g/255.0, b/255.0)",
-                                                "from __main__ import rgb_to_hsv_c, r, g, b", number=N))
-    print("Colorsys rgb_to_hsv ", timeit.timeit("rgb_to_hsv(r/255.0, g/255.0, b/255.0)",
-                                                "from __main__ import rgb_to_hsv, r, g, b", number=N))
+    print("\nTIMINGS :")
+    print("Cython rgb2hsv %s for %s iterations: " % (timeit.timeit("rgb2hsv(r/255.0, g/255.0, b/255.0)",
+                                                                   "from __main__ import rgb2hsv, r, g, b", number=N),
+                                                     N))
+    print("C rgb_to_hsv_c %s for %s iterations: " % (timeit.timeit("rgb_to_hsv_c(r/255.0, g/255.0, b/255.0)",
+                                                                   "from __main__ import rgb_to_hsv_c, r, g, b",
+                                                                   number=N), N))
+    print("Colorsys rgb_to_hsv %s for %s iterations: " % (timeit.timeit("rgb_to_hsv(r/255.0, g/255.0, b/255.0)",
+                                                                        "from __main__ import rgb_to_hsv, r, g, b",
+                                                                        number=N), N))
+
+    # TEST CYTHON rgb2hsv method vs colorsys.rgb_to_hsv
+    for i in range(256):
+       for j in range(256):
+           for k in range(256):
+               hsv = rgb2hsv(i/255.0, j/255.0, k/255.0)
+               hsv1 = colorsys.rgb_to_hsv(i/255.0, j/255.0, k/255.0)
+               h, s, v = round(hsv[0], 2), round(hsv[1], 2), round(hsv[2], 2)
+               h1, s1, v1 = round(hsv1[0], 2), round(hsv1[1], 2), round(hsv1[2], 2)
+               if abs(h - h1)> 0.1 or abs(s - s1) > 0.1 or abs(v - v1) > 0.1:
+                   print("\n R:%s G:%s B :%s " % (i, j, k))
+                   print("rgb_to_hsv_c   : h:%s s:%s v:%s " % (h, s, v))
+                   print("rgb_to_hsv     : h:%s s:%s v:%s " % (h1, s1, v1))
+                   raise ValueError("discrepancy.")
+
+    # TEST CYTHON rgb_to_hsv_c method vs colorsys.rgb_to_hsv
+    for i in range(256):
+        for j in range(256):
+           for k in range(256):
+               hsv = rgb_to_hsv_c(i/255.0, j/255.0, k/255.0)
+               hsv1 = colorsys.rgb_to_hsv(i/255.0, j/255.0, k/255.0)
+               h, s, v = round(hsv[0], 2), round(hsv[1], 2), round(hsv[2], 2)
+               h1, s1, v1 = round(hsv1[0], 2), round(hsv1[1], 2), round(hsv1[2], 2)
+               if abs(h - h1) > 0.1 or abs(s - s1) > 0.1 or abs(v - v1) > 0.1:
+                   print("\n R:%s G:%s B :%s " % (i, j, k))
+                   print("rgb_to_hsv_c   : h:%s s:%s v:%s " % (h, s, v))
+                   print("rgb_to_hsv     : h:%s s:%s v:%s " % (h1, s1, v1))
+                   raise ValueError("discrepancy.")
+
+    # TEST C hsv_to_rgb_c method vs colorsys.hsv_to_rgb
+    for i in range(256):
+        for j in range(256):
+            for k in range(256):
+                hsv = colorsys.rgb_to_hsv(i / 255.0, j / 255.0, k / 255.0)
+                h1, s1, v1 = hsv[0], hsv[1], hsv[2]
+                rgb = hsv_to_rgb_c(h1, s1, v1)
+                r, g, b = rgb[0] * 255.0, rgb[1] * 255.0, rgb[2] * 255.0
+                rgb1 = colorsys.hsv_to_rgb(h1, s1, v1)
+                r1, g1, b1 = rgb1[0] * 255.0, rgb1[1] * 255.0, rgb1[2] * 255.0
+                if abs(r - r1) > 0.1 or abs(g - g1) > 0.1 or abs(b - b1) > 0.1:
+                    print("\n", i, j, k)
+                    print(r, g, b)
+                    print(r1, g1, b1)
+                    raise ValueError("discrepancy.")
+
+    # TEST C hsv2rgb method vs colorsys.hsv_to_rgb
+    for i in range(256):
+        for j in range(256):
+            for k in range(256):
+                hsv = colorsys.rgb_to_hsv(i / 255.0, j / 255.0, k / 255.0)
+                h1, s1, v1 = hsv[0], hsv[1], hsv[2]
+                rgb = hsv2rgb(h1, s1, v1)
+                r, g, b = rgb[0] * 255.0, rgb[1] * 255.0, rgb[2] * 255.0
+                rgb1 = colorsys.hsv_to_rgb(h1, s1, v1)
+                r1, g1, b1 = rgb1[0] * 255.0, rgb1[1] * 255.0, rgb1[2] * 255.0
+
+                if abs(r - r1) > 0.1 or abs(g - g1) > 0.1 or abs(b - b1) > 0.1:
+                    print("\n R:%s G:%s B:%s " % (i, j, k))
+                    print("hsv2rgb R:%s G:%s B:%s " % (r, g, b))
+                    print("colorsys : R:%s G:%s B:%s " % (r1, g1, b1))
+                    raise ValueError("discrepancy.")
+
+    

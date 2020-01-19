@@ -8,7 +8,7 @@ HSV conversion algorithms.
 The code is based on the current python COLORSYS library, adapted and improved 
 for an good increase in speed compare to the original model.
 ```
-![alt text](https://github.com/yoyoberenguer/RGBChannels/blob/master/hue.gif)
+![alt text](https://github.com/yoyoberenguer/HSV/blob/master/hue.gif)
 
 ## Requirements: 
 ```

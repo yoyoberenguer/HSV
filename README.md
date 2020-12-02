@@ -1,4 +1,4 @@
-# HSV
+# HSV algorithm
 
 ## RGB to HSV and HSV to RGB colors system converstion tools.
 ```

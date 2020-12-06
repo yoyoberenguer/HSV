@@ -46,6 +46,14 @@ struct rgb{
     double b;
 };
 
+
+struct rgba{
+    double r;
+    double g;
+    double b;
+    double a;
+};
+
 // All inputs have to be double precision (python float) in range [0.0 ... 255.0]
 // Output: return the maximum value from given RGB values (double precision).
 inline double fmax_rgb_value(double red, double green, double blue)

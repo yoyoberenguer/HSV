@@ -558,8 +558,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__hsv
-#define __PYX_HAVE_API__hsv
+#define __PYX_HAVE__HSV
+#define __PYX_HAVE_API__HSV
 /* Early includes */
 #include <string.h>
 #include <stdlib.h>
@@ -888,23 +888,23 @@ struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
 struct __pyx_memoryviewslice_obj;
 
-/* "hsv.pyx":59
+/* "hsv.pyx":100
  *     double fmin_rgb_value(double red, double green, double blue)nogil
  * 
  * ctypedef hsv HSV             # <<<<<<<<<<<<<<
  * ctypedef rgb RGB
  * 
  */
-typedef struct hsv __pyx_t_3hsv_HSV;
+typedef struct hsv __pyx_t_3HSV_HSV;
 
-/* "hsv.pyx":60
+/* "hsv.pyx":101
  * 
  * ctypedef hsv HSV
  * ctypedef rgb RGB             # <<<<<<<<<<<<<<
  * 
  * # ------------------------------------ INTERFACE ----------------------------------------------
  */
-typedef struct rgb __pyx_t_3hsv_RGB;
+typedef struct rgb __pyx_t_3HSV_RGB;
 
 /* "View.MemoryView":104
  * 
@@ -1542,13 +1542,6 @@ static int __pyx_slices_overlap(__Pyx_memviewslice *slice1,
 /* Capsule.proto */
 static CYTHON_INLINE PyObject *__pyx_capsule_create(void *p, const char *sig);
 
-/* Print.proto */
-static int __Pyx_Print(PyObject*, PyObject *, int);
-#if CYTHON_COMPILING_IN_PYPY || PY_MAJOR_VERSION >= 3
-static PyObject* __pyx_print = 0;
-static PyObject* __pyx_print_kwargs = 0;
-#endif
-
 /* CIntToPy.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
 
@@ -1568,9 +1561,6 @@ __pyx_memoryview_copy_new_contig(const __Pyx_memviewslice *from_mvs,
                                  const char *mode, int ndim,
                                  size_t sizeof_dtype, int contig_flag,
                                  int dtype_is_object);
-
-/* PrintOne.proto */
-static int __Pyx_PrintOne(PyObject* stream, PyObject *o);
 
 /* CIntFromPy.proto */
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
@@ -1641,7 +1631,7 @@ static PyObject *__pyx_memoryviewslice_assign_item_from_object(struct __pyx_memo
 
 /* Module declarations from 'libc.stdlib' */
 
-/* Module declarations from 'hsv' */
+/* Module declarations from 'HSV' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -1653,18 +1643,18 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static PyObject *__pyx_f_3hsv_hsv2rgb(double, double, double, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_f_3hsv_rgb2hsv(double, double, double, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_f_3hsv_rgb_to_hsv_c(double, double, double, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_f_3hsv_hsv_to_rgb_c(double, double, double, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_f_3hsv_struct_rgb_to_hsv_c(double, double, double, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_f_3hsv_struct_hsv_to_rgb_c(double, double, double, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_f_3hsv_hue_surface_24(PyObject *, float, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_f_3hsv_hue_surface_32(PyObject *, float, int __pyx_skip_dispatch); /*proto*/
-static double *__pyx_f_3hsv_rgb2hsv_c(double, double, double); /*proto*/
-static double *__pyx_f_3hsv_hsv2rgb_c(double, double, double); /*proto*/
-static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *, double); /*proto*/
-static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *, float); /*proto*/
+static PyObject *__pyx_f_3HSV_hsv2rgb(double, double, double, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_3HSV_rgb2hsv(double, double, double, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_3HSV_rgb_to_hsv_c(double, double, double, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_3HSV_hsv_to_rgb_c(double, double, double, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_3HSV_struct_rgb_to_hsv_c(double, double, double, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_3HSV_struct_hsv_to_rgb_c(double, double, double, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_3HSV_hue_surface_24(PyObject *, float, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_3HSV_hue_surface_32(PyObject *, float, int __pyx_skip_dispatch); /*proto*/
+static double *__pyx_f_3HSV_rgb2hsv_c(double, double, double); /*proto*/
+static double *__pyx_f_3HSV_hsv2rgb_c(double, double, double); /*proto*/
+static PyObject *__pyx_f_3HSV_hue_surface_24c(PyObject *, double); /*proto*/
+static PyObject *__pyx_f_3HSV_hue_surface_32c(PyObject *, float); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static void *__pyx_align_pointer(void *, size_t); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -1699,11 +1689,11 @@ static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_unsigned_char = { "unsigned char", NULL, sizeof(unsigned char), { 0 }, 0, IS_UNSIGNED(unsigned char) ? 'U' : 'I', IS_UNSIGNED(unsigned char), 0 };
-#define __Pyx_MODULE_NAME "hsv"
-extern int __pyx_module_is_main_hsv;
-int __pyx_module_is_main_hsv = 0;
+#define __Pyx_MODULE_NAME "HSV"
+extern int __pyx_module_is_main_HSV;
+int __pyx_module_is_main_HSV = 0;
 
-/* Implementation of 'hsv' */
+/* Implementation of 'HSV' */
 static PyObject *__pyx_builtin_ImportError;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
@@ -1725,20 +1715,16 @@ static const char __pyx_k_r[] = "r";
 static const char __pyx_k_s[] = "s";
 static const char __pyx_k_v[] = "v";
 static const char __pyx_k_id[] = "id";
+static const char __pyx_k_HSV[] = "HSV";
 static const char __pyx_k_RGB[] = "RGB";
-static const char __pyx_k_end[] = "end";
-static const char __pyx_k_hsv[] = "hsv";
 static const char __pyx_k_new[] = "__new__";
 static const char __pyx_k_obj[] = "obj";
 static const char __pyx_k_RGBA[] = "RGBA";
-static const char __pyx_k_Rect[] = "Rect";
 static const char __pyx_k_base[] = "base";
 static const char __pyx_k_copy[] = "copy";
 static const char __pyx_k_dict[] = "__dict__";
-static const char __pyx_k_file[] = "file";
 static const char __pyx_k_hsva[] = "hsva";
 static const char __pyx_k_main[] = "__main__";
-static const char __pyx_k_mask[] = "mask";
 static const char __pyx_k_mode[] = "mode";
 static const char __pyx_k_name[] = "name";
 static const char __pyx_k_ndim[] = "ndim";
@@ -1747,6 +1733,7 @@ static const char __pyx_k_size[] = "size";
 static const char __pyx_k_step[] = "step";
 static const char __pyx_k_stop[] = "stop";
 static const char __pyx_k_test[] = "__test__";
+static const char __pyx_k_1_0_1[] = "1.0.1";
 static const char __pyx_k_ASCII[] = "ASCII";
 static const char __pyx_k_Color[] = "Color";
 static const char __pyx_k_array[] = "array";
@@ -1754,14 +1741,11 @@ static const char __pyx_k_class[] = "__class__";
 static const char __pyx_k_dtype[] = "dtype";
 static const char __pyx_k_empty[] = "empty";
 static const char __pyx_k_error[] = "error";
-static const char __pyx_k_event[] = "event";
 static const char __pyx_k_flags[] = "flags";
 static const char __pyx_k_image[] = "image";
 static const char __pyx_k_numpy[] = "numpy";
 static const char __pyx_k_order[] = "order";
-static const char __pyx_k_print[] = "print";
 static const char __pyx_k_range[] = "range";
-static const char __pyx_k_scale[] = "scale";
 static const char __pyx_k_shape[] = "shape";
 static const char __pyx_k_shift[] = "shift_";
 static const char __pyx_k_start[] = "start";
@@ -1775,21 +1759,17 @@ static const char __pyx_k_name_2[] = "__name__";
 static const char __pyx_k_pickle[] = "pickle";
 static const char __pyx_k_pygame[] = "pygame";
 static const char __pyx_k_reduce[] = "__reduce__";
-static const char __pyx_k_rotate[] = "rotate";
 static const char __pyx_k_struct[] = "struct";
 static const char __pyx_k_unpack[] = "unpack";
 static const char __pyx_k_update[] = "update";
-static const char __pyx_k_HWACCEL[] = "HWACCEL";
 static const char __pyx_k_Surface[] = "Surface";
-static const char __pyx_k_Vector2[] = "Vector2";
 static const char __pyx_k_array3d[] = "array3d";
 static const char __pyx_k_fortran[] = "fortran";
 static const char __pyx_k_hsv_pyx[] = "hsv.pyx";
 static const char __pyx_k_memview[] = "memview";
 static const char __pyx_k_surface[] = "surface_";
+static const char __pyx_k_version[] = "__version__";
 static const char __pyx_k_Ellipsis[] = "Ellipsis";
-static const char __pyx_k_RLEACCEL[] = "RLEACCEL";
-static const char __pyx_k_SRCALPHA[] = "SRCALPHA";
 static const char __pyx_k_colorsys[] = "colorsys";
 static const char __pyx_k_get_size[] = "get_size";
 static const char __pyx_k_getstate[] = "__getstate__";
@@ -1805,7 +1785,6 @@ static const char __pyx_k_rgb_array[] = "rgb_array";
 static const char __pyx_k_rgb_color[] = "rgb_color";
 static const char __pyx_k_shift_hue[] = "shift_hue";
 static const char __pyx_k_surfarray[] = "surfarray";
-static const char __pyx_k_transform[] = "transform";
 static const char __pyx_k_transpose[] = "transpose";
 static const char __pyx_k_vectorize[] = "vectorize";
 static const char __pyx_k_IndexError[] = "IndexError";
@@ -1819,27 +1798,21 @@ static const char __pyx_k_MemoryError[] = "MemoryError";
 static const char __pyx_k_PickleError[] = "PickleError";
 static const char __pyx_k_alpha_array[] = "alpha_array";
 static const char __pyx_k_hue_surface[] = "hue_surface";
-static const char __pyx_k_pygame_math[] = "pygame.math";
-static const char __pyx_k_smoothscale[] = "smoothscale";
 static const char __pyx_k_vectorize_2[] = "vectorize_";
 static const char __pyx_k_pixels_alpha[] = "pixels_alpha";
 static const char __pyx_k_pygame_image[] = "pygame.image";
 static const char __pyx_k_pyx_checksum[] = "__pyx_checksum";
 static const char __pyx_k_source_array[] = "source_array_";
 static const char __pyx_k_stringsource[] = "stringsource";
-static const char __pyx_k_BLEND_RGB_ADD[] = "BLEND_RGB_ADD";
-static const char __pyx_k_BLEND_RGB_MAX[] = "BLEND_RGB_MAX";
 static const char __pyx_k_convert_alpha[] = "convert_alpha";
 static const char __pyx_k_pyx_getbuffer[] = "__pyx_getbuffer";
 static const char __pyx_k_reduce_cython[] = "__reduce_cython__";
-static const char __pyx_k_BLEND_RGB_MULT[] = "BLEND_RGB_MULT";
 static const char __pyx_k_View_MemoryView[] = "View.MemoryView";
 static const char __pyx_k_allocate_buffer[] = "allocate_buffer";
 static const char __pyx_k_dtype_is_object[] = "dtype_is_object";
 static const char __pyx_k_pyx_PickleError[] = "__pyx_PickleError";
 static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
 static const char __pyx_k_pygame_surfarray[] = "pygame.surfarray";
-static const char __pyx_k_pygame_transform[] = "pygame.transform";
 static const char __pyx_k_pyx_unpickle_Enum[] = "__pyx_unpickle_Enum";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
@@ -1874,10 +1847,8 @@ static const char __pyx_k_Unable_to_convert_item_to_object[] = "Unable to conver
 static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing extents in dimension %d (got %d and %d)";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to allocate shape and strides.";
+static PyObject *__pyx_kp_s_1_0_1;
 static PyObject *__pyx_n_s_ASCII;
-static PyObject *__pyx_n_s_BLEND_RGB_ADD;
-static PyObject *__pyx_n_s_BLEND_RGB_MAX;
-static PyObject *__pyx_n_s_BLEND_RGB_MULT;
 static PyObject *__pyx_kp_s_Buffer_view_does_not_expose_stri;
 static PyObject *__pyx_n_s_C;
 static PyObject *__pyx_kp_s_Can_only_create_a_buffer_that_is;
@@ -1891,7 +1862,7 @@ static PyObject *__pyx_kp_s_Empty_shape_tuple_for_cython_arr;
 static PyObject *__pyx_kp_s_Expecting_Surface_for_argument_s;
 static PyObject *__pyx_kp_s_Expecting_double_for_argument_sh;
 static PyObject *__pyx_kp_s_Expecting_float_for_argument_shi;
-static PyObject *__pyx_n_s_HWACCEL;
+static PyObject *__pyx_n_s_HSV;
 static PyObject *__pyx_n_s_ImportError;
 static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0xb0;
 static PyObject *__pyx_n_s_IndexError;
@@ -1910,14 +1881,10 @@ static PyObject *__pyx_kp_s_Positional_argument_shift__shoul;
 static PyObject *__pyx_kp_s_Pygame_library_is_missing_on_yo;
 static PyObject *__pyx_n_s_RGB;
 static PyObject *__pyx_n_s_RGBA;
-static PyObject *__pyx_n_s_RLEACCEL;
-static PyObject *__pyx_n_s_Rect;
-static PyObject *__pyx_n_s_SRCALPHA;
 static PyObject *__pyx_n_s_Surface;
 static PyObject *__pyx_n_s_TypeError;
 static PyObject *__pyx_kp_s_Unable_to_convert_item_to_object;
 static PyObject *__pyx_n_s_ValueError;
-static PyObject *__pyx_n_s_Vector2;
 static PyObject *__pyx_n_s_View_MemoryView;
 static PyObject *__pyx_n_s_a;
 static PyObject *__pyx_n_s_allocate_buffer;
@@ -1943,11 +1910,8 @@ static PyObject *__pyx_n_s_dtype_is_object;
 static PyObject *__pyx_n_s_e;
 static PyObject *__pyx_n_s_empty;
 static PyObject *__pyx_n_s_encode;
-static PyObject *__pyx_n_s_end;
 static PyObject *__pyx_n_s_enumerate;
 static PyObject *__pyx_n_s_error;
-static PyObject *__pyx_n_s_event;
-static PyObject *__pyx_n_s_file;
 static PyObject *__pyx_n_s_flags;
 static PyObject *__pyx_n_s_format;
 static PyObject *__pyx_n_s_fortran;
@@ -1958,7 +1922,6 @@ static PyObject *__pyx_n_s_get_size;
 static PyObject *__pyx_n_s_getstate;
 static PyObject *__pyx_kp_s_got_differing_extents_in_dimensi;
 static PyObject *__pyx_n_s_h;
-static PyObject *__pyx_n_s_hsv;
 static PyObject *__pyx_kp_s_hsv_pyx;
 static PyObject *__pyx_n_s_hsv_to_rgb;
 static PyObject *__pyx_n_s_hsva;
@@ -1969,7 +1932,6 @@ static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_itemsize;
 static PyObject *__pyx_kp_s_itemsize_0_for_cython_array;
 static PyObject *__pyx_n_s_main;
-static PyObject *__pyx_n_s_mask;
 static PyObject *__pyx_n_s_memview;
 static PyObject *__pyx_n_s_mode;
 static PyObject *__pyx_n_s_name;
@@ -1984,12 +1946,9 @@ static PyObject *__pyx_n_s_pack;
 static PyObject *__pyx_n_s_pickle;
 static PyObject *__pyx_n_s_pixels3d;
 static PyObject *__pyx_n_s_pixels_alpha;
-static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_n_s_pygame;
 static PyObject *__pyx_n_s_pygame_image;
-static PyObject *__pyx_n_s_pygame_math;
 static PyObject *__pyx_n_s_pygame_surfarray;
-static PyObject *__pyx_n_s_pygame_transform;
 static PyObject *__pyx_n_s_pyx_PickleError;
 static PyObject *__pyx_n_s_pyx_checksum;
 static PyObject *__pyx_n_s_pyx_getbuffer;
@@ -2005,16 +1964,13 @@ static PyObject *__pyx_n_s_reduce_cython;
 static PyObject *__pyx_n_s_reduce_ex;
 static PyObject *__pyx_n_s_rgb_array;
 static PyObject *__pyx_n_s_rgb_color;
-static PyObject *__pyx_n_s_rotate;
 static PyObject *__pyx_n_s_s;
-static PyObject *__pyx_n_s_scale;
 static PyObject *__pyx_n_s_setstate;
 static PyObject *__pyx_n_s_setstate_cython;
 static PyObject *__pyx_n_s_shape;
 static PyObject *__pyx_n_s_shift;
 static PyObject *__pyx_n_s_shift_hue;
 static PyObject *__pyx_n_s_size;
-static PyObject *__pyx_n_s_smoothscale;
 static PyObject *__pyx_n_s_source_array;
 static PyObject *__pyx_n_s_start;
 static PyObject *__pyx_n_s_step;
@@ -2027,7 +1983,6 @@ static PyObject *__pyx_n_s_struct;
 static PyObject *__pyx_n_s_surface;
 static PyObject *__pyx_n_s_surfarray;
 static PyObject *__pyx_n_s_test;
-static PyObject *__pyx_n_s_transform;
 static PyObject *__pyx_n_s_transpose;
 static PyObject *__pyx_n_s_uint8;
 static PyObject *__pyx_kp_s_unable_to_allocate_array_data;
@@ -2037,16 +1992,17 @@ static PyObject *__pyx_n_s_update;
 static PyObject *__pyx_n_s_v;
 static PyObject *__pyx_n_s_vectorize;
 static PyObject *__pyx_n_s_vectorize_2;
-static PyObject *__pyx_pf_3hsv_hsv2rgb(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v); /* proto */
-static PyObject *__pyx_pf_3hsv_2rgb2hsv(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b); /* proto */
-static PyObject *__pyx_pf_3hsv_4rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b); /* proto */
-static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v); /* proto */
-static PyObject *__pyx_pf_3hsv_8struct_rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b); /* proto */
-static PyObject *__pyx_pf_3hsv_10struct_hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v); /* proto */
-static PyObject *__pyx_pf_3hsv_12hue_surface_24(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, float __pyx_v_shift_); /* proto */
-static PyObject *__pyx_pf_3hsv_14hue_surface_32(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, float __pyx_v_shift_); /* proto */
-static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_r, PyObject *__pyx_v_g, PyObject *__pyx_v_b, PyObject *__pyx_v_shift_); /* proto */
-static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, PyObject *__pyx_v_shift_); /* proto */
+static PyObject *__pyx_n_s_version;
+static PyObject *__pyx_pf_3HSV_hsv2rgb(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v); /* proto */
+static PyObject *__pyx_pf_3HSV_2rgb2hsv(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b); /* proto */
+static PyObject *__pyx_pf_3HSV_4rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b); /* proto */
+static PyObject *__pyx_pf_3HSV_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v); /* proto */
+static PyObject *__pyx_pf_3HSV_8struct_rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b); /* proto */
+static PyObject *__pyx_pf_3HSV_10struct_hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v); /* proto */
+static PyObject *__pyx_pf_3HSV_12hue_surface_24(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, float __pyx_v_shift_); /* proto */
+static PyObject *__pyx_pf_3HSV_14hue_surface_32(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, float __pyx_v_shift_); /* proto */
+static PyObject *__pyx_pf_3HSV_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_r, PyObject *__pyx_v_g, PyObject *__pyx_v_b, PyObject *__pyx_v_shift_); /* proto */
+static PyObject *__pyx_pf_3HSV_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, PyObject *__pyx_v_shift_); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2154,107 +2110,87 @@ static PyObject *__pyx_codeobj__42;
 static PyObject *__pyx_codeobj__49;
 /* Late includes */
 
-/* "hsv.pyx":71
+/* "hsv.pyx":108
+ * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * # CYTHON VERSION
- * cpdef hsv2rgb(double h, double s, double v):             # <<<<<<<<<<<<<<
- *     cdef:
- *         double *rgb
+ * cpdef tuple hsv2rgb(double h, double s, double v):             # <<<<<<<<<<<<<<
+ *     """
+ *     CONVERT HSV MODEL TO RGB
  */
 
-static PyObject *__pyx_pw_3hsv_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_3hsv_hsv2rgb(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_3HSV_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_hsv2rgb(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v, CYTHON_UNUSED int __pyx_skip_dispatch) {
   double *__pyx_v_rgb;
-  double __pyx_v_r;
-  double __pyx_v_g;
-  double __pyx_v_b;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  double __pyx_t_2;
-  double __pyx_t_3;
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  PyObject *__pyx_t_6 = NULL;
-  PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("hsv2rgb", 0);
 
-  /* "hsv.pyx":75
- *         double *rgb
- *         double r, g, b
- *     rgb = hsv2rgb_c(h, s, v)             # <<<<<<<<<<<<<<
- *     r, g, b = rgb[0], rgb[1], rgb[2]
+  /* "hsv.pyx":119
+ *     """
+ *     cdef:
+ *         double *rgb = hsv2rgb_c(h, s, v)             # <<<<<<<<<<<<<<
+ *     # free the pointer (do not remove)
  *     free(rgb)
  */
-  __pyx_v_rgb = __pyx_f_3hsv_hsv2rgb_c(__pyx_v_h, __pyx_v_s, __pyx_v_v);
+  __pyx_v_rgb = __pyx_f_3HSV_hsv2rgb_c(__pyx_v_h, __pyx_v_s, __pyx_v_v);
 
-  /* "hsv.pyx":76
- *         double r, g, b
- *     rgb = hsv2rgb_c(h, s, v)
- *     r, g, b = rgb[0], rgb[1], rgb[2]             # <<<<<<<<<<<<<<
- *     free(rgb)
- *     return r, g ,b
- */
-  __pyx_t_1 = (__pyx_v_rgb[0]);
-  __pyx_t_2 = (__pyx_v_rgb[1]);
-  __pyx_t_3 = (__pyx_v_rgb[2]);
-  __pyx_v_r = __pyx_t_1;
-  __pyx_v_g = __pyx_t_2;
-  __pyx_v_b = __pyx_t_3;
-
-  /* "hsv.pyx":77
- *     rgb = hsv2rgb_c(h, s, v)
- *     r, g, b = rgb[0], rgb[1], rgb[2]
+  /* "hsv.pyx":121
+ *         double *rgb = hsv2rgb_c(h, s, v)
+ *     # free the pointer (do not remove)
  *     free(rgb)             # <<<<<<<<<<<<<<
- *     return r, g ,b
+ *     return rgb[0], rgb[1], rgb[2]
  * 
  */
   free(__pyx_v_rgb);
 
-  /* "hsv.pyx":78
- *     r, g, b = rgb[0], rgb[1], rgb[2]
+  /* "hsv.pyx":122
+ *     # free the pointer (do not remove)
  *     free(rgb)
- *     return r, g ,b             # <<<<<<<<<<<<<<
+ *     return rgb[0], rgb[1], rgb[2]             # <<<<<<<<<<<<<<
  * 
- * # CYTHON VERSION
+ * @cython.boundscheck(False)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((__pyx_v_rgb[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 122, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_rgb[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 122, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = PyFloat_FromDouble((__pyx_v_rgb[2])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 122, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_g); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 78, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_b); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 78, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 78, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_6);
-  PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_t_6);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_2);
+  PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2);
+  __Pyx_GIVEREF(__pyx_t_3);
+  PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3);
+  __pyx_t_1 = 0;
+  __pyx_t_2 = 0;
+  __pyx_t_3 = 0;
+  __pyx_r = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_5 = 0;
-  __pyx_t_6 = 0;
-  __pyx_r = __pyx_t_7;
-  __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":71
+  /* "hsv.pyx":108
+ * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * # CYTHON VERSION
- * cpdef hsv2rgb(double h, double s, double v):             # <<<<<<<<<<<<<<
- *     cdef:
- *         double *rgb
+ * cpdef tuple hsv2rgb(double h, double s, double v):             # <<<<<<<<<<<<<<
+ *     """
+ *     CONVERT HSV MODEL TO RGB
  */
 
   /* function exit code */
   __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("hsv.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2263,8 +2199,9 @@ static PyObject *__pyx_f_3hsv_hsv2rgb(double __pyx_v_h, double __pyx_v_s, double
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3hsv_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_3hsv_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3HSV_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_3HSV_hsv2rgb[] = "\n    CONVERT HSV MODEL TO RGB \n    This method is using cython code (method hsv2rgb_c) of HSV to RGB (see algorithm below)\n    \n    :param h: python float; value in range [0...1.0]   \n    :param s: python float; value in range [0...1.0]   \n    :param v: python float; value in range [0...1.0]   \n    :return: tuple of RGB values (Normalized, range [0...1.0] \n    ";
+static PyObject *__pyx_pw_3HSV_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_h;
   double __pyx_v_s;
   double __pyx_v_v;
@@ -2296,17 +2233,17 @@ static PyObject *__pyx_pw_3hsv_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_ar
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_s)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("hsv2rgb", 1, 3, 3, 1); __PYX_ERR(0, 71, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("hsv2rgb", 1, 3, 3, 1); __PYX_ERR(0, 108, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("hsv2rgb", 1, 3, 3, 2); __PYX_ERR(0, 71, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("hsv2rgb", 1, 3, 3, 2); __PYX_ERR(0, 108, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "hsv2rgb") < 0)) __PYX_ERR(0, 71, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "hsv2rgb") < 0)) __PYX_ERR(0, 108, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -2315,32 +2252,32 @@ static PyObject *__pyx_pw_3hsv_1hsv2rgb(PyObject *__pyx_self, PyObject *__pyx_ar
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_h = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_h == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 71, __pyx_L3_error)
-    __pyx_v_s = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 71, __pyx_L3_error)
-    __pyx_v_v = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_v == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 71, __pyx_L3_error)
+    __pyx_v_h = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_h == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
+    __pyx_v_s = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
+    __pyx_v_v = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_v == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("hsv2rgb", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 71, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("hsv2rgb", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 108, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("hsv.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_hsv2rgb(__pyx_self, __pyx_v_h, __pyx_v_s, __pyx_v_v);
+  __pyx_r = __pyx_pf_3HSV_hsv2rgb(__pyx_self, __pyx_v_h, __pyx_v_s, __pyx_v_v);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_hsv2rgb(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
+static PyObject *__pyx_pf_3HSV_hsv2rgb(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("hsv2rgb", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3hsv_hsv2rgb(__pyx_v_h, __pyx_v_s, __pyx_v_v, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3HSV_hsv2rgb(__pyx_v_h, __pyx_v_s, __pyx_v_v, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2349,7 +2286,7 @@ static PyObject *__pyx_pf_3hsv_hsv2rgb(CYTHON_UNUSED PyObject *__pyx_self, doubl
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("hsv.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hsv2rgb", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2357,107 +2294,87 @@ static PyObject *__pyx_pf_3hsv_hsv2rgb(CYTHON_UNUSED PyObject *__pyx_self, doubl
   return __pyx_r;
 }
 
-/* "hsv.pyx":84
+/* "hsv.pyx":127
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * cpdef rgb2hsv(double r, double g, double b):             # <<<<<<<<<<<<<<
- *     cdef:
- *         double *hsv
+ * cpdef tuple rgb2hsv(double r, double g, double b):             # <<<<<<<<<<<<<<
+ *     """
+ *     CONVERT RGB TO HSV MODEL
  */
 
-static PyObject *__pyx_pw_3hsv_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_3hsv_rgb2hsv(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_3HSV_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_rgb2hsv(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
   double *__pyx_v_hsv;
-  double __pyx_v_h;
-  double __pyx_v_s;
-  double __pyx_v_v;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  double __pyx_t_2;
-  double __pyx_t_3;
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  PyObject *__pyx_t_6 = NULL;
-  PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("rgb2hsv", 0);
 
-  /* "hsv.pyx":88
- *         double *hsv
- *         double h, s, v
- *     hsv = rgb2hsv_c(r, g, b)             # <<<<<<<<<<<<<<
- *     h, s, v = hsv[0], hsv[1], hsv[2]
+  /* "hsv.pyx":138
+ *     """
+ *     cdef:
+ *         double *hsv = rgb2hsv_c(r, g, b)             # <<<<<<<<<<<<<<
+ *     # free the pointer (do not remove)
  *     free(hsv)
  */
-  __pyx_v_hsv = __pyx_f_3hsv_rgb2hsv_c(__pyx_v_r, __pyx_v_g, __pyx_v_b);
+  __pyx_v_hsv = __pyx_f_3HSV_rgb2hsv_c(__pyx_v_r, __pyx_v_g, __pyx_v_b);
 
-  /* "hsv.pyx":89
- *         double h, s, v
- *     hsv = rgb2hsv_c(r, g, b)
- *     h, s, v = hsv[0], hsv[1], hsv[2]             # <<<<<<<<<<<<<<
- *     free(hsv)
- *     return h, s, v
- */
-  __pyx_t_1 = (__pyx_v_hsv[0]);
-  __pyx_t_2 = (__pyx_v_hsv[1]);
-  __pyx_t_3 = (__pyx_v_hsv[2]);
-  __pyx_v_h = __pyx_t_1;
-  __pyx_v_s = __pyx_t_2;
-  __pyx_v_v = __pyx_t_3;
-
-  /* "hsv.pyx":90
- *     hsv = rgb2hsv_c(r, g, b)
- *     h, s, v = hsv[0], hsv[1], hsv[2]
+  /* "hsv.pyx":140
+ *         double *hsv = rgb2hsv_c(r, g, b)
+ *     # free the pointer (do not remove)
  *     free(hsv)             # <<<<<<<<<<<<<<
- *     return h, s, v
+ *     return hsv[0], hsv[1], hsv[2]
  * 
  */
   free(__pyx_v_hsv);
 
-  /* "hsv.pyx":91
- *     h, s, v = hsv[0], hsv[1], hsv[2]
+  /* "hsv.pyx":141
+ *     # free the pointer (do not remove)
  *     free(hsv)
- *     return h, s, v             # <<<<<<<<<<<<<<
+ *     return hsv[0], hsv[1], hsv[2]             # <<<<<<<<<<<<<<
  * 
- * # C VERSION METHOD 1
+ * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_h); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((__pyx_v_hsv[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_hsv[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = PyFloat_FromDouble((__pyx_v_hsv[2])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 91, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_v); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 91, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 91, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_6);
-  PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_t_6);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_2);
+  PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2);
+  __Pyx_GIVEREF(__pyx_t_3);
+  PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3);
+  __pyx_t_1 = 0;
+  __pyx_t_2 = 0;
+  __pyx_t_3 = 0;
+  __pyx_r = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_5 = 0;
-  __pyx_t_6 = 0;
-  __pyx_r = __pyx_t_7;
-  __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":84
+  /* "hsv.pyx":127
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * cpdef rgb2hsv(double r, double g, double b):             # <<<<<<<<<<<<<<
- *     cdef:
- *         double *hsv
+ * cpdef tuple rgb2hsv(double r, double g, double b):             # <<<<<<<<<<<<<<
+ *     """
+ *     CONVERT RGB TO HSV MODEL
  */
 
   /* function exit code */
   __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("hsv.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2466,8 +2383,9 @@ static PyObject *__pyx_f_3hsv_rgb2hsv(double __pyx_v_r, double __pyx_v_g, double
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3hsv_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_3hsv_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3HSV_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_3HSV_2rgb2hsv[] = "\n    CONVERT RGB TO HSV MODEL \n    This method is using cython code (method rgb2hsv_c) of RGB to HSV (see algorithm below)\n    \n    :param r: python float; value in range [0...1.0]   \n    :param g: python float; value in range [0...1.0]   \n    :param b: python float; value in range [0...1.0]   \n    :return: tuple of HSV values (Normalized, range [0...1.0] \n    ";
+static PyObject *__pyx_pw_3HSV_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_r;
   double __pyx_v_g;
   double __pyx_v_b;
@@ -2499,17 +2417,17 @@ static PyObject *__pyx_pw_3hsv_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_ar
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_g)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rgb2hsv", 1, 3, 3, 1); __PYX_ERR(0, 84, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rgb2hsv", 1, 3, 3, 1); __PYX_ERR(0, 127, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rgb2hsv", 1, 3, 3, 2); __PYX_ERR(0, 84, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rgb2hsv", 1, 3, 3, 2); __PYX_ERR(0, 127, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "rgb2hsv") < 0)) __PYX_ERR(0, 84, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "rgb2hsv") < 0)) __PYX_ERR(0, 127, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -2518,32 +2436,32 @@ static PyObject *__pyx_pw_3hsv_3rgb2hsv(PyObject *__pyx_self, PyObject *__pyx_ar
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_r = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_r == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_g = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_g == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_b = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_b == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_r = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_r == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L3_error)
+    __pyx_v_g = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_g == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L3_error)
+    __pyx_v_b = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_b == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("rgb2hsv", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 84, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("rgb2hsv", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 127, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("hsv.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_2rgb2hsv(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
+  __pyx_r = __pyx_pf_3HSV_2rgb2hsv(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_2rgb2hsv(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
+static PyObject *__pyx_pf_3HSV_2rgb2hsv(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("rgb2hsv", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3hsv_rgb2hsv(__pyx_v_r, __pyx_v_g, __pyx_v_b, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3HSV_rgb2hsv(__pyx_v_r, __pyx_v_g, __pyx_v_b, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2552,7 +2470,7 @@ static PyObject *__pyx_pf_3hsv_2rgb2hsv(CYTHON_UNUSED PyObject *__pyx_self, doub
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("hsv.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.rgb2hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2560,107 +2478,87 @@ static PyObject *__pyx_pf_3hsv_2rgb2hsv(CYTHON_UNUSED PyObject *__pyx_self, doub
   return __pyx_r;
 }
 
-/* "hsv.pyx":97
+/* "hsv.pyx":147
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * cpdef rgb_to_hsv_c(double r, double g, double b):             # <<<<<<<<<<<<<<
- *     cdef:
- *         double *hsv
+ * cpdef tuple rgb_to_hsv_c(double r, double g, double b):             # <<<<<<<<<<<<<<
+ *     """
+ *     CONVERT RGB MODEL TO HSV
  */
 
-static PyObject *__pyx_pw_3hsv_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_3hsv_rgb_to_hsv_c(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_3HSV_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_rgb_to_hsv_c(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
   double *__pyx_v_hsv;
-  double __pyx_v_h;
-  double __pyx_v_s;
-  double __pyx_v_v;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  double __pyx_t_2;
-  double __pyx_t_3;
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  PyObject *__pyx_t_6 = NULL;
-  PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("rgb_to_hsv_c", 0);
 
-  /* "hsv.pyx":101
- *         double *hsv
- *         double h, s, v
- *     hsv = rgb_to_hsv(r, g, b)             # <<<<<<<<<<<<<<
- *     h, s, v = hsv[0], hsv[1], hsv[2]
+  /* "hsv.pyx":159
+ *     """
+ *     cdef:
+ *         double *hsv = rgb_to_hsv(r, g, b)             # <<<<<<<<<<<<<<
+ *     # free the pointer (do not remove)
  *     free(hsv)
  */
   __pyx_v_hsv = rgb_to_hsv(__pyx_v_r, __pyx_v_g, __pyx_v_b);
 
-  /* "hsv.pyx":102
- *         double h, s, v
- *     hsv = rgb_to_hsv(r, g, b)
- *     h, s, v = hsv[0], hsv[1], hsv[2]             # <<<<<<<<<<<<<<
- *     free(hsv)
- *     return h, s, v
- */
-  __pyx_t_1 = (__pyx_v_hsv[0]);
-  __pyx_t_2 = (__pyx_v_hsv[1]);
-  __pyx_t_3 = (__pyx_v_hsv[2]);
-  __pyx_v_h = __pyx_t_1;
-  __pyx_v_s = __pyx_t_2;
-  __pyx_v_v = __pyx_t_3;
-
-  /* "hsv.pyx":103
- *     hsv = rgb_to_hsv(r, g, b)
- *     h, s, v = hsv[0], hsv[1], hsv[2]
+  /* "hsv.pyx":161
+ *         double *hsv = rgb_to_hsv(r, g, b)
+ *     # free the pointer (do not remove)
  *     free(hsv)             # <<<<<<<<<<<<<<
- *     return h, s, v
+ *     return hsv[0], hsv[1], hsv[2]
  * 
  */
   free(__pyx_v_hsv);
 
-  /* "hsv.pyx":104
- *     h, s, v = hsv[0], hsv[1], hsv[2]
+  /* "hsv.pyx":162
+ *     # free the pointer (do not remove)
  *     free(hsv)
- *     return h, s, v             # <<<<<<<<<<<<<<
+ *     return hsv[0], hsv[1], hsv[2]             # <<<<<<<<<<<<<<
  * 
- * # C VERSION METHOD 1
+ * @cython.boundscheck(False)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_h); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((__pyx_v_hsv[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_hsv[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = PyFloat_FromDouble((__pyx_v_hsv[2])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 104, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_v); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 104, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 104, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_6);
-  PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_t_6);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_2);
+  PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2);
+  __Pyx_GIVEREF(__pyx_t_3);
+  PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3);
+  __pyx_t_1 = 0;
+  __pyx_t_2 = 0;
+  __pyx_t_3 = 0;
+  __pyx_r = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_5 = 0;
-  __pyx_t_6 = 0;
-  __pyx_r = __pyx_t_7;
-  __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":97
+  /* "hsv.pyx":147
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * cpdef rgb_to_hsv_c(double r, double g, double b):             # <<<<<<<<<<<<<<
- *     cdef:
- *         double *hsv
+ * cpdef tuple rgb_to_hsv_c(double r, double g, double b):             # <<<<<<<<<<<<<<
+ *     """
+ *     CONVERT RGB MODEL TO HSV
  */
 
   /* function exit code */
   __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("hsv.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2669,8 +2567,9 @@ static PyObject *__pyx_f_3hsv_rgb_to_hsv_c(double __pyx_v_r, double __pyx_v_g, d
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3hsv_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_3hsv_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3HSV_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_3HSV_4rgb_to_hsv_c[] = "\n    CONVERT RGB MODEL TO HSV\n    This method is using a C function rgb_to_hsv (source code in the file hsv_c.c)  \n     \n    :param r: python float; value in range [0...1.0]   \n    :param g: python float; value in range [0...1.0]   \n    :param b: python float; value in range [0...1.0]   \n    :return: tuple of HSV values (Normalized, range [0...1.0] \n \n    ";
+static PyObject *__pyx_pw_3HSV_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_r;
   double __pyx_v_g;
   double __pyx_v_b;
@@ -2702,17 +2601,17 @@ static PyObject *__pyx_pw_3hsv_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__p
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_g)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rgb_to_hsv_c", 1, 3, 3, 1); __PYX_ERR(0, 97, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rgb_to_hsv_c", 1, 3, 3, 1); __PYX_ERR(0, 147, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rgb_to_hsv_c", 1, 3, 3, 2); __PYX_ERR(0, 97, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rgb_to_hsv_c", 1, 3, 3, 2); __PYX_ERR(0, 147, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "rgb_to_hsv_c") < 0)) __PYX_ERR(0, 97, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "rgb_to_hsv_c") < 0)) __PYX_ERR(0, 147, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -2721,32 +2620,32 @@ static PyObject *__pyx_pw_3hsv_5rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__p
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_r = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_r == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 97, __pyx_L3_error)
-    __pyx_v_g = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_g == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 97, __pyx_L3_error)
-    __pyx_v_b = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_b == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 97, __pyx_L3_error)
+    __pyx_v_r = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_r == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 147, __pyx_L3_error)
+    __pyx_v_g = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_g == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 147, __pyx_L3_error)
+    __pyx_v_b = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_b == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 147, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("rgb_to_hsv_c", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 97, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("rgb_to_hsv_c", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 147, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("hsv.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_4rgb_to_hsv_c(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
+  __pyx_r = __pyx_pf_3HSV_4rgb_to_hsv_c(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_4rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
+static PyObject *__pyx_pf_3HSV_4rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("rgb_to_hsv_c", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3hsv_rgb_to_hsv_c(__pyx_v_r, __pyx_v_g, __pyx_v_b, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 97, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3HSV_rgb_to_hsv_c(__pyx_v_r, __pyx_v_g, __pyx_v_b, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 147, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2755,7 +2654,7 @@ static PyObject *__pyx_pf_3hsv_4rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self,
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("hsv.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2763,107 +2662,87 @@ static PyObject *__pyx_pf_3hsv_4rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self,
   return __pyx_r;
 }
 
-/* "hsv.pyx":110
+/* "hsv.pyx":167
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * cpdef hsv_to_rgb_c(double h, double s, double v):             # <<<<<<<<<<<<<<
- *     cdef:
- *         double *rgb
+ * cpdef tuple hsv_to_rgb_c(double h, double s, double v):             # <<<<<<<<<<<<<<
+ *     """
+ *     CONVERT RGB MODEL TO HSV
  */
 
-static PyObject *__pyx_pw_3hsv_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_3hsv_hsv_to_rgb_c(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_3HSV_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_hsv_to_rgb_c(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v, CYTHON_UNUSED int __pyx_skip_dispatch) {
   double *__pyx_v_rgb;
-  double __pyx_v_r;
-  double __pyx_v_g;
-  double __pyx_v_b;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  double __pyx_t_2;
-  double __pyx_t_3;
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  PyObject *__pyx_t_6 = NULL;
-  PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("hsv_to_rgb_c", 0);
 
-  /* "hsv.pyx":114
- *         double *rgb
- *         double r, g, b
- *     rgb = hsv_to_rgb(h, s, v)             # <<<<<<<<<<<<<<
- *     r, g, b = rgb[0], rgb[1], rgb[2]
+  /* "hsv.pyx":179
+ *     """
+ *     cdef:
+ *         double *rgb = hsv_to_rgb(h, s, v)             # <<<<<<<<<<<<<<
+ *      # free the pointer (do not remove)
  *     free(rgb)
  */
   __pyx_v_rgb = hsv_to_rgb(__pyx_v_h, __pyx_v_s, __pyx_v_v);
 
-  /* "hsv.pyx":115
- *         double r, g, b
- *     rgb = hsv_to_rgb(h, s, v)
- *     r, g, b = rgb[0], rgb[1], rgb[2]             # <<<<<<<<<<<<<<
- *     free(rgb)
- *     return r, g, b
- */
-  __pyx_t_1 = (__pyx_v_rgb[0]);
-  __pyx_t_2 = (__pyx_v_rgb[1]);
-  __pyx_t_3 = (__pyx_v_rgb[2]);
-  __pyx_v_r = __pyx_t_1;
-  __pyx_v_g = __pyx_t_2;
-  __pyx_v_b = __pyx_t_3;
-
-  /* "hsv.pyx":116
- *     rgb = hsv_to_rgb(h, s, v)
- *     r, g, b = rgb[0], rgb[1], rgb[2]
+  /* "hsv.pyx":181
+ *         double *rgb = hsv_to_rgb(h, s, v)
+ *      # free the pointer (do not remove)
  *     free(rgb)             # <<<<<<<<<<<<<<
- *     return r, g, b
+ *     return rgb[0], rgb[1], rgb[2]
  * 
  */
   free(__pyx_v_rgb);
 
-  /* "hsv.pyx":117
- *     r, g, b = rgb[0], rgb[1], rgb[2]
+  /* "hsv.pyx":182
+ *      # free the pointer (do not remove)
  *     free(rgb)
- *     return r, g, b             # <<<<<<<<<<<<<<
+ *     return rgb[0], rgb[1], rgb[2]             # <<<<<<<<<<<<<<
  * 
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((__pyx_v_rgb[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_rgb[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = PyFloat_FromDouble((__pyx_v_rgb[2])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_g); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 117, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_b); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 117, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 117, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_6);
-  PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_t_6);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_2);
+  PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2);
+  __Pyx_GIVEREF(__pyx_t_3);
+  PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3);
+  __pyx_t_1 = 0;
+  __pyx_t_2 = 0;
+  __pyx_t_3 = 0;
+  __pyx_r = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_5 = 0;
-  __pyx_t_6 = 0;
-  __pyx_r = __pyx_t_7;
-  __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":110
+  /* "hsv.pyx":167
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * cpdef hsv_to_rgb_c(double h, double s, double v):             # <<<<<<<<<<<<<<
- *     cdef:
- *         double *rgb
+ * cpdef tuple hsv_to_rgb_c(double h, double s, double v):             # <<<<<<<<<<<<<<
+ *     """
+ *     CONVERT RGB MODEL TO HSV
  */
 
   /* function exit code */
   __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("hsv.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2872,8 +2751,9 @@ static PyObject *__pyx_f_3hsv_hsv_to_rgb_c(double __pyx_v_h, double __pyx_v_s, d
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3hsv_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_3hsv_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3HSV_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_3HSV_6hsv_to_rgb_c[] = "\n    CONVERT RGB MODEL TO HSV\n    This method is using a C function hsv_to_rgb (source code in the file hsv_c.c)  \n     \n    :param h: python float; value in range [0...1.0]   \n    :param s: python float; value in range [0...1.0]   \n    :param v: python float; value in range [0...1.0]   \n    :return: tuple of HSV values (Normalized, range [0...1.0] \n \n    ";
+static PyObject *__pyx_pw_3HSV_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_h;
   double __pyx_v_s;
   double __pyx_v_v;
@@ -2905,17 +2785,17 @@ static PyObject *__pyx_pw_3hsv_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__p
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_s)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("hsv_to_rgb_c", 1, 3, 3, 1); __PYX_ERR(0, 110, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("hsv_to_rgb_c", 1, 3, 3, 1); __PYX_ERR(0, 167, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("hsv_to_rgb_c", 1, 3, 3, 2); __PYX_ERR(0, 110, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("hsv_to_rgb_c", 1, 3, 3, 2); __PYX_ERR(0, 167, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "hsv_to_rgb_c") < 0)) __PYX_ERR(0, 110, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "hsv_to_rgb_c") < 0)) __PYX_ERR(0, 167, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -2924,32 +2804,32 @@ static PyObject *__pyx_pw_3hsv_7hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__p
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_h = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_h == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L3_error)
-    __pyx_v_s = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L3_error)
-    __pyx_v_v = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_v == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L3_error)
+    __pyx_v_h = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_h == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L3_error)
+    __pyx_v_s = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L3_error)
+    __pyx_v_v = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_v == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("hsv_to_rgb_c", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 110, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("hsv_to_rgb_c", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 167, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("hsv.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_6hsv_to_rgb_c(__pyx_self, __pyx_v_h, __pyx_v_s, __pyx_v_v);
+  __pyx_r = __pyx_pf_3HSV_6hsv_to_rgb_c(__pyx_self, __pyx_v_h, __pyx_v_s, __pyx_v_v);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
+static PyObject *__pyx_pf_3HSV_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("hsv_to_rgb_c", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3hsv_hsv_to_rgb_c(__pyx_v_h, __pyx_v_s, __pyx_v_v, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3HSV_hsv_to_rgb_c(__pyx_v_h, __pyx_v_s, __pyx_v_v, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2958,7 +2838,7 @@ static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self,
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("hsv.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2966,17 +2846,17 @@ static PyObject *__pyx_pf_3hsv_6hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self,
   return __pyx_r;
 }
 
-/* "hsv.pyx":124
+/* "hsv.pyx":188
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cpdef tuple struct_rgb_to_hsv_c(double r, double g, double b):             # <<<<<<<<<<<<<<
- *     cdef HSV hsv_
- *     hsv_ = struct_rgb_to_hsv(r, g, b)
+ *     """
+ *     CONVERT RGB TO HSV MODEL
  */
 
-static PyObject *__pyx_pw_3hsv_9struct_rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_3hsv_struct_rgb_to_hsv_c(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
-  __pyx_t_3hsv_HSV __pyx_v_hsv_;
+static PyObject *__pyx_pw_3HSV_9struct_rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_struct_rgb_to_hsv_c(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  __pyx_t_3HSV_HSV __pyx_v_hsv_;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2985,30 +2865,30 @@ static PyObject *__pyx_f_3hsv_struct_rgb_to_hsv_c(double __pyx_v_r, double __pyx
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("struct_rgb_to_hsv_c", 0);
 
-  /* "hsv.pyx":126
- * cpdef tuple struct_rgb_to_hsv_c(double r, double g, double b):
- *     cdef HSV hsv_
- *     hsv_ = struct_rgb_to_hsv(r, g, b)             # <<<<<<<<<<<<<<
+  /* "hsv.pyx":198
+ *     :return: tuple of HSV values (Normalized, range [0...1.0]
+ *     """
+ *     cdef HSV hsv_ = struct_rgb_to_hsv(r, g, b)             # <<<<<<<<<<<<<<
  *     return hsv_.h, hsv_.s, hsv_.v
  * 
  */
   __pyx_v_hsv_ = struct_rgb_to_hsv(__pyx_v_r, __pyx_v_g, __pyx_v_b);
 
-  /* "hsv.pyx":127
- *     cdef HSV hsv_
- *     hsv_ = struct_rgb_to_hsv(r, g, b)
+  /* "hsv.pyx":199
+ *     """
+ *     cdef HSV hsv_ = struct_rgb_to_hsv(r, g, b)
  *     return hsv_.h, hsv_.s, hsv_.v             # <<<<<<<<<<<<<<
  * 
- * # C VERSION METHOD 2
+ * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_hsv_.h); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_hsv_.h); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_hsv_.s); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_hsv_.s); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_hsv_.v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_hsv_.v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -3023,12 +2903,12 @@ static PyObject *__pyx_f_3hsv_struct_rgb_to_hsv_c(double __pyx_v_r, double __pyx
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":124
+  /* "hsv.pyx":188
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cpdef tuple struct_rgb_to_hsv_c(double r, double g, double b):             # <<<<<<<<<<<<<<
- *     cdef HSV hsv_
- *     hsv_ = struct_rgb_to_hsv(r, g, b)
+ *     """
+ *     CONVERT RGB TO HSV MODEL
  */
 
   /* function exit code */
@@ -3037,7 +2917,7 @@ static PyObject *__pyx_f_3hsv_struct_rgb_to_hsv_c(double __pyx_v_r, double __pyx
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("hsv.struct_rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.struct_rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3046,8 +2926,9 @@ static PyObject *__pyx_f_3hsv_struct_rgb_to_hsv_c(double __pyx_v_r, double __pyx
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3hsv_9struct_rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_3hsv_9struct_rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3HSV_9struct_rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_3HSV_8struct_rgb_to_hsv_c[] = "\n    CONVERT RGB TO HSV MODEL \n    This method is using a C function struct_rgb_to_hsv (source code in the file hsv_c.c)  \n    \n    :param r: python float; value in range [0...1.0]  \n    :param g: python float; value in range [0...1.0]  \n    :param b: python float; value in range [0...1.0]  \n    :return: tuple of HSV values (Normalized, range [0...1.0] \n    ";
+static PyObject *__pyx_pw_3HSV_9struct_rgb_to_hsv_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_r;
   double __pyx_v_g;
   double __pyx_v_b;
@@ -3079,17 +2960,17 @@ static PyObject *__pyx_pw_3hsv_9struct_rgb_to_hsv_c(PyObject *__pyx_self, PyObje
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_g)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("struct_rgb_to_hsv_c", 1, 3, 3, 1); __PYX_ERR(0, 124, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("struct_rgb_to_hsv_c", 1, 3, 3, 1); __PYX_ERR(0, 188, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("struct_rgb_to_hsv_c", 1, 3, 3, 2); __PYX_ERR(0, 124, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("struct_rgb_to_hsv_c", 1, 3, 3, 2); __PYX_ERR(0, 188, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "struct_rgb_to_hsv_c") < 0)) __PYX_ERR(0, 124, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "struct_rgb_to_hsv_c") < 0)) __PYX_ERR(0, 188, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -3098,32 +2979,32 @@ static PyObject *__pyx_pw_3hsv_9struct_rgb_to_hsv_c(PyObject *__pyx_self, PyObje
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_r = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_r == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L3_error)
-    __pyx_v_g = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_g == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L3_error)
-    __pyx_v_b = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_b == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L3_error)
+    __pyx_v_r = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_r == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 188, __pyx_L3_error)
+    __pyx_v_g = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_g == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 188, __pyx_L3_error)
+    __pyx_v_b = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_b == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 188, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("struct_rgb_to_hsv_c", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 124, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("struct_rgb_to_hsv_c", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 188, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("hsv.struct_rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.struct_rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_8struct_rgb_to_hsv_c(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
+  __pyx_r = __pyx_pf_3HSV_8struct_rgb_to_hsv_c(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_8struct_rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
+static PyObject *__pyx_pf_3HSV_8struct_rgb_to_hsv_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("struct_rgb_to_hsv_c", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3hsv_struct_rgb_to_hsv_c(__pyx_v_r, __pyx_v_g, __pyx_v_b, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3HSV_struct_rgb_to_hsv_c(__pyx_v_r, __pyx_v_g, __pyx_v_b, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3132,7 +3013,7 @@ static PyObject *__pyx_pf_3hsv_8struct_rgb_to_hsv_c(CYTHON_UNUSED PyObject *__py
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("hsv.struct_rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.struct_rgb_to_hsv_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3140,17 +3021,17 @@ static PyObject *__pyx_pf_3hsv_8struct_rgb_to_hsv_c(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "hsv.pyx":133
+/* "hsv.pyx":205
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cpdef tuple struct_hsv_to_rgb_c(double h, double s, double v):             # <<<<<<<<<<<<<<
- *     cdef RGB rgb_
- *     rgb_ = struct_hsv_to_rgb(h, s, v)
+ *     """
+ *     CONVERT HSV MODEL TO RGB
  */
 
-static PyObject *__pyx_pw_3hsv_11struct_hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_3hsv_struct_hsv_to_rgb_c(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v, CYTHON_UNUSED int __pyx_skip_dispatch) {
-  __pyx_t_3hsv_RGB __pyx_v_rgb_;
+static PyObject *__pyx_pw_3HSV_11struct_hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_struct_hsv_to_rgb_c(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  __pyx_t_3HSV_RGB __pyx_v_rgb_;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3159,30 +3040,30 @@ static PyObject *__pyx_f_3hsv_struct_hsv_to_rgb_c(double __pyx_v_h, double __pyx
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("struct_hsv_to_rgb_c", 0);
 
-  /* "hsv.pyx":135
- * cpdef tuple struct_hsv_to_rgb_c(double h, double s, double v):
- *     cdef RGB rgb_
- *     rgb_ = struct_hsv_to_rgb(h, s, v)             # <<<<<<<<<<<<<<
+  /* "hsv.pyx":215
+ *     :return: tuple of RGB values (Normalized, range [0...1.0]
+ *     """
+ *     cdef RGB rgb_ = struct_hsv_to_rgb(h, s, v)             # <<<<<<<<<<<<<<
  *     return rgb_.r, rgb_.g, rgb_.b
  * 
  */
   __pyx_v_rgb_ = struct_hsv_to_rgb(__pyx_v_h, __pyx_v_s, __pyx_v_v);
 
-  /* "hsv.pyx":136
- *     cdef RGB rgb_
- *     rgb_ = struct_hsv_to_rgb(h, s, v)
+  /* "hsv.pyx":216
+ *     """
+ *     cdef RGB rgb_ = struct_hsv_to_rgb(h, s, v)
  *     return rgb_.r, rgb_.g, rgb_.b             # <<<<<<<<<<<<<<
  * 
- * cpdef hue_surface_24(surface_, float shift_):
+ * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_rgb_.r); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_rgb_.r); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 216, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_rgb_.g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_rgb_.g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 216, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_rgb_.b); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_rgb_.b); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 216, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 216, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -3197,12 +3078,12 @@ static PyObject *__pyx_f_3hsv_struct_hsv_to_rgb_c(double __pyx_v_h, double __pyx
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":133
+  /* "hsv.pyx":205
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cpdef tuple struct_hsv_to_rgb_c(double h, double s, double v):             # <<<<<<<<<<<<<<
- *     cdef RGB rgb_
- *     rgb_ = struct_hsv_to_rgb(h, s, v)
+ *     """
+ *     CONVERT HSV MODEL TO RGB
  */
 
   /* function exit code */
@@ -3211,7 +3092,7 @@ static PyObject *__pyx_f_3hsv_struct_hsv_to_rgb_c(double __pyx_v_h, double __pyx
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("hsv.struct_hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.struct_hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3220,8 +3101,9 @@ static PyObject *__pyx_f_3hsv_struct_hsv_to_rgb_c(double __pyx_v_h, double __pyx
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3hsv_11struct_hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_3hsv_11struct_hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3HSV_11struct_hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_3HSV_10struct_hsv_to_rgb_c[] = "\n    CONVERT HSV MODEL TO RGB \n    This method is using a C function struct_hsv_to_rgb (source code in the file hsv_c.c  \n    \n    :param h: python float; value in range [0...1.0]  \n    :param s: python float; value in range [0...1.0]  \n    :param l: python float; value in range [0...1.0]  \n    :return: tuple of RGB values (Normalized, range [0...1.0] \n    ";
+static PyObject *__pyx_pw_3HSV_11struct_hsv_to_rgb_c(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_h;
   double __pyx_v_s;
   double __pyx_v_v;
@@ -3253,17 +3135,17 @@ static PyObject *__pyx_pw_3hsv_11struct_hsv_to_rgb_c(PyObject *__pyx_self, PyObj
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_s)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("struct_hsv_to_rgb_c", 1, 3, 3, 1); __PYX_ERR(0, 133, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("struct_hsv_to_rgb_c", 1, 3, 3, 1); __PYX_ERR(0, 205, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("struct_hsv_to_rgb_c", 1, 3, 3, 2); __PYX_ERR(0, 133, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("struct_hsv_to_rgb_c", 1, 3, 3, 2); __PYX_ERR(0, 205, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "struct_hsv_to_rgb_c") < 0)) __PYX_ERR(0, 133, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "struct_hsv_to_rgb_c") < 0)) __PYX_ERR(0, 205, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -3272,32 +3154,32 @@ static PyObject *__pyx_pw_3hsv_11struct_hsv_to_rgb_c(PyObject *__pyx_self, PyObj
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_h = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_h == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L3_error)
-    __pyx_v_s = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L3_error)
-    __pyx_v_v = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_v == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L3_error)
+    __pyx_v_h = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_h == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
+    __pyx_v_s = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
+    __pyx_v_v = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_v == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("struct_hsv_to_rgb_c", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 133, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("struct_hsv_to_rgb_c", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 205, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("hsv.struct_hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.struct_hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_10struct_hsv_to_rgb_c(__pyx_self, __pyx_v_h, __pyx_v_s, __pyx_v_v);
+  __pyx_r = __pyx_pf_3HSV_10struct_hsv_to_rgb_c(__pyx_self, __pyx_v_h, __pyx_v_s, __pyx_v_v);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_10struct_hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
+static PyObject *__pyx_pf_3HSV_10struct_hsv_to_rgb_c(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("struct_hsv_to_rgb_c", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3hsv_struct_hsv_to_rgb_c(__pyx_v_h, __pyx_v_s, __pyx_v_v, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3HSV_struct_hsv_to_rgb_c(__pyx_v_h, __pyx_v_s, __pyx_v_v, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3306,7 +3188,7 @@ static PyObject *__pyx_pf_3hsv_10struct_hsv_to_rgb_c(CYTHON_UNUSED PyObject *__p
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("hsv.struct_hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.struct_hsv_to_rgb_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3314,22 +3196,22 @@ static PyObject *__pyx_pf_3hsv_10struct_hsv_to_rgb_c(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "hsv.pyx":138
- *     return rgb_.r, rgb_.g, rgb_.b
+/* "hsv.pyx":219
+ * 
  * 
  * cpdef hue_surface_24(surface_, float shift_):             # <<<<<<<<<<<<<<
  *     return hue_surface_24c(surface_, shift_)
  * 
  */
 
-static PyObject *__pyx_pw_3hsv_13hue_surface_24(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_3hsv_hue_surface_24(PyObject *__pyx_v_surface_, float __pyx_v_shift_, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_3HSV_13hue_surface_24(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_hue_surface_24(PyObject *__pyx_v_surface_, float __pyx_v_shift_, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("hue_surface_24", 0);
 
-  /* "hsv.pyx":139
+  /* "hsv.pyx":220
  * 
  * cpdef hue_surface_24(surface_, float shift_):
  *     return hue_surface_24c(surface_, shift_)             # <<<<<<<<<<<<<<
@@ -3337,14 +3219,14 @@ static PyObject *__pyx_f_3hsv_hue_surface_24(PyObject *__pyx_v_surface_, float _
  * cpdef hue_surface_32(surface_, float shift_):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3hsv_hue_surface_24c(__pyx_v_surface_, __pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3HSV_hue_surface_24c(__pyx_v_surface_, __pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":138
- *     return rgb_.r, rgb_.g, rgb_.b
+  /* "hsv.pyx":219
+ * 
  * 
  * cpdef hue_surface_24(surface_, float shift_):             # <<<<<<<<<<<<<<
  *     return hue_surface_24c(surface_, shift_)
@@ -3354,7 +3236,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24(PyObject *__pyx_v_surface_, float _
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("hsv.hue_surface_24", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hue_surface_24", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3363,8 +3245,8 @@ static PyObject *__pyx_f_3hsv_hue_surface_24(PyObject *__pyx_v_surface_, float _
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3hsv_13hue_surface_24(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_3hsv_13hue_surface_24(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3HSV_13hue_surface_24(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_3HSV_13hue_surface_24(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_surface_ = 0;
   float __pyx_v_shift_;
   PyObject *__pyx_r = 0;
@@ -3393,11 +3275,11 @@ static PyObject *__pyx_pw_3hsv_13hue_surface_24(PyObject *__pyx_self, PyObject *
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_shift)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("hue_surface_24", 1, 2, 2, 1); __PYX_ERR(0, 138, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("hue_surface_24", 1, 2, 2, 1); __PYX_ERR(0, 219, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "hue_surface_24") < 0)) __PYX_ERR(0, 138, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "hue_surface_24") < 0)) __PYX_ERR(0, 219, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -3406,30 +3288,30 @@ static PyObject *__pyx_pw_3hsv_13hue_surface_24(PyObject *__pyx_self, PyObject *
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_surface_ = values[0];
-    __pyx_v_shift_ = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_shift_ == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 138, __pyx_L3_error)
+    __pyx_v_shift_ = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_shift_ == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("hue_surface_24", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 138, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("hue_surface_24", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 219, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("hsv.hue_surface_24", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hue_surface_24", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_12hue_surface_24(__pyx_self, __pyx_v_surface_, __pyx_v_shift_);
+  __pyx_r = __pyx_pf_3HSV_12hue_surface_24(__pyx_self, __pyx_v_surface_, __pyx_v_shift_);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_12hue_surface_24(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, float __pyx_v_shift_) {
+static PyObject *__pyx_pf_3HSV_12hue_surface_24(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, float __pyx_v_shift_) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("hue_surface_24", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3hsv_hue_surface_24(__pyx_v_surface_, __pyx_v_shift_, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3HSV_hue_surface_24(__pyx_v_surface_, __pyx_v_shift_, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3438,7 +3320,7 @@ static PyObject *__pyx_pf_3hsv_12hue_surface_24(CYTHON_UNUSED PyObject *__pyx_se
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("hsv.hue_surface_24", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hue_surface_24", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3446,7 +3328,7 @@ static PyObject *__pyx_pf_3hsv_12hue_surface_24(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "hsv.pyx":141
+/* "hsv.pyx":222
  *     return hue_surface_24c(surface_, shift_)
  * 
  * cpdef hue_surface_32(surface_, float shift_):             # <<<<<<<<<<<<<<
@@ -3454,14 +3336,14 @@ static PyObject *__pyx_pf_3hsv_12hue_surface_24(CYTHON_UNUSED PyObject *__pyx_se
  * 
  */
 
-static PyObject *__pyx_pw_3hsv_15hue_surface_32(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_3hsv_hue_surface_32(PyObject *__pyx_v_surface_, float __pyx_v_shift_, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_3HSV_15hue_surface_32(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_3HSV_hue_surface_32(PyObject *__pyx_v_surface_, float __pyx_v_shift_, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("hue_surface_32", 0);
 
-  /* "hsv.pyx":142
+  /* "hsv.pyx":223
  * 
  * cpdef hue_surface_32(surface_, float shift_):
  *     return hue_surface_32c(surface_, shift_)             # <<<<<<<<<<<<<<
@@ -3469,13 +3351,13 @@ static PyObject *__pyx_f_3hsv_hue_surface_32(PyObject *__pyx_v_surface_, float _
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3hsv_hue_surface_32c(__pyx_v_surface_, __pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3HSV_hue_surface_32c(__pyx_v_surface_, __pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 223, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":141
+  /* "hsv.pyx":222
  *     return hue_surface_24c(surface_, shift_)
  * 
  * cpdef hue_surface_32(surface_, float shift_):             # <<<<<<<<<<<<<<
@@ -3486,7 +3368,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32(PyObject *__pyx_v_surface_, float _
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("hsv.hue_surface_32", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hue_surface_32", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3495,8 +3377,8 @@ static PyObject *__pyx_f_3hsv_hue_surface_32(PyObject *__pyx_v_surface_, float _
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3hsv_15hue_surface_32(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_3hsv_15hue_surface_32(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3HSV_15hue_surface_32(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_3HSV_15hue_surface_32(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_surface_ = 0;
   float __pyx_v_shift_;
   PyObject *__pyx_r = 0;
@@ -3525,11 +3407,11 @@ static PyObject *__pyx_pw_3hsv_15hue_surface_32(PyObject *__pyx_self, PyObject *
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_shift)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("hue_surface_32", 1, 2, 2, 1); __PYX_ERR(0, 141, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("hue_surface_32", 1, 2, 2, 1); __PYX_ERR(0, 222, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "hue_surface_32") < 0)) __PYX_ERR(0, 141, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "hue_surface_32") < 0)) __PYX_ERR(0, 222, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -3538,30 +3420,30 @@ static PyObject *__pyx_pw_3hsv_15hue_surface_32(PyObject *__pyx_self, PyObject *
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_surface_ = values[0];
-    __pyx_v_shift_ = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_shift_ == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 141, __pyx_L3_error)
+    __pyx_v_shift_ = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_shift_ == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 222, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("hue_surface_32", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 141, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("hue_surface_32", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 222, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("hsv.hue_surface_32", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hue_surface_32", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_14hue_surface_32(__pyx_self, __pyx_v_surface_, __pyx_v_shift_);
+  __pyx_r = __pyx_pf_3HSV_14hue_surface_32(__pyx_self, __pyx_v_surface_, __pyx_v_shift_);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_14hue_surface_32(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, float __pyx_v_shift_) {
+static PyObject *__pyx_pf_3HSV_14hue_surface_32(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, float __pyx_v_shift_) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("hue_surface_32", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3hsv_hue_surface_32(__pyx_v_surface_, __pyx_v_shift_, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3HSV_hue_surface_32(__pyx_v_surface_, __pyx_v_shift_, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3570,7 +3452,7 @@ static PyObject *__pyx_pf_3hsv_14hue_surface_32(CYTHON_UNUSED PyObject *__pyx_se
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("hsv.hue_surface_32", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hue_surface_32", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3578,7 +3460,7 @@ static PyObject *__pyx_pf_3hsv_14hue_surface_32(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "hsv.pyx":150
+/* "hsv.pyx":231
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef double * rgb2hsv_c(double r, double g, double b)nogil:             # <<<<<<<<<<<<<<
@@ -3586,7 +3468,7 @@ static PyObject *__pyx_pf_3hsv_14hue_surface_32(CYTHON_UNUSED PyObject *__pyx_se
  *     Convert RGB color model into HSV
  */
 
-static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
+static double *__pyx_f_3HSV_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double __pyx_v_b) {
   double __pyx_v_mx;
   double __pyx_v_mn;
   double __pyx_v_h;
@@ -3598,7 +3480,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
   double *__pyx_r;
   int __pyx_t_1;
 
-  /* "hsv.pyx":172
+  /* "hsv.pyx":250
  *         double mx, mn
  *         double h, df, s, v, df_
  *         double *hsv = <double *> malloc(3 * sizeof(double))             # <<<<<<<<<<<<<<
@@ -3607,7 +3489,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
   __pyx_v_hsv = ((double *)malloc((3 * (sizeof(double)))));
 
-  /* "hsv.pyx":174
+  /* "hsv.pyx":252
  *         double *hsv = <double *> malloc(3 * sizeof(double))
  * 
  *     mx = fmax_rgb_value(r, g, b)             # <<<<<<<<<<<<<<
@@ -3616,7 +3498,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
   __pyx_v_mx = fmax_rgb_value(__pyx_v_r, __pyx_v_g, __pyx_v_b);
 
-  /* "hsv.pyx":175
+  /* "hsv.pyx":253
  * 
  *     mx = fmax_rgb_value(r, g, b)
  *     mn = fmin_rgb_value(r, g, b)             # <<<<<<<<<<<<<<
@@ -3625,7 +3507,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
   __pyx_v_mn = fmin_rgb_value(__pyx_v_r, __pyx_v_g, __pyx_v_b);
 
-  /* "hsv.pyx":177
+  /* "hsv.pyx":255
  *     mn = fmin_rgb_value(r, g, b)
  * 
  *     df = mx - mn             # <<<<<<<<<<<<<<
@@ -3634,7 +3516,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
   __pyx_v_df = (__pyx_v_mx - __pyx_v_mn);
 
-  /* "hsv.pyx":178
+  /* "hsv.pyx":256
  * 
  *     df = mx - mn
  *     df_ = 1.0/df             # <<<<<<<<<<<<<<
@@ -3643,7 +3525,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
   __pyx_v_df_ = (1.0 / __pyx_v_df);
 
-  /* "hsv.pyx":179
+  /* "hsv.pyx":257
  *     df = mx - mn
  *     df_ = 1.0/df
  *     if mx == mn:             # <<<<<<<<<<<<<<
@@ -3653,7 +3535,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
   __pyx_t_1 = ((__pyx_v_mx == __pyx_v_mn) != 0);
   if (__pyx_t_1) {
 
-    /* "hsv.pyx":180
+    /* "hsv.pyx":258
  *     df_ = 1.0/df
  *     if mx == mn:
  *         h = 0.0             # <<<<<<<<<<<<<<
@@ -3662,7 +3544,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
     __pyx_v_h = 0.0;
 
-    /* "hsv.pyx":179
+    /* "hsv.pyx":257
  *     df = mx - mn
  *     df_ = 1.0/df
  *     if mx == mn:             # <<<<<<<<<<<<<<
@@ -3672,7 +3554,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
     goto __pyx_L3;
   }
 
-  /* "hsv.pyx":182
+  /* "hsv.pyx":260
  *         h = 0.0
  * 
  *     elif mx == r:             # <<<<<<<<<<<<<<
@@ -3682,7 +3564,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
   __pyx_t_1 = ((__pyx_v_mx == __pyx_v_r) != 0);
   if (__pyx_t_1) {
 
-    /* "hsv.pyx":183
+    /* "hsv.pyx":261
  * 
  *     elif mx == r:
  *         h = (60 * ((g-b) * df_) + 360) % 360             # <<<<<<<<<<<<<<
@@ -3691,7 +3573,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
     __pyx_v_h = fmod(((60.0 * ((__pyx_v_g - __pyx_v_b) * __pyx_v_df_)) + 360.0), 360.0);
 
-    /* "hsv.pyx":182
+    /* "hsv.pyx":260
  *         h = 0.0
  * 
  *     elif mx == r:             # <<<<<<<<<<<<<<
@@ -3701,7 +3583,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
     goto __pyx_L3;
   }
 
-  /* "hsv.pyx":184
+  /* "hsv.pyx":262
  *     elif mx == r:
  *         h = (60 * ((g-b) * df_) + 360) % 360
  *     elif mx == g:             # <<<<<<<<<<<<<<
@@ -3711,7 +3593,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
   __pyx_t_1 = ((__pyx_v_mx == __pyx_v_g) != 0);
   if (__pyx_t_1) {
 
-    /* "hsv.pyx":185
+    /* "hsv.pyx":263
  *         h = (60 * ((g-b) * df_) + 360) % 360
  *     elif mx == g:
  *         h = (60 * ((b-r) * df_) + 120) % 360             # <<<<<<<<<<<<<<
@@ -3720,7 +3602,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
     __pyx_v_h = fmod(((60.0 * ((__pyx_v_b - __pyx_v_r) * __pyx_v_df_)) + 120.0), 360.0);
 
-    /* "hsv.pyx":184
+    /* "hsv.pyx":262
  *     elif mx == r:
  *         h = (60 * ((g-b) * df_) + 360) % 360
  *     elif mx == g:             # <<<<<<<<<<<<<<
@@ -3730,7 +3612,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
     goto __pyx_L3;
   }
 
-  /* "hsv.pyx":186
+  /* "hsv.pyx":264
  *     elif mx == g:
  *         h = (60 * ((b-r) * df_) + 120) % 360
  *     elif mx == b:             # <<<<<<<<<<<<<<
@@ -3740,7 +3622,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
   __pyx_t_1 = ((__pyx_v_mx == __pyx_v_b) != 0);
   if (__pyx_t_1) {
 
-    /* "hsv.pyx":187
+    /* "hsv.pyx":265
  *         h = (60 * ((b-r) * df_) + 120) % 360
  *     elif mx == b:
  *         h = (60 * ((r-g) * df_) + 240) % 360             # <<<<<<<<<<<<<<
@@ -3749,7 +3631,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
     __pyx_v_h = fmod(((60.0 * ((__pyx_v_r - __pyx_v_g) * __pyx_v_df_)) + 240.0), 360.0);
 
-    /* "hsv.pyx":186
+    /* "hsv.pyx":264
  *     elif mx == g:
  *         h = (60 * ((b-r) * df_) + 120) % 360
  *     elif mx == b:             # <<<<<<<<<<<<<<
@@ -3759,7 +3641,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
   }
   __pyx_L3:;
 
-  /* "hsv.pyx":188
+  /* "hsv.pyx":266
  *     elif mx == b:
  *         h = (60 * ((r-g) * df_) + 240) % 360
  *     if mx == 0:             # <<<<<<<<<<<<<<
@@ -3769,7 +3651,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
   __pyx_t_1 = ((__pyx_v_mx == 0.0) != 0);
   if (__pyx_t_1) {
 
-    /* "hsv.pyx":189
+    /* "hsv.pyx":267
  *         h = (60 * ((r-g) * df_) + 240) % 360
  *     if mx == 0:
  *         s = 0.0             # <<<<<<<<<<<<<<
@@ -3778,7 +3660,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
     __pyx_v_s = 0.0;
 
-    /* "hsv.pyx":188
+    /* "hsv.pyx":266
  *     elif mx == b:
  *         h = (60 * ((r-g) * df_) + 240) % 360
  *     if mx == 0:             # <<<<<<<<<<<<<<
@@ -3788,7 +3670,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
     goto __pyx_L4;
   }
 
-  /* "hsv.pyx":191
+  /* "hsv.pyx":269
  *         s = 0.0
  *     else:
  *         s = df/mx             # <<<<<<<<<<<<<<
@@ -3800,7 +3682,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
   }
   __pyx_L4:;
 
-  /* "hsv.pyx":192
+  /* "hsv.pyx":270
  *     else:
  *         s = df/mx
  *     v = mx             # <<<<<<<<<<<<<<
@@ -3809,7 +3691,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
   __pyx_v_v = __pyx_v_mx;
 
-  /* "hsv.pyx":193
+  /* "hsv.pyx":271
  *         s = df/mx
  *     v = mx
  *     hsv[0] = h * ONE_360             # <<<<<<<<<<<<<<
@@ -3818,7 +3700,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
   (__pyx_v_hsv[0]) = (__pyx_v_h * 0.002777777777777778);
 
-  /* "hsv.pyx":194
+  /* "hsv.pyx":272
  *     v = mx
  *     hsv[0] = h * ONE_360
  *     hsv[1] = s             # <<<<<<<<<<<<<<
@@ -3827,7 +3709,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
   (__pyx_v_hsv[1]) = __pyx_v_s;
 
-  /* "hsv.pyx":195
+  /* "hsv.pyx":273
  *     hsv[0] = h * ONE_360
  *     hsv[1] = s
  *     hsv[2] = v             # <<<<<<<<<<<<<<
@@ -3836,7 +3718,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  */
   (__pyx_v_hsv[2]) = __pyx_v_v;
 
-  /* "hsv.pyx":196
+  /* "hsv.pyx":274
  *     hsv[1] = s
  *     hsv[2] = v
  *     return hsv             # <<<<<<<<<<<<<<
@@ -3846,7 +3728,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
   __pyx_r = __pyx_v_hsv;
   goto __pyx_L0;
 
-  /* "hsv.pyx":150
+  /* "hsv.pyx":231
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef double * rgb2hsv_c(double r, double g, double b)nogil:             # <<<<<<<<<<<<<<
@@ -3859,7 +3741,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
   return __pyx_r;
 }
 
-/* "hsv.pyx":202
+/* "hsv.pyx":280
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef double * hsv2rgb_c(double h, double s, double v)nogil:             # <<<<<<<<<<<<<<
@@ -3867,7 +3749,7 @@ static double *__pyx_f_3hsv_rgb2hsv_c(double __pyx_v_r, double __pyx_v_g, double
  *     Convert hsv color model to rgb
  */
 
-static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
+static double *__pyx_f_3HSV_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double __pyx_v_v) {
   int __pyx_v_i;
   double __pyx_v_f;
   double __pyx_v_p;
@@ -3877,7 +3759,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
   double *__pyx_r;
   int __pyx_t_1;
 
-  /* "hsv.pyx":216
+  /* "hsv.pyx":292
  *     """
  *     cdef:
  *         int i = 0             # <<<<<<<<<<<<<<
@@ -3886,7 +3768,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
   __pyx_v_i = 0;
 
-  /* "hsv.pyx":218
+  /* "hsv.pyx":294
  *         int i = 0
  *         double f, p, q, t
  *         double *rgb = <double *> malloc(3 * sizeof(double))             # <<<<<<<<<<<<<<
@@ -3895,7 +3777,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
   __pyx_v_rgb = ((double *)malloc((3 * (sizeof(double)))));
 
-  /* "hsv.pyx":220
+  /* "hsv.pyx":296
  *         double *rgb = <double *> malloc(3 * sizeof(double))
  * 
  *     if s == 0.0:             # <<<<<<<<<<<<<<
@@ -3905,7 +3787,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
   __pyx_t_1 = ((__pyx_v_s == 0.0) != 0);
   if (__pyx_t_1) {
 
-    /* "hsv.pyx":221
+    /* "hsv.pyx":297
  * 
  *     if s == 0.0:
  *         rgb[0] = v             # <<<<<<<<<<<<<<
@@ -3914,7 +3796,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[0]) = __pyx_v_v;
 
-    /* "hsv.pyx":222
+    /* "hsv.pyx":298
  *     if s == 0.0:
  *         rgb[0] = v
  *         rgb[1] = v             # <<<<<<<<<<<<<<
@@ -3923,7 +3805,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[1]) = __pyx_v_v;
 
-    /* "hsv.pyx":223
+    /* "hsv.pyx":299
  *         rgb[0] = v
  *         rgb[1] = v
  *         rgb[2] = v             # <<<<<<<<<<<<<<
@@ -3932,7 +3814,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[2]) = __pyx_v_v;
 
-    /* "hsv.pyx":224
+    /* "hsv.pyx":300
  *         rgb[1] = v
  *         rgb[2] = v
  *         return rgb             # <<<<<<<<<<<<<<
@@ -3942,7 +3824,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
     __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
 
-    /* "hsv.pyx":220
+    /* "hsv.pyx":296
  *         double *rgb = <double *> malloc(3 * sizeof(double))
  * 
  *     if s == 0.0:             # <<<<<<<<<<<<<<
@@ -3951,7 +3833,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
   }
 
-  /* "hsv.pyx":226
+  /* "hsv.pyx":302
  *         return rgb
  * 
  *     i = <int>(h * 6.0)             # <<<<<<<<<<<<<<
@@ -3960,7 +3842,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
   __pyx_v_i = ((int)(__pyx_v_h * 6.0));
 
-  /* "hsv.pyx":227
+  /* "hsv.pyx":303
  * 
  *     i = <int>(h * 6.0)
  *     f = (h * 6.0) - i             # <<<<<<<<<<<<<<
@@ -3969,7 +3851,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
   __pyx_v_f = ((__pyx_v_h * 6.0) - __pyx_v_i);
 
-  /* "hsv.pyx":228
+  /* "hsv.pyx":304
  *     i = <int>(h * 6.0)
  *     f = (h * 6.0) - i
  *     p = v*(1.0 - s)             # <<<<<<<<<<<<<<
@@ -3978,7 +3860,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
   __pyx_v_p = (__pyx_v_v * (1.0 - __pyx_v_s));
 
-  /* "hsv.pyx":229
+  /* "hsv.pyx":305
  *     f = (h * 6.0) - i
  *     p = v*(1.0 - s)
  *     q = v*(1.0 - s * f)             # <<<<<<<<<<<<<<
@@ -3987,7 +3869,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
   __pyx_v_q = (__pyx_v_v * (1.0 - (__pyx_v_s * __pyx_v_f)));
 
-  /* "hsv.pyx":230
+  /* "hsv.pyx":306
  *     p = v*(1.0 - s)
  *     q = v*(1.0 - s * f)
  *     t = v*(1.0 - s * (1.0 - f))             # <<<<<<<<<<<<<<
@@ -3996,7 +3878,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
   __pyx_v_t = (__pyx_v_v * (1.0 - (__pyx_v_s * (1.0 - __pyx_v_f))));
 
-  /* "hsv.pyx":231
+  /* "hsv.pyx":307
  *     q = v*(1.0 - s * f)
  *     t = v*(1.0 - s * (1.0 - f))
  *     i = i % 6             # <<<<<<<<<<<<<<
@@ -4005,7 +3887,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
   __pyx_v_i = __Pyx_mod_long(__pyx_v_i, 6);
 
-  /* "hsv.pyx":233
+  /* "hsv.pyx":309
  *     i = i % 6
  * 
  *     if i == 0:             # <<<<<<<<<<<<<<
@@ -4015,7 +3897,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
   switch (__pyx_v_i) {
     case 0:
 
-    /* "hsv.pyx":234
+    /* "hsv.pyx":310
  * 
  *     if i == 0:
  *         rgb[0] = v             # <<<<<<<<<<<<<<
@@ -4024,7 +3906,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[0]) = __pyx_v_v;
 
-    /* "hsv.pyx":235
+    /* "hsv.pyx":311
  *     if i == 0:
  *         rgb[0] = v
  *         rgb[1] = t             # <<<<<<<<<<<<<<
@@ -4033,7 +3915,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[1]) = __pyx_v_t;
 
-    /* "hsv.pyx":236
+    /* "hsv.pyx":312
  *         rgb[0] = v
  *         rgb[1] = t
  *         rgb[2] = p             # <<<<<<<<<<<<<<
@@ -4042,7 +3924,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[2]) = __pyx_v_p;
 
-    /* "hsv.pyx":237
+    /* "hsv.pyx":313
  *         rgb[1] = t
  *         rgb[2] = p
  *         return rgb             # <<<<<<<<<<<<<<
@@ -4052,7 +3934,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
     __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
 
-    /* "hsv.pyx":233
+    /* "hsv.pyx":309
  *     i = i % 6
  * 
  *     if i == 0:             # <<<<<<<<<<<<<<
@@ -4061,7 +3943,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     break;
 
-    /* "hsv.pyx":238
+    /* "hsv.pyx":314
  *         rgb[2] = p
  *         return rgb
  *     elif i == 1:             # <<<<<<<<<<<<<<
@@ -4070,7 +3952,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     case 1:
 
-    /* "hsv.pyx":239
+    /* "hsv.pyx":315
  *         return rgb
  *     elif i == 1:
  *         rgb[0] = q             # <<<<<<<<<<<<<<
@@ -4079,7 +3961,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[0]) = __pyx_v_q;
 
-    /* "hsv.pyx":240
+    /* "hsv.pyx":316
  *     elif i == 1:
  *         rgb[0] = q
  *         rgb[1] = v             # <<<<<<<<<<<<<<
@@ -4088,7 +3970,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[1]) = __pyx_v_v;
 
-    /* "hsv.pyx":241
+    /* "hsv.pyx":317
  *         rgb[0] = q
  *         rgb[1] = v
  *         rgb[2] = p             # <<<<<<<<<<<<<<
@@ -4097,7 +3979,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[2]) = __pyx_v_p;
 
-    /* "hsv.pyx":242
+    /* "hsv.pyx":318
  *         rgb[1] = v
  *         rgb[2] = p
  *         return rgb             # <<<<<<<<<<<<<<
@@ -4107,7 +3989,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
     __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
 
-    /* "hsv.pyx":238
+    /* "hsv.pyx":314
  *         rgb[2] = p
  *         return rgb
  *     elif i == 1:             # <<<<<<<<<<<<<<
@@ -4116,7 +3998,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     break;
 
-    /* "hsv.pyx":243
+    /* "hsv.pyx":319
  *         rgb[2] = p
  *         return rgb
  *     elif i == 2:             # <<<<<<<<<<<<<<
@@ -4125,7 +4007,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     case 2:
 
-    /* "hsv.pyx":244
+    /* "hsv.pyx":320
  *         return rgb
  *     elif i == 2:
  *         rgb[0] = p             # <<<<<<<<<<<<<<
@@ -4134,7 +4016,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[0]) = __pyx_v_p;
 
-    /* "hsv.pyx":245
+    /* "hsv.pyx":321
  *     elif i == 2:
  *         rgb[0] = p
  *         rgb[1] = v             # <<<<<<<<<<<<<<
@@ -4143,7 +4025,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[1]) = __pyx_v_v;
 
-    /* "hsv.pyx":246
+    /* "hsv.pyx":322
  *         rgb[0] = p
  *         rgb[1] = v
  *         rgb[2] = t             # <<<<<<<<<<<<<<
@@ -4152,7 +4034,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[2]) = __pyx_v_t;
 
-    /* "hsv.pyx":247
+    /* "hsv.pyx":323
  *         rgb[1] = v
  *         rgb[2] = t
  *         return rgb             # <<<<<<<<<<<<<<
@@ -4162,7 +4044,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
     __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
 
-    /* "hsv.pyx":243
+    /* "hsv.pyx":319
  *         rgb[2] = p
  *         return rgb
  *     elif i == 2:             # <<<<<<<<<<<<<<
@@ -4171,7 +4053,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     break;
 
-    /* "hsv.pyx":248
+    /* "hsv.pyx":324
  *         rgb[2] = t
  *         return rgb
  *     elif i == 3:             # <<<<<<<<<<<<<<
@@ -4180,7 +4062,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     case 3:
 
-    /* "hsv.pyx":249
+    /* "hsv.pyx":325
  *         return rgb
  *     elif i == 3:
  *         rgb[0] = p             # <<<<<<<<<<<<<<
@@ -4189,7 +4071,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[0]) = __pyx_v_p;
 
-    /* "hsv.pyx":250
+    /* "hsv.pyx":326
  *     elif i == 3:
  *         rgb[0] = p
  *         rgb[1] = q             # <<<<<<<<<<<<<<
@@ -4198,7 +4080,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[1]) = __pyx_v_q;
 
-    /* "hsv.pyx":251
+    /* "hsv.pyx":327
  *         rgb[0] = p
  *         rgb[1] = q
  *         rgb[2] = v             # <<<<<<<<<<<<<<
@@ -4207,7 +4089,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[2]) = __pyx_v_v;
 
-    /* "hsv.pyx":252
+    /* "hsv.pyx":328
  *         rgb[1] = q
  *         rgb[2] = v
  *         return rgb             # <<<<<<<<<<<<<<
@@ -4217,7 +4099,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
     __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
 
-    /* "hsv.pyx":248
+    /* "hsv.pyx":324
  *         rgb[2] = t
  *         return rgb
  *     elif i == 3:             # <<<<<<<<<<<<<<
@@ -4226,7 +4108,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     break;
 
-    /* "hsv.pyx":253
+    /* "hsv.pyx":329
  *         rgb[2] = v
  *         return rgb
  *     elif i == 4:             # <<<<<<<<<<<<<<
@@ -4235,7 +4117,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     case 4:
 
-    /* "hsv.pyx":254
+    /* "hsv.pyx":330
  *         return rgb
  *     elif i == 4:
  *         rgb[0] = t             # <<<<<<<<<<<<<<
@@ -4244,7 +4126,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[0]) = __pyx_v_t;
 
-    /* "hsv.pyx":255
+    /* "hsv.pyx":331
  *     elif i == 4:
  *         rgb[0] = t
  *         rgb[1] = p             # <<<<<<<<<<<<<<
@@ -4253,7 +4135,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[1]) = __pyx_v_p;
 
-    /* "hsv.pyx":256
+    /* "hsv.pyx":332
  *         rgb[0] = t
  *         rgb[1] = p
  *         rgb[2] = v             # <<<<<<<<<<<<<<
@@ -4262,7 +4144,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[2]) = __pyx_v_v;
 
-    /* "hsv.pyx":257
+    /* "hsv.pyx":333
  *         rgb[1] = p
  *         rgb[2] = v
  *         return rgb             # <<<<<<<<<<<<<<
@@ -4272,7 +4154,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
     __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
 
-    /* "hsv.pyx":253
+    /* "hsv.pyx":329
  *         rgb[2] = v
  *         return rgb
  *     elif i == 4:             # <<<<<<<<<<<<<<
@@ -4281,7 +4163,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     break;
 
-    /* "hsv.pyx":258
+    /* "hsv.pyx":334
  *         rgb[2] = v
  *         return rgb
  *     elif i == 5:             # <<<<<<<<<<<<<<
@@ -4290,7 +4172,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     case 5:
 
-    /* "hsv.pyx":259
+    /* "hsv.pyx":335
  *         return rgb
  *     elif i == 5:
  *         rgb[0] = v             # <<<<<<<<<<<<<<
@@ -4299,7 +4181,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[0]) = __pyx_v_v;
 
-    /* "hsv.pyx":260
+    /* "hsv.pyx":336
  *     elif i == 5:
  *         rgb[0] = v
  *         rgb[1] = p             # <<<<<<<<<<<<<<
@@ -4308,7 +4190,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[1]) = __pyx_v_p;
 
-    /* "hsv.pyx":261
+    /* "hsv.pyx":337
  *         rgb[0] = v
  *         rgb[1] = p
  *         rgb[2] = q             # <<<<<<<<<<<<<<
@@ -4317,7 +4199,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  */
     (__pyx_v_rgb[2]) = __pyx_v_q;
 
-    /* "hsv.pyx":262
+    /* "hsv.pyx":338
  *         rgb[1] = p
  *         rgb[2] = q
  *         return rgb             # <<<<<<<<<<<<<<
@@ -4327,7 +4209,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
     __pyx_r = __pyx_v_rgb;
     goto __pyx_L0;
 
-    /* "hsv.pyx":258
+    /* "hsv.pyx":334
  *         rgb[2] = v
  *         return rgb
  *     elif i == 5:             # <<<<<<<<<<<<<<
@@ -4338,7 +4220,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
     default: break;
   }
 
-  /* "hsv.pyx":202
+  /* "hsv.pyx":280
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef double * hsv2rgb_c(double h, double s, double v)nogil:             # <<<<<<<<<<<<<<
@@ -4352,7 +4234,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
   return __pyx_r;
 }
 
-/* "hsv.pyx":268
+/* "hsv.pyx":344
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef hue_surface_24c(surface_, double shift_):             # <<<<<<<<<<<<<<
@@ -4360,7 +4242,7 @@ static double *__pyx_f_3hsv_hsv2rgb_c(double __pyx_v_h, double __pyx_v_s, double
  *     assert isinstance(surface_, Surface), \
  */
 
-static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double __pyx_v_shift_) {
+static PyObject *__pyx_f_3HSV_hue_surface_24c(PyObject *__pyx_v_surface_, double __pyx_v_shift_) {
   int __pyx_v_width;
   int __pyx_v_height;
   PyObject *__pyx_v_rgb_ = NULL;
@@ -4441,7 +4323,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
   Py_ssize_t __pyx_t_51;
   __Pyx_RefNannySetupContext("hue_surface_24c", 0);
 
-  /* "hsv.pyx":270
+  /* "hsv.pyx":346
  * cdef hue_surface_24c(surface_, double shift_):
  * 
  *     assert isinstance(surface_, Surface), \             # <<<<<<<<<<<<<<
@@ -4450,29 +4332,29 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
   #ifndef CYTHON_WITHOUT_ASSERTIONS
   if (unlikely(!Py_OptimizeFlag)) {
-    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_Surface); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_Surface); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyObject_IsInstance(__pyx_v_surface_, __pyx_t_1); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_2 = PyObject_IsInstance(__pyx_v_surface_, __pyx_t_1); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 346, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(!(__pyx_t_2 != 0))) {
 
-      /* "hsv.pyx":271
+      /* "hsv.pyx":347
  * 
  *     assert isinstance(surface_, Surface), \
  *            'Expecting Surface for argument surface_ got %s ' % type(surface_)             # <<<<<<<<<<<<<<
  *     assert isinstance(shift_, float), \
  *             'Expecting double for argument shift_, got %s ' % type(shift_)
  */
-      __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_Expecting_Surface_for_argument_s, ((PyObject *)Py_TYPE(__pyx_v_surface_))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_Expecting_Surface_for_argument_s, ((PyObject *)Py_TYPE(__pyx_v_surface_))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       PyErr_SetObject(PyExc_AssertionError, __pyx_t_1);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __PYX_ERR(0, 270, __pyx_L1_error)
+      __PYX_ERR(0, 346, __pyx_L1_error)
     }
   }
   #endif
 
-  /* "hsv.pyx":272
+  /* "hsv.pyx":348
  *     assert isinstance(surface_, Surface), \
  *            'Expecting Surface for argument surface_ got %s ' % type(surface_)
  *     assert isinstance(shift_, float), \             # <<<<<<<<<<<<<<
@@ -4481,32 +4363,32 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
   #ifndef CYTHON_WITHOUT_ASSERTIONS
   if (unlikely(!Py_OptimizeFlag)) {
-    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 272, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_2 = PyFloat_Check(__pyx_t_1); 
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(!(__pyx_t_2 != 0))) {
 
-      /* "hsv.pyx":273
+      /* "hsv.pyx":349
  *            'Expecting Surface for argument surface_ got %s ' % type(surface_)
  *     assert isinstance(shift_, float), \
  *             'Expecting double for argument shift_, got %s ' % type(shift_)             # <<<<<<<<<<<<<<
  *     assert 0.0<= shift_ <=1.0, 'Positional argument shift_ should be between[0.0 .. 1.0]'
  * 
  */
-      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 273, __pyx_L1_error)
+      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_3 = __Pyx_PyString_Format(__pyx_kp_s_Expecting_double_for_argument_sh, ((PyObject *)Py_TYPE(__pyx_t_1))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 273, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyString_Format(__pyx_kp_s_Expecting_double_for_argument_sh, ((PyObject *)Py_TYPE(__pyx_t_1))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       PyErr_SetObject(PyExc_AssertionError, __pyx_t_3);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __PYX_ERR(0, 272, __pyx_L1_error)
+      __PYX_ERR(0, 348, __pyx_L1_error)
     }
   }
   #endif
 
-  /* "hsv.pyx":274
+  /* "hsv.pyx":350
  *     assert isinstance(shift_, float), \
  *             'Expecting double for argument shift_, got %s ' % type(shift_)
  *     assert 0.0<= shift_ <=1.0, 'Positional argument shift_ should be between[0.0 .. 1.0]'             # <<<<<<<<<<<<<<
@@ -4521,19 +4403,19 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     }
     if (unlikely(!(__pyx_t_2 != 0))) {
       PyErr_SetObject(PyExc_AssertionError, __pyx_kp_s_Positional_argument_shift__shoul);
-      __PYX_ERR(0, 274, __pyx_L1_error)
+      __PYX_ERR(0, 350, __pyx_L1_error)
     }
   }
   #endif
 
-  /* "hsv.pyx":277
+  /* "hsv.pyx":353
  * 
  *     cdef int width, height
  *     width, height = surface_.get_size()             # <<<<<<<<<<<<<<
  * 
  *     try:
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_surface_, __pyx_n_s_get_size); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 277, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_surface_, __pyx_n_s_get_size); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -4546,10 +4428,10 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     }
   }
   if (__pyx_t_4) {
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   } else {
-    __pyx_t_3 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -4559,7 +4441,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     if (unlikely(size != 2)) {
       if (size > 2) __Pyx_RaiseTooManyValuesError(2);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 277, __pyx_L1_error)
+      __PYX_ERR(0, 353, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -4572,15 +4454,15 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     __Pyx_INCREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_t_4);
     #else
-    __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 277, __pyx_L1_error)
+    __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 277, __pyx_L1_error)
+    __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     #endif
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_5 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 277, __pyx_L1_error)
+    __pyx_t_5 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_6 = Py_TYPE(__pyx_t_5)->tp_iternext;
@@ -4588,7 +4470,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     __Pyx_GOTREF(__pyx_t_1);
     index = 1; __pyx_t_4 = __pyx_t_6(__pyx_t_5); if (unlikely(!__pyx_t_4)) goto __pyx_L3_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_4);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 2) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 2) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
     __pyx_t_6 = NULL;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     goto __pyx_L4_unpacking_done;
@@ -4596,17 +4478,17 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 277, __pyx_L1_error)
+    __PYX_ERR(0, 353, __pyx_L1_error)
     __pyx_L4_unpacking_done:;
   }
-  __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 277, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 277, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_width = __pyx_t_7;
   __pyx_v_height = __pyx_t_8;
 
-  /* "hsv.pyx":279
+  /* "hsv.pyx":355
  *     width, height = surface_.get_size()
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -4622,14 +4504,14 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     __Pyx_XGOTREF(__pyx_t_11);
     /*try:*/ {
 
-      /* "hsv.pyx":280
+      /* "hsv.pyx":356
  * 
  *     try:
  *         rgb_ = pixels3d(surface_)             # <<<<<<<<<<<<<<
  *     except (pygame.error, ValueError):
  *         try:
  */
-      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_pixels3d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 280, __pyx_L5_error)
+      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_pixels3d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 356, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_1 = NULL;
       if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
@@ -4642,13 +4524,13 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
         }
       }
       if (!__pyx_t_1) {
-        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_surface_); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 280, __pyx_L5_error)
+        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_surface_); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 356, __pyx_L5_error)
         __Pyx_GOTREF(__pyx_t_3);
       } else {
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_4)) {
           PyObject *__pyx_temp[2] = {__pyx_t_1, __pyx_v_surface_};
-          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 280, __pyx_L5_error)
+          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 356, __pyx_L5_error)
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
@@ -4656,19 +4538,19 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
           PyObject *__pyx_temp[2] = {__pyx_t_1, __pyx_v_surface_};
-          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 280, __pyx_L5_error)
+          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 356, __pyx_L5_error)
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
         #endif
         {
-          __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 280, __pyx_L5_error)
+          __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 356, __pyx_L5_error)
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1); __pyx_t_1 = NULL;
           __Pyx_INCREF(__pyx_v_surface_);
           __Pyx_GIVEREF(__pyx_v_surface_);
           PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_v_surface_);
-          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 280, __pyx_L5_error)
+          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 356, __pyx_L5_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         }
@@ -4677,7 +4559,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
       __pyx_v_rgb_ = __pyx_t_3;
       __pyx_t_3 = 0;
 
-      /* "hsv.pyx":279
+      /* "hsv.pyx":355
  *     width, height = surface_.get_size()
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -4695,7 +4577,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "hsv.pyx":281
+    /* "hsv.pyx":357
  *     try:
  *         rgb_ = pixels3d(surface_)
  *     except (pygame.error, ValueError):             # <<<<<<<<<<<<<<
@@ -4703,9 +4585,9 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  *             rgb_ = array3d(surface_)
  */
     __Pyx_ErrFetch(&__pyx_t_3, &__pyx_t_4, &__pyx_t_5);
-    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L7_except_error)
+    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 357, __pyx_L7_except_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_error); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 281, __pyx_L7_except_error)
+    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_error); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 357, __pyx_L7_except_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_8 = __Pyx_PyErr_GivenExceptionMatches(__pyx_t_3, __pyx_t_12) || __Pyx_PyErr_GivenExceptionMatches(__pyx_t_3, __pyx_builtin_ValueError);
@@ -4713,13 +4595,13 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     __Pyx_ErrRestore(__pyx_t_3, __pyx_t_4, __pyx_t_5);
     __pyx_t_3 = 0; __pyx_t_4 = 0; __pyx_t_5 = 0;
     if (__pyx_t_8) {
-      __Pyx_AddTraceback("hsv.hue_surface_24c", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_3) < 0) __PYX_ERR(0, 281, __pyx_L7_except_error)
+      __Pyx_AddTraceback("HSV.hue_surface_24c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_3) < 0) __PYX_ERR(0, 357, __pyx_L7_except_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_3);
 
-      /* "hsv.pyx":282
+      /* "hsv.pyx":358
  *         rgb_ = pixels3d(surface_)
  *     except (pygame.error, ValueError):
  *         try:             # <<<<<<<<<<<<<<
@@ -4735,14 +4617,14 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
         __Pyx_XGOTREF(__pyx_t_15);
         /*try:*/ {
 
-          /* "hsv.pyx":283
+          /* "hsv.pyx":359
  *     except (pygame.error, ValueError):
  *         try:
  *             rgb_ = array3d(surface_)             # <<<<<<<<<<<<<<
  *         except:
  *             raise ValueError('\nInvalid pixel format.')
  */
-          __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_array3d); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 283, __pyx_L13_error)
+          __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_array3d); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L13_error)
           __Pyx_GOTREF(__pyx_t_1);
           __pyx_t_16 = NULL;
           if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -4755,13 +4637,13 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
             }
           }
           if (!__pyx_t_16) {
-            __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_surface_); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 283, __pyx_L13_error)
+            __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_surface_); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 359, __pyx_L13_error)
             __Pyx_GOTREF(__pyx_t_12);
           } else {
             #if CYTHON_FAST_PYCALL
             if (PyFunction_Check(__pyx_t_1)) {
               PyObject *__pyx_temp[2] = {__pyx_t_16, __pyx_v_surface_};
-              __pyx_t_12 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 283, __pyx_L13_error)
+              __pyx_t_12 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 359, __pyx_L13_error)
               __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
               __Pyx_GOTREF(__pyx_t_12);
             } else
@@ -4769,19 +4651,19 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
             #if CYTHON_FAST_PYCCALL
             if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
               PyObject *__pyx_temp[2] = {__pyx_t_16, __pyx_v_surface_};
-              __pyx_t_12 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 283, __pyx_L13_error)
+              __pyx_t_12 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 359, __pyx_L13_error)
               __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
               __Pyx_GOTREF(__pyx_t_12);
             } else
             #endif
             {
-              __pyx_t_17 = PyTuple_New(1+1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 283, __pyx_L13_error)
+              __pyx_t_17 = PyTuple_New(1+1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 359, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_17);
               __Pyx_GIVEREF(__pyx_t_16); PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_t_16); __pyx_t_16 = NULL;
               __Pyx_INCREF(__pyx_v_surface_);
               __Pyx_GIVEREF(__pyx_v_surface_);
               PyTuple_SET_ITEM(__pyx_t_17, 0+1, __pyx_v_surface_);
-              __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_17, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 283, __pyx_L13_error)
+              __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_17, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 359, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_12);
               __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
             }
@@ -4790,7 +4672,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
           __Pyx_XDECREF_SET(__pyx_v_rgb_, __pyx_t_12);
           __pyx_t_12 = 0;
 
-          /* "hsv.pyx":282
+          /* "hsv.pyx":358
  *         rgb_ = pixels3d(surface_)
  *     except (pygame.error, ValueError):
  *         try:             # <<<<<<<<<<<<<<
@@ -4808,7 +4690,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-        /* "hsv.pyx":284
+        /* "hsv.pyx":360
  *         try:
  *             rgb_ = array3d(surface_)
  *         except:             # <<<<<<<<<<<<<<
@@ -4816,28 +4698,28 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  * 
  */
         /*except:*/ {
-          __Pyx_AddTraceback("hsv.hue_surface_24c", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_12, &__pyx_t_1, &__pyx_t_17) < 0) __PYX_ERR(0, 284, __pyx_L15_except_error)
+          __Pyx_AddTraceback("HSV.hue_surface_24c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          if (__Pyx_GetException(&__pyx_t_12, &__pyx_t_1, &__pyx_t_17) < 0) __PYX_ERR(0, 360, __pyx_L15_except_error)
           __Pyx_GOTREF(__pyx_t_12);
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_GOTREF(__pyx_t_17);
 
-          /* "hsv.pyx":285
+          /* "hsv.pyx":361
  *             rgb_ = array3d(surface_)
  *         except:
  *             raise ValueError('\nInvalid pixel format.')             # <<<<<<<<<<<<<<
  * 
  *     cdef:
  */
-          __pyx_t_16 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 285, __pyx_L15_except_error)
+          __pyx_t_16 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 361, __pyx_L15_except_error)
           __Pyx_GOTREF(__pyx_t_16);
           __Pyx_Raise(__pyx_t_16, 0, 0, 0);
           __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-          __PYX_ERR(0, 285, __pyx_L15_except_error)
+          __PYX_ERR(0, 361, __pyx_L15_except_error)
         }
         __pyx_L15_except_error:;
 
-        /* "hsv.pyx":282
+        /* "hsv.pyx":358
  *         rgb_ = pixels3d(surface_)
  *     except (pygame.error, ValueError):
  *         try:             # <<<<<<<<<<<<<<
@@ -4859,7 +4741,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     goto __pyx_L7_except_error;
     __pyx_L7_except_error:;
 
-    /* "hsv.pyx":279
+    /* "hsv.pyx":355
  *     width, height = surface_.get_size()
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -4879,32 +4761,32 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     __pyx_L10_try_end:;
   }
 
-  /* "hsv.pyx":288
+  /* "hsv.pyx":364
  * 
  *     cdef:
  *         unsigned char [:, :, :] rgb_array = rgb_             # <<<<<<<<<<<<<<
  *         unsigned char [:, :, ::1] new_array = empty((height, width, 3), dtype=uint8)
  *         int i=0, j=0
  */
-  __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_char(__pyx_v_rgb_, PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 288, __pyx_L1_error)
+  __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_char(__pyx_v_rgb_, PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 364, __pyx_L1_error)
   __pyx_v_rgb_array = __pyx_t_18;
   __pyx_t_18.memview = NULL;
   __pyx_t_18.data = NULL;
 
-  /* "hsv.pyx":289
+  /* "hsv.pyx":365
  *     cdef:
  *         unsigned char [:, :, :] rgb_array = rgb_
  *         unsigned char [:, :, ::1] new_array = empty((height, width, 3), dtype=uint8)             # <<<<<<<<<<<<<<
  *         int i=0, j=0
  *         float r, g, b
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_empty); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_empty); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_height); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_height); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_width); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_width); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_17 = PyTuple_New(3); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_17 = PyTuple_New(3); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_17);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_t_4);
@@ -4915,29 +4797,29 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
   PyTuple_SET_ITEM(__pyx_t_17, 2, __pyx_int_3);
   __pyx_t_4 = 0;
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_17);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_17);
   __pyx_t_17 = 0;
-  __pyx_t_17 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_17 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_17);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_uint8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_uint8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_17, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 289, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_17, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_17); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_17); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-  __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_d_d_dc_unsigned_char(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_d_d_dc_unsigned_char(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_new_array = __pyx_t_19;
   __pyx_t_19.memview = NULL;
   __pyx_t_19.data = NULL;
 
-  /* "hsv.pyx":290
+  /* "hsv.pyx":366
  *         unsigned char [:, :, :] rgb_array = rgb_
  *         unsigned char [:, :, ::1] new_array = empty((height, width, 3), dtype=uint8)
  *         int i=0, j=0             # <<<<<<<<<<<<<<
@@ -4947,7 +4829,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
   __pyx_v_i = 0;
   __pyx_v_j = 0;
 
-  /* "hsv.pyx":297
+  /* "hsv.pyx":373
  *         float f, p, q, t, ii
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -4962,7 +4844,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
       #endif
       /*try:*/ {
 
-        /* "hsv.pyx":298
+        /* "hsv.pyx":374
  * 
  *     with nogil:
  *         for i in prange(width, schedule='static', num_threads=8, chunksize=4):             # <<<<<<<<<<<<<<
@@ -5013,7 +4895,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                             __pyx_v_t = ((float)__PYX_NAN());
                             __pyx_v_v = ((float)__PYX_NAN());
 
-                            /* "hsv.pyx":299
+                            /* "hsv.pyx":375
  *     with nogil:
  *         for i in prange(width, schedule='static', num_threads=8, chunksize=4):
  *             for j in range(height):             # <<<<<<<<<<<<<<
@@ -5025,7 +4907,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                             for (__pyx_t_24 = 0; __pyx_t_24 < __pyx_t_23; __pyx_t_24+=1) {
                               __pyx_v_j = __pyx_t_24;
 
-                              /* "hsv.pyx":300
+                              /* "hsv.pyx":376
  *         for i in prange(width, schedule='static', num_threads=8, chunksize=4):
  *             for j in range(height):
  *                 r, g, b = rgb_array[i, j, 0], rgb_array[i, j, 1], rgb_array[i, j, 2]             # <<<<<<<<<<<<<<
@@ -5048,7 +4930,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_v_g = __pyx_t_32;
                               __pyx_v_b = __pyx_t_36;
 
-                              /* "hsv.pyx":302
+                              /* "hsv.pyx":378
  *                 r, g, b = rgb_array[i, j, 0], rgb_array[i, j, 1], rgb_array[i, j, 2]
  * 
  *                 rr = r * ONE_255 # / 255.0             # <<<<<<<<<<<<<<
@@ -5057,7 +4939,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_rr = (__pyx_v_r * 0.00392156862745098);
 
-                              /* "hsv.pyx":303
+                              /* "hsv.pyx":379
  * 
  *                 rr = r * ONE_255 # / 255.0
  *                 gg = g * ONE_255 # / 255.0             # <<<<<<<<<<<<<<
@@ -5066,7 +4948,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_gg = (__pyx_v_g * 0.00392156862745098);
 
-                              /* "hsv.pyx":304
+                              /* "hsv.pyx":380
  *                 rr = r * ONE_255 # / 255.0
  *                 gg = g * ONE_255 # / 255.0
  *                 bb = b * ONE_255 # / 255.0             # <<<<<<<<<<<<<<
@@ -5075,7 +4957,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_bb = (__pyx_v_b * 0.00392156862745098);
 
-                              /* "hsv.pyx":305
+                              /* "hsv.pyx":381
  *                 gg = g * ONE_255 # / 255.0
  *                 bb = b * ONE_255 # / 255.0
  *                 mx = fmax_rgb_value(rr, gg, bb)             # <<<<<<<<<<<<<<
@@ -5084,7 +4966,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_mx = fmax_rgb_value(__pyx_v_rr, __pyx_v_gg, __pyx_v_bb);
 
-                              /* "hsv.pyx":306
+                              /* "hsv.pyx":382
  *                 bb = b * ONE_255 # / 255.0
  *                 mx = fmax_rgb_value(rr, gg, bb)
  *                 mn = fmin_rgb_value(rr, gg, bb)             # <<<<<<<<<<<<<<
@@ -5093,7 +4975,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_mn = fmin_rgb_value(__pyx_v_rr, __pyx_v_gg, __pyx_v_bb);
 
-                              /* "hsv.pyx":307
+                              /* "hsv.pyx":383
  *                 mx = fmax_rgb_value(rr, gg, bb)
  *                 mn = fmin_rgb_value(rr, gg, bb)
  *                 df = mx-mn             # <<<<<<<<<<<<<<
@@ -5102,7 +4984,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_df = (__pyx_v_mx - __pyx_v_mn);
 
-                              /* "hsv.pyx":308
+                              /* "hsv.pyx":384
  *                 mn = fmin_rgb_value(rr, gg, bb)
  *                 df = mx-mn
  *                 df_ = 1.0/df             # <<<<<<<<<<<<<<
@@ -5111,7 +4993,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_df_ = (1.0 / __pyx_v_df);
 
-                              /* "hsv.pyx":309
+                              /* "hsv.pyx":385
  *                 df = mx-mn
  *                 df_ = 1.0/df
  *                 if mx == mn:             # <<<<<<<<<<<<<<
@@ -5121,7 +5003,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_mx == __pyx_v_mn) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":310
+                                /* "hsv.pyx":386
  *                 df_ = 1.0/df
  *                 if mx == mn:
  *                     h = 0             # <<<<<<<<<<<<<<
@@ -5130,7 +5012,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                                 __pyx_v_h = 0.0;
 
-                                /* "hsv.pyx":309
+                                /* "hsv.pyx":385
  *                 df = mx-mn
  *                 df_ = 1.0/df
  *                 if mx == mn:             # <<<<<<<<<<<<<<
@@ -5140,7 +5022,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 goto __pyx_L32;
                               }
 
-                              /* "hsv.pyx":311
+                              /* "hsv.pyx":387
  *                 if mx == mn:
  *                     h = 0
  *                 elif mx == rr:             # <<<<<<<<<<<<<<
@@ -5150,7 +5032,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_mx == __pyx_v_rr) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":312
+                                /* "hsv.pyx":388
  *                     h = 0
  *                 elif mx == rr:
  *                     h = (60 * ((gg-bb) * df_) + 360) % 360             # <<<<<<<<<<<<<<
@@ -5159,7 +5041,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                                 __pyx_v_h = fmodf(((60.0 * ((__pyx_v_gg - __pyx_v_bb) * __pyx_v_df_)) + 360.0), 360.0);
 
-                                /* "hsv.pyx":311
+                                /* "hsv.pyx":387
  *                 if mx == mn:
  *                     h = 0
  *                 elif mx == rr:             # <<<<<<<<<<<<<<
@@ -5169,7 +5051,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 goto __pyx_L32;
                               }
 
-                              /* "hsv.pyx":313
+                              /* "hsv.pyx":389
  *                 elif mx == rr:
  *                     h = (60 * ((gg-bb) * df_) + 360) % 360
  *                 elif mx == gg:             # <<<<<<<<<<<<<<
@@ -5179,7 +5061,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_mx == __pyx_v_gg) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":314
+                                /* "hsv.pyx":390
  *                     h = (60 * ((gg-bb) * df_) + 360) % 360
  *                 elif mx == gg:
  *                     h = (60 * ((bb-rr) * df_) + 120) % 360             # <<<<<<<<<<<<<<
@@ -5188,7 +5070,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                                 __pyx_v_h = fmodf(((60.0 * ((__pyx_v_bb - __pyx_v_rr) * __pyx_v_df_)) + 120.0), 360.0);
 
-                                /* "hsv.pyx":313
+                                /* "hsv.pyx":389
  *                 elif mx == rr:
  *                     h = (60 * ((gg-bb) * df_) + 360) % 360
  *                 elif mx == gg:             # <<<<<<<<<<<<<<
@@ -5198,7 +5080,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 goto __pyx_L32;
                               }
 
-                              /* "hsv.pyx":315
+                              /* "hsv.pyx":391
  *                 elif mx == gg:
  *                     h = (60 * ((bb-rr) * df_) + 120) % 360
  *                 elif mx == bb:             # <<<<<<<<<<<<<<
@@ -5208,7 +5090,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_mx == __pyx_v_bb) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":316
+                                /* "hsv.pyx":392
  *                     h = (60 * ((bb-rr) * df_) + 120) % 360
  *                 elif mx == bb:
  *                     h = (60 * ((rr-gg) * df_) + 240) % 360             # <<<<<<<<<<<<<<
@@ -5217,7 +5099,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                                 __pyx_v_h = fmodf(((60.0 * ((__pyx_v_rr - __pyx_v_gg) * __pyx_v_df_)) + 240.0), 360.0);
 
-                                /* "hsv.pyx":315
+                                /* "hsv.pyx":391
  *                 elif mx == gg:
  *                     h = (60 * ((bb-rr) * df_) + 120) % 360
  *                 elif mx == bb:             # <<<<<<<<<<<<<<
@@ -5227,7 +5109,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               }
                               __pyx_L32:;
 
-                              /* "hsv.pyx":317
+                              /* "hsv.pyx":393
  *                 elif mx == bb:
  *                     h = (60 * ((rr-gg) * df_) + 240) % 360
  *                 if mx == 0:             # <<<<<<<<<<<<<<
@@ -5237,7 +5119,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_mx == 0.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":318
+                                /* "hsv.pyx":394
  *                     h = (60 * ((rr-gg) * df_) + 240) % 360
  *                 if mx == 0:
  *                     s = 0             # <<<<<<<<<<<<<<
@@ -5246,7 +5128,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                                 __pyx_v_s = 0.0;
 
-                                /* "hsv.pyx":317
+                                /* "hsv.pyx":393
  *                 elif mx == bb:
  *                     h = (60 * ((rr-gg) * df_) + 240) % 360
  *                 if mx == 0:             # <<<<<<<<<<<<<<
@@ -5256,7 +5138,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 goto __pyx_L33;
                               }
 
-                              /* "hsv.pyx":320
+                              /* "hsv.pyx":396
  *                     s = 0
  *                 else:
  *                     s = df/mx             # <<<<<<<<<<<<<<
@@ -5268,7 +5150,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               }
                               __pyx_L33:;
 
-                              /* "hsv.pyx":321
+                              /* "hsv.pyx":397
  *                 else:
  *                     s = df/mx
  *                 v = mx             # <<<<<<<<<<<<<<
@@ -5277,7 +5159,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_v = __pyx_v_mx;
 
-                              /* "hsv.pyx":322
+                              /* "hsv.pyx":398
  *                     s = df/mx
  *                 v = mx
  *                 h = (h * ONE_360) + shift_             # <<<<<<<<<<<<<<
@@ -5286,7 +5168,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_h = ((__pyx_v_h * 0.002777777777777778) + __pyx_v_shift_);
 
-                              /* "hsv.pyx":324
+                              /* "hsv.pyx":400
  *                 h = (h * ONE_360) + shift_
  * 
  *                 if s == 0.0:             # <<<<<<<<<<<<<<
@@ -5296,7 +5178,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_s == 0.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":325
+                                /* "hsv.pyx":401
  * 
  *                 if s == 0.0:
  *                     r, g, b = v, v, v             # <<<<<<<<<<<<<<
@@ -5310,7 +5192,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 __pyx_v_g = __pyx_t_38;
                                 __pyx_v_b = __pyx_t_39;
 
-                                /* "hsv.pyx":324
+                                /* "hsv.pyx":400
  *                 h = (h * ONE_360) + shift_
  * 
  *                 if s == 0.0:             # <<<<<<<<<<<<<<
@@ -5319,7 +5201,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               }
 
-                              /* "hsv.pyx":326
+                              /* "hsv.pyx":402
  *                 if s == 0.0:
  *                     r, g, b = v, v, v
  *                 ii = <int>(h * 6.0)             # <<<<<<<<<<<<<<
@@ -5328,7 +5210,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_ii = ((int)(__pyx_v_h * 6.0));
 
-                              /* "hsv.pyx":327
+                              /* "hsv.pyx":403
  *                     r, g, b = v, v, v
  *                 ii = <int>(h * 6.0)
  *                 f = (h * 6.0) - ii             # <<<<<<<<<<<<<<
@@ -5337,7 +5219,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_f = ((__pyx_v_h * 6.0) - __pyx_v_ii);
 
-                              /* "hsv.pyx":328
+                              /* "hsv.pyx":404
  *                 ii = <int>(h * 6.0)
  *                 f = (h * 6.0) - ii
  *                 p = v*(1.0 - s)             # <<<<<<<<<<<<<<
@@ -5346,7 +5228,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_p = (__pyx_v_v * (1.0 - __pyx_v_s));
 
-                              /* "hsv.pyx":329
+                              /* "hsv.pyx":405
  *                 f = (h * 6.0) - ii
  *                 p = v*(1.0 - s)
  *                 q = v*(1.0 - s * f)             # <<<<<<<<<<<<<<
@@ -5355,7 +5237,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_q = (__pyx_v_v * (1.0 - (__pyx_v_s * __pyx_v_f)));
 
-                              /* "hsv.pyx":330
+                              /* "hsv.pyx":406
  *                 p = v*(1.0 - s)
  *                 q = v*(1.0 - s * f)
  *                 t = v*(1.0 - s * (1.0 - f))             # <<<<<<<<<<<<<<
@@ -5364,7 +5246,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_t = (__pyx_v_v * (1.0 - (__pyx_v_s * (1.0 - __pyx_v_f))));
 
-                              /* "hsv.pyx":331
+                              /* "hsv.pyx":407
  *                 q = v*(1.0 - s * f)
  *                 t = v*(1.0 - s * (1.0 - f))
  *                 ii = ii % 6             # <<<<<<<<<<<<<<
@@ -5373,7 +5255,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               __pyx_v_ii = fmodf(__pyx_v_ii, 6.0);
 
-                              /* "hsv.pyx":333
+                              /* "hsv.pyx":409
  *                 ii = ii % 6
  * 
  *                 if ii == 0:             # <<<<<<<<<<<<<<
@@ -5383,7 +5265,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_ii == 0.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":334
+                                /* "hsv.pyx":410
  * 
  *                 if ii == 0:
  *                     r, g, b = v, t, p             # <<<<<<<<<<<<<<
@@ -5397,7 +5279,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 __pyx_v_g = __pyx_t_38;
                                 __pyx_v_b = __pyx_t_37;
 
-                                /* "hsv.pyx":333
+                                /* "hsv.pyx":409
  *                 ii = ii % 6
  * 
  *                 if ii == 0:             # <<<<<<<<<<<<<<
@@ -5406,7 +5288,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               }
 
-                              /* "hsv.pyx":335
+                              /* "hsv.pyx":411
  *                 if ii == 0:
  *                     r, g, b = v, t, p
  *                 if ii == 1:             # <<<<<<<<<<<<<<
@@ -5416,7 +5298,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_ii == 1.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":336
+                                /* "hsv.pyx":412
  *                     r, g, b = v, t, p
  *                 if ii == 1:
  *                     r, g, b = q, v, p             # <<<<<<<<<<<<<<
@@ -5430,7 +5312,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 __pyx_v_g = __pyx_t_38;
                                 __pyx_v_b = __pyx_t_39;
 
-                                /* "hsv.pyx":335
+                                /* "hsv.pyx":411
  *                 if ii == 0:
  *                     r, g, b = v, t, p
  *                 if ii == 1:             # <<<<<<<<<<<<<<
@@ -5439,7 +5321,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               }
 
-                              /* "hsv.pyx":337
+                              /* "hsv.pyx":413
  *                 if ii == 1:
  *                     r, g, b = q, v, p
  *                 if ii == 2:             # <<<<<<<<<<<<<<
@@ -5449,7 +5331,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_ii == 2.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":338
+                                /* "hsv.pyx":414
  *                     r, g, b = q, v, p
  *                 if ii == 2:
  *                     r, g, b = p, v, t             # <<<<<<<<<<<<<<
@@ -5463,7 +5345,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 __pyx_v_g = __pyx_t_38;
                                 __pyx_v_b = __pyx_t_37;
 
-                                /* "hsv.pyx":337
+                                /* "hsv.pyx":413
  *                 if ii == 1:
  *                     r, g, b = q, v, p
  *                 if ii == 2:             # <<<<<<<<<<<<<<
@@ -5472,7 +5354,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               }
 
-                              /* "hsv.pyx":339
+                              /* "hsv.pyx":415
  *                 if ii == 2:
  *                     r, g, b = p, v, t
  *                 if ii == 3:             # <<<<<<<<<<<<<<
@@ -5482,7 +5364,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_ii == 3.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":340
+                                /* "hsv.pyx":416
  *                     r, g, b = p, v, t
  *                 if ii == 3:
  *                     r, g, b = p, q, v             # <<<<<<<<<<<<<<
@@ -5496,7 +5378,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 __pyx_v_g = __pyx_t_38;
                                 __pyx_v_b = __pyx_t_39;
 
-                                /* "hsv.pyx":339
+                                /* "hsv.pyx":415
  *                 if ii == 2:
  *                     r, g, b = p, v, t
  *                 if ii == 3:             # <<<<<<<<<<<<<<
@@ -5505,7 +5387,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               }
 
-                              /* "hsv.pyx":341
+                              /* "hsv.pyx":417
  *                 if ii == 3:
  *                     r, g, b = p, q, v
  *                 if ii == 4:             # <<<<<<<<<<<<<<
@@ -5515,7 +5397,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_ii == 4.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":342
+                                /* "hsv.pyx":418
  *                     r, g, b = p, q, v
  *                 if ii == 4:
  *                     r, g, b = t, p, v             # <<<<<<<<<<<<<<
@@ -5529,7 +5411,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 __pyx_v_g = __pyx_t_38;
                                 __pyx_v_b = __pyx_t_37;
 
-                                /* "hsv.pyx":341
+                                /* "hsv.pyx":417
  *                 if ii == 3:
  *                     r, g, b = p, q, v
  *                 if ii == 4:             # <<<<<<<<<<<<<<
@@ -5538,7 +5420,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               }
 
-                              /* "hsv.pyx":343
+                              /* "hsv.pyx":419
  *                 if ii == 4:
  *                     r, g, b = t, p, v
  *                 if ii == 5:             # <<<<<<<<<<<<<<
@@ -5548,7 +5430,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_2 = ((__pyx_v_ii == 5.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":344
+                                /* "hsv.pyx":420
  *                     r, g, b = t, p, v
  *                 if ii == 5:
  *                     r, g, b = v, p, q             # <<<<<<<<<<<<<<
@@ -5562,7 +5444,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                                 __pyx_v_g = __pyx_t_38;
                                 __pyx_v_b = __pyx_t_39;
 
-                                /* "hsv.pyx":343
+                                /* "hsv.pyx":419
  *                 if ii == 4:
  *                     r, g, b = t, p, v
  *                 if ii == 5:             # <<<<<<<<<<<<<<
@@ -5571,7 +5453,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  */
                               }
 
-                              /* "hsv.pyx":347
+                              /* "hsv.pyx":423
  * 
  *                 new_array[j, i, 0], new_array[j, i, 1], \
  *                 new_array[j, i, 2] = <int>(r*255.0), <int>(g*255.0), <int>(b*255.0)             # <<<<<<<<<<<<<<
@@ -5582,7 +5464,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_41 = ((int)(__pyx_v_g * 255.0));
                               __pyx_t_42 = ((int)(__pyx_v_b * 255.0));
 
-                              /* "hsv.pyx":346
+                              /* "hsv.pyx":422
  *                     r, g, b = v, p, q
  * 
  *                 new_array[j, i, 0], new_array[j, i, 1], \             # <<<<<<<<<<<<<<
@@ -5598,7 +5480,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
                               __pyx_t_48 = 1;
                               *((unsigned char *) ( /* dim=2 */ ((char *) (((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_new_array.data + __pyx_t_46 * __pyx_v_new_array.strides[0]) ) + __pyx_t_47 * __pyx_v_new_array.strides[1]) )) + __pyx_t_48)) )) = __pyx_t_41;
 
-                              /* "hsv.pyx":347
+                              /* "hsv.pyx":423
  * 
  *                 new_array[j, i, 0], new_array[j, i, 1], \
  *                 new_array[j, i, 2] = <int>(r*255.0), <int>(g*255.0), <int>(b*255.0)             # <<<<<<<<<<<<<<
@@ -5623,7 +5505,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
         #endif
       }
 
-      /* "hsv.pyx":297
+      /* "hsv.pyx":373
  *         float f, p, q, t, ii
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -5642,7 +5524,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
       }
   }
 
-  /* "hsv.pyx":349
+  /* "hsv.pyx":425
  *                 new_array[j, i, 2] = <int>(r*255.0), <int>(g*255.0), <int>(b*255.0)
  * 
  *     return frombuffer(new_array, (width, height), 'RGB')             # <<<<<<<<<<<<<<
@@ -5650,15 +5532,15 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_17 = __Pyx_GetModuleGlobalName(__pyx_n_s_frombuffer); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_17 = __Pyx_GetModuleGlobalName(__pyx_n_s_frombuffer); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_17);
-  __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_v_new_array, 3, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_char, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_char, 0);; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_v_new_array, 3, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_char, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_char, 0);; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_width); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_width); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_3);
@@ -5681,7 +5563,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_17)) {
     PyObject *__pyx_temp[4] = {__pyx_t_1, __pyx_t_5, __pyx_t_12, __pyx_n_s_RGB};
-    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_17, __pyx_temp+1-__pyx_t_20, 3+__pyx_t_20); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_17, __pyx_temp+1-__pyx_t_20, 3+__pyx_t_20); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 425, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -5691,7 +5573,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_17)) {
     PyObject *__pyx_temp[4] = {__pyx_t_1, __pyx_t_5, __pyx_t_12, __pyx_n_s_RGB};
-    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_17, __pyx_temp+1-__pyx_t_20, 3+__pyx_t_20); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_17, __pyx_temp+1-__pyx_t_20, 3+__pyx_t_20); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 425, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -5699,7 +5581,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
   } else
   #endif
   {
-    __pyx_t_3 = PyTuple_New(3+__pyx_t_20); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(3+__pyx_t_20); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 425, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     if (__pyx_t_1) {
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -5713,7 +5595,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
     PyTuple_SET_ITEM(__pyx_t_3, 2+__pyx_t_20, __pyx_n_s_RGB);
     __pyx_t_5 = 0;
     __pyx_t_12 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_17, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_17, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 425, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
@@ -5722,7 +5604,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":268
+  /* "hsv.pyx":344
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef hue_surface_24c(surface_, double shift_):             # <<<<<<<<<<<<<<
@@ -5741,7 +5623,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
   __Pyx_XDECREF(__pyx_t_17);
   __PYX_XDEC_MEMVIEW(&__pyx_t_18, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_19, 1);
-  __Pyx_AddTraceback("hsv.hue_surface_24c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hue_surface_24c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_rgb_);
@@ -5752,7 +5634,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
   return __pyx_r;
 }
 
-/* "hsv.pyx":356
+/* "hsv.pyx":432
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef hue_surface_32c(surface_: Surface, float shift_):             # <<<<<<<<<<<<<<
@@ -5760,7 +5642,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_24c(PyObject *__pyx_v_surface_, double
  * 
  */
 
-static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float __pyx_v_shift_) {
+static PyObject *__pyx_f_3HSV_hue_surface_32c(PyObject *__pyx_v_surface_, float __pyx_v_shift_) {
   PyObject *__pyx_v_rgb_ = NULL;
   PyObject *__pyx_v_alpha_ = NULL;
   int __pyx_v_width;
@@ -5845,7 +5727,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
   PyObject *__pyx_t_53 = NULL;
   __Pyx_RefNannySetupContext("hue_surface_32c", 0);
 
-  /* "hsv.pyx":359
+  /* "hsv.pyx":435
  * 
  * 
  *     assert isinstance(surface_, Surface), \             # <<<<<<<<<<<<<<
@@ -5854,29 +5736,29 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
   #ifndef CYTHON_WITHOUT_ASSERTIONS
   if (unlikely(!Py_OptimizeFlag)) {
-    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_Surface); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_Surface); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 435, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyObject_IsInstance(__pyx_v_surface_, __pyx_t_1); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 359, __pyx_L1_error)
+    __pyx_t_2 = PyObject_IsInstance(__pyx_v_surface_, __pyx_t_1); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 435, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(!(__pyx_t_2 != 0))) {
 
-      /* "hsv.pyx":360
+      /* "hsv.pyx":436
  * 
  *     assert isinstance(surface_, Surface), \
  *            'Expecting Surface for argument surface_ got %s ' % type(surface_)             # <<<<<<<<<<<<<<
  *     assert isinstance(shift_, float), \
  *            'Expecting float for argument shift_, got %s ' % type(shift_)
  */
-      __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_Expecting_Surface_for_argument_s, ((PyObject *)Py_TYPE(__pyx_v_surface_))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 360, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_Expecting_Surface_for_argument_s, ((PyObject *)Py_TYPE(__pyx_v_surface_))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 436, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       PyErr_SetObject(PyExc_AssertionError, __pyx_t_1);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __PYX_ERR(0, 359, __pyx_L1_error)
+      __PYX_ERR(0, 435, __pyx_L1_error)
     }
   }
   #endif
 
-  /* "hsv.pyx":361
+  /* "hsv.pyx":437
  *     assert isinstance(surface_, Surface), \
  *            'Expecting Surface for argument surface_ got %s ' % type(surface_)
  *     assert isinstance(shift_, float), \             # <<<<<<<<<<<<<<
@@ -5885,32 +5767,32 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
   #ifndef CYTHON_WITHOUT_ASSERTIONS
   if (unlikely(!Py_OptimizeFlag)) {
-    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 361, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 437, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_2 = PyFloat_Check(__pyx_t_1); 
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(!(__pyx_t_2 != 0))) {
 
-      /* "hsv.pyx":362
+      /* "hsv.pyx":438
  *            'Expecting Surface for argument surface_ got %s ' % type(surface_)
  *     assert isinstance(shift_, float), \
  *            'Expecting float for argument shift_, got %s ' % type(shift_)             # <<<<<<<<<<<<<<
  *     assert 0.0 <= shift_ <= 1.0, 'Positional argument shift_ should be between[0.0 .. 1.0]'
  * 
  */
-      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
+      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_shift_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 438, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_3 = __Pyx_PyString_Format(__pyx_kp_s_Expecting_float_for_argument_shi, ((PyObject *)Py_TYPE(__pyx_t_1))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 362, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyString_Format(__pyx_kp_s_Expecting_float_for_argument_shi, ((PyObject *)Py_TYPE(__pyx_t_1))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 438, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       PyErr_SetObject(PyExc_AssertionError, __pyx_t_3);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __PYX_ERR(0, 361, __pyx_L1_error)
+      __PYX_ERR(0, 437, __pyx_L1_error)
     }
   }
   #endif
 
-  /* "hsv.pyx":363
+  /* "hsv.pyx":439
  *     assert isinstance(shift_, float), \
  *            'Expecting float for argument shift_, got %s ' % type(shift_)
  *     assert 0.0 <= shift_ <= 1.0, 'Positional argument shift_ should be between[0.0 .. 1.0]'             # <<<<<<<<<<<<<<
@@ -5925,12 +5807,12 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     }
     if (unlikely(!(__pyx_t_2 != 0))) {
       PyErr_SetObject(PyExc_AssertionError, __pyx_kp_s_Positional_argument_shift__shoul);
-      __PYX_ERR(0, 363, __pyx_L1_error)
+      __PYX_ERR(0, 439, __pyx_L1_error)
     }
   }
   #endif
 
-  /* "hsv.pyx":365
+  /* "hsv.pyx":441
  *     assert 0.0 <= shift_ <= 1.0, 'Positional argument shift_ should be between[0.0 .. 1.0]'
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -5946,14 +5828,14 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     __Pyx_XGOTREF(__pyx_t_6);
     /*try:*/ {
 
-      /* "hsv.pyx":366
+      /* "hsv.pyx":442
  * 
  *     try:
  *         rgb_ = pixels3d(surface_)             # <<<<<<<<<<<<<<
  *         alpha_ = pixels_alpha(surface_)
  *     except (pygame.error, ValueError):
  */
-      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_pixels3d); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L3_error)
+      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_pixels3d); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 442, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_7 = NULL;
       if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -5966,13 +5848,13 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
         }
       }
       if (!__pyx_t_7) {
-        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_surface_); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L3_error)
+        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_surface_); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_3);
       } else {
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_1)) {
           PyObject *__pyx_temp[2] = {__pyx_t_7, __pyx_v_surface_};
-          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L3_error)
+          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L3_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
@@ -5980,19 +5862,19 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
           PyObject *__pyx_temp[2] = {__pyx_t_7, __pyx_v_surface_};
-          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L3_error)
+          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L3_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
         #endif
         {
-          __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 366, __pyx_L3_error)
+          __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 442, __pyx_L3_error)
           __Pyx_GOTREF(__pyx_t_8);
           __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_7); __pyx_t_7 = NULL;
           __Pyx_INCREF(__pyx_v_surface_);
           __Pyx_GIVEREF(__pyx_v_surface_);
           PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_v_surface_);
-          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L3_error)
+          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L3_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
         }
@@ -6001,14 +5883,14 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
       __pyx_v_rgb_ = __pyx_t_3;
       __pyx_t_3 = 0;
 
-      /* "hsv.pyx":367
+      /* "hsv.pyx":443
  *     try:
  *         rgb_ = pixels3d(surface_)
  *         alpha_ = pixels_alpha(surface_)             # <<<<<<<<<<<<<<
  *     except (pygame.error, ValueError):
  *        raise ValueError('\nCompatible only for 32-bit format with per-pixel transparency.')
  */
-      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_pixels_alpha); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L3_error)
+      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_pixels_alpha); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 443, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_8 = NULL;
       if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -6021,13 +5903,13 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
         }
       }
       if (!__pyx_t_8) {
-        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_surface_); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 367, __pyx_L3_error)
+        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_surface_); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 443, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_3);
       } else {
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_1)) {
           PyObject *__pyx_temp[2] = {__pyx_t_8, __pyx_v_surface_};
-          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 367, __pyx_L3_error)
+          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 443, __pyx_L3_error)
           __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
@@ -6035,19 +5917,19 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
           PyObject *__pyx_temp[2] = {__pyx_t_8, __pyx_v_surface_};
-          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 367, __pyx_L3_error)
+          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 443, __pyx_L3_error)
           __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
         #endif
         {
-          __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 367, __pyx_L3_error)
+          __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 443, __pyx_L3_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_8); __pyx_t_8 = NULL;
           __Pyx_INCREF(__pyx_v_surface_);
           __Pyx_GIVEREF(__pyx_v_surface_);
           PyTuple_SET_ITEM(__pyx_t_7, 0+1, __pyx_v_surface_);
-          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 367, __pyx_L3_error)
+          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 443, __pyx_L3_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         }
@@ -6056,7 +5938,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
       __pyx_v_alpha_ = __pyx_t_3;
       __pyx_t_3 = 0;
 
-      /* "hsv.pyx":365
+      /* "hsv.pyx":441
  *     assert 0.0 <= shift_ <= 1.0, 'Positional argument shift_ should be between[0.0 .. 1.0]'
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -6074,7 +5956,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "hsv.pyx":368
+    /* "hsv.pyx":444
  *         rgb_ = pixels3d(surface_)
  *         alpha_ = pixels_alpha(surface_)
  *     except (pygame.error, ValueError):             # <<<<<<<<<<<<<<
@@ -6082,9 +5964,9 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  * 
  */
     __Pyx_ErrFetch(&__pyx_t_3, &__pyx_t_1, &__pyx_t_7);
-    __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 368, __pyx_L5_except_error)
+    __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 444, __pyx_L5_except_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_error); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 368, __pyx_L5_except_error)
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_error); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 444, __pyx_L5_except_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __pyx_t_10 = __Pyx_PyErr_GivenExceptionMatches(__pyx_t_3, __pyx_t_9) || __Pyx_PyErr_GivenExceptionMatches(__pyx_t_3, __pyx_builtin_ValueError);
@@ -6092,29 +5974,29 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     __Pyx_ErrRestore(__pyx_t_3, __pyx_t_1, __pyx_t_7);
     __pyx_t_3 = 0; __pyx_t_1 = 0; __pyx_t_7 = 0;
     if (__pyx_t_10) {
-      __Pyx_AddTraceback("hsv.hue_surface_32c", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_1, &__pyx_t_3) < 0) __PYX_ERR(0, 368, __pyx_L5_except_error)
+      __Pyx_AddTraceback("HSV.hue_surface_32c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_1, &__pyx_t_3) < 0) __PYX_ERR(0, 444, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GOTREF(__pyx_t_3);
 
-      /* "hsv.pyx":369
+      /* "hsv.pyx":445
  *         alpha_ = pixels_alpha(surface_)
  *     except (pygame.error, ValueError):
  *        raise ValueError('\nCompatible only for 32-bit format with per-pixel transparency.')             # <<<<<<<<<<<<<<
  * 
  *     cdef int width, height
  */
-      __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 369, __pyx_L5_except_error)
+      __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 445, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_Raise(__pyx_t_9, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __PYX_ERR(0, 369, __pyx_L5_except_error)
+      __PYX_ERR(0, 445, __pyx_L5_except_error)
     }
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "hsv.pyx":365
+    /* "hsv.pyx":441
  *     assert 0.0 <= shift_ <= 1.0, 'Positional argument shift_ should be between[0.0 .. 1.0]'
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -6129,14 +6011,14 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     __pyx_L8_try_end:;
   }
 
-  /* "hsv.pyx":372
+  /* "hsv.pyx":448
  * 
  *     cdef int width, height
  *     width, height = surface_.get_size()             # <<<<<<<<<<<<<<
  * 
  *     cdef:
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_surface_, __pyx_n_s_get_size); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_surface_, __pyx_n_s_get_size); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 448, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_7 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -6149,10 +6031,10 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     }
   }
   if (__pyx_t_7) {
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 372, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 448, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   } else {
-    __pyx_t_3 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 372, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 448, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -6162,7 +6044,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     if (unlikely(size != 2)) {
       if (size > 2) __Pyx_RaiseTooManyValuesError(2);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 372, __pyx_L1_error)
+      __PYX_ERR(0, 448, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -6175,15 +6057,15 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     __Pyx_INCREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_t_7);
     #else
-    __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
+    __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 448, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_7 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 372, __pyx_L1_error)
+    __pyx_t_7 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 448, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     #endif
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_9 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 372, __pyx_L1_error)
+    __pyx_t_9 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 448, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_11 = Py_TYPE(__pyx_t_9)->tp_iternext;
@@ -6191,7 +6073,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     __Pyx_GOTREF(__pyx_t_1);
     index = 1; __pyx_t_7 = __pyx_t_11(__pyx_t_9); if (unlikely(!__pyx_t_7)) goto __pyx_L11_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_7);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_11(__pyx_t_9), 2) < 0) __PYX_ERR(0, 372, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_11(__pyx_t_9), 2) < 0) __PYX_ERR(0, 448, __pyx_L1_error)
     __pyx_t_11 = NULL;
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     goto __pyx_L12_unpacking_done;
@@ -6199,54 +6081,54 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_11 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 372, __pyx_L1_error)
+    __PYX_ERR(0, 448, __pyx_L1_error)
     __pyx_L12_unpacking_done:;
   }
-  __pyx_t_10 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_10 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_10 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 448, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_12 = __Pyx_PyInt_As_int(__pyx_t_7); if (unlikely((__pyx_t_12 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyInt_As_int(__pyx_t_7); if (unlikely((__pyx_t_12 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 448, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_v_width = __pyx_t_10;
   __pyx_v_height = __pyx_t_12;
 
-  /* "hsv.pyx":375
+  /* "hsv.pyx":451
  * 
  *     cdef:
  *         unsigned char [:, :, :] rgb_array = rgb_             # <<<<<<<<<<<<<<
  *         unsigned char [:, :] alpha_array = alpha_
  *         unsigned char [:, :, ::1] new_array = empty((height, width, 4), dtype=uint8)
  */
-  __pyx_t_13 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_char(__pyx_v_rgb_, PyBUF_WRITABLE); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 375, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_unsigned_char(__pyx_v_rgb_, PyBUF_WRITABLE); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 451, __pyx_L1_error)
   __pyx_v_rgb_array = __pyx_t_13;
   __pyx_t_13.memview = NULL;
   __pyx_t_13.data = NULL;
 
-  /* "hsv.pyx":376
+  /* "hsv.pyx":452
  *     cdef:
  *         unsigned char [:, :, :] rgb_array = rgb_
  *         unsigned char [:, :] alpha_array = alpha_             # <<<<<<<<<<<<<<
  *         unsigned char [:, :, ::1] new_array = empty((height, width, 4), dtype=uint8)
  *         int i=0, j=0
  */
-  __pyx_t_14 = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(__pyx_v_alpha_, PyBUF_WRITABLE); if (unlikely(!__pyx_t_14.memview)) __PYX_ERR(0, 376, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(__pyx_v_alpha_, PyBUF_WRITABLE); if (unlikely(!__pyx_t_14.memview)) __PYX_ERR(0, 452, __pyx_L1_error)
   __pyx_v_alpha_array = __pyx_t_14;
   __pyx_t_14.memview = NULL;
   __pyx_t_14.data = NULL;
 
-  /* "hsv.pyx":377
+  /* "hsv.pyx":453
  *         unsigned char [:, :, :] rgb_array = rgb_
  *         unsigned char [:, :] alpha_array = alpha_
  *         unsigned char [:, :, ::1] new_array = empty((height, width, 4), dtype=uint8)             # <<<<<<<<<<<<<<
  *         int i=0, j=0
  *         #float r, g, b
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_empty); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_empty); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_height); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_height); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_9 = PyTuple_New(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_9 = PyTuple_New(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_GIVEREF(__pyx_t_7);
   PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7);
@@ -6257,29 +6139,29 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
   PyTuple_SET_ITEM(__pyx_t_9, 2, __pyx_int_4);
   __pyx_t_7 = 0;
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_9);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_9);
   __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_7 = __Pyx_GetModuleGlobalName(__pyx_n_s_uint8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_GetModuleGlobalName(__pyx_n_s_uint8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_dtype, __pyx_t_7) < 0) __PYX_ERR(0, 377, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_dtype, __pyx_t_7) < 0) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_1, __pyx_t_9); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_1, __pyx_t_9); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_d_d_dc_unsigned_char(__pyx_t_7, PyBUF_WRITABLE); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_d_d_dc_unsigned_char(__pyx_t_7, PyBUF_WRITABLE); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_v_new_array = __pyx_t_15;
   __pyx_t_15.memview = NULL;
   __pyx_t_15.data = NULL;
 
-  /* "hsv.pyx":378
+  /* "hsv.pyx":454
  *         unsigned char [:, :] alpha_array = alpha_
  *         unsigned char [:, :, ::1] new_array = empty((height, width, 4), dtype=uint8)
  *         int i=0, j=0             # <<<<<<<<<<<<<<
@@ -6289,7 +6171,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
   __pyx_v_i = 0;
   __pyx_v_j = 0;
 
-  /* "hsv.pyx":389
+  /* "hsv.pyx":465
  *         double *rgb
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -6304,7 +6186,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
       #endif
       /*try:*/ {
 
-        /* "hsv.pyx":390
+        /* "hsv.pyx":466
  * 
  *     with nogil:
  *         for i in prange(width, schedule='static', num_threads=8):             # <<<<<<<<<<<<<<
@@ -6354,7 +6236,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                             __pyx_v_t = ((float)__PYX_NAN());
                             __pyx_v_v = ((double)__PYX_NAN());
 
-                            /* "hsv.pyx":391
+                            /* "hsv.pyx":467
  *     with nogil:
  *         for i in prange(width, schedule='static', num_threads=8):
  *             for j in range(height):             # <<<<<<<<<<<<<<
@@ -6366,7 +6248,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                             for (__pyx_t_19 = 0; __pyx_t_19 < __pyx_t_18; __pyx_t_19+=1) {
                               __pyx_v_j = __pyx_t_19;
 
-                              /* "hsv.pyx":392
+                              /* "hsv.pyx":468
  *         for i in prange(width, schedule='static', num_threads=8):
  *             for j in range(height):
  *                 r, g, b = rgb_array[i, j, 0], rgb_array[i, j, 1], rgb_array[i, j, 2]             # <<<<<<<<<<<<<<
@@ -6389,7 +6271,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_v_g = __pyx_t_27;
                               __pyx_v_b = __pyx_t_31;
 
-                              /* "hsv.pyx":394
+                              /* "hsv.pyx":470
  *                 r, g, b = rgb_array[i, j, 0], rgb_array[i, j, 1], rgb_array[i, j, 2]
  * 
  *                 rr = r * ONE_255             # <<<<<<<<<<<<<<
@@ -6398,7 +6280,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_rr = (__pyx_v_r * 0.00392156862745098);
 
-                              /* "hsv.pyx":395
+                              /* "hsv.pyx":471
  * 
  *                 rr = r * ONE_255
  *                 gg = g * ONE_255             # <<<<<<<<<<<<<<
@@ -6407,7 +6289,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_gg = (__pyx_v_g * 0.00392156862745098);
 
-                              /* "hsv.pyx":396
+                              /* "hsv.pyx":472
  *                 rr = r * ONE_255
  *                 gg = g * ONE_255
  *                 bb = b * ONE_255             # <<<<<<<<<<<<<<
@@ -6416,7 +6298,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_bb = (__pyx_v_b * 0.00392156862745098);
 
-                              /* "hsv.pyx":397
+                              /* "hsv.pyx":473
  *                 gg = g * ONE_255
  *                 bb = b * ONE_255
  *                 mx = max(rr, gg, bb)             # <<<<<<<<<<<<<<
@@ -6439,7 +6321,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               }
                               __pyx_v_mx = __pyx_t_35;
 
-                              /* "hsv.pyx":398
+                              /* "hsv.pyx":474
  *                 bb = b * ONE_255
  *                 mx = max(rr, gg, bb)
  *                 mn = min(rr, gg, bb)             # <<<<<<<<<<<<<<
@@ -6462,7 +6344,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               }
                               __pyx_v_mn = __pyx_t_34;
 
-                              /* "hsv.pyx":399
+                              /* "hsv.pyx":475
  *                 mx = max(rr, gg, bb)
  *                 mn = min(rr, gg, bb)
  *                 df = mx-mn             # <<<<<<<<<<<<<<
@@ -6471,7 +6353,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_df = (__pyx_v_mx - __pyx_v_mn);
 
-                              /* "hsv.pyx":400
+                              /* "hsv.pyx":476
  *                 mn = min(rr, gg, bb)
  *                 df = mx-mn
  *                 df_ = 1.0/df             # <<<<<<<<<<<<<<
@@ -6480,7 +6362,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_df_ = (1.0 / __pyx_v_df);
 
-                              /* "hsv.pyx":401
+                              /* "hsv.pyx":477
  *                 df = mx-mn
  *                 df_ = 1.0/df
  *                 if mx == mn:             # <<<<<<<<<<<<<<
@@ -6490,7 +6372,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_mx == __pyx_v_mn) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":402
+                                /* "hsv.pyx":478
  *                 df_ = 1.0/df
  *                 if mx == mn:
  *                     h = 0             # <<<<<<<<<<<<<<
@@ -6499,7 +6381,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                                 __pyx_v_h = 0.0;
 
-                                /* "hsv.pyx":401
+                                /* "hsv.pyx":477
  *                 df = mx-mn
  *                 df_ = 1.0/df
  *                 if mx == mn:             # <<<<<<<<<<<<<<
@@ -6509,7 +6391,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 goto __pyx_L22;
                               }
 
-                              /* "hsv.pyx":403
+                              /* "hsv.pyx":479
  *                 if mx == mn:
  *                     h = 0
  *                 elif mx == rr:             # <<<<<<<<<<<<<<
@@ -6519,7 +6401,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_mx == __pyx_v_rr) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":404
+                                /* "hsv.pyx":480
  *                     h = 0
  *                 elif mx == rr:
  *                     h = (60 * ((gg-bb) * df_) + 360) % 360             # <<<<<<<<<<<<<<
@@ -6528,7 +6410,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                                 __pyx_v_h = fmodf(((60.0 * ((__pyx_v_gg - __pyx_v_bb) * __pyx_v_df_)) + 360.0), 360.0);
 
-                                /* "hsv.pyx":403
+                                /* "hsv.pyx":479
  *                 if mx == mn:
  *                     h = 0
  *                 elif mx == rr:             # <<<<<<<<<<<<<<
@@ -6538,7 +6420,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 goto __pyx_L22;
                               }
 
-                              /* "hsv.pyx":405
+                              /* "hsv.pyx":481
  *                 elif mx == rr:
  *                     h = (60 * ((gg-bb) * df_) + 360) % 360
  *                 elif mx == gg:             # <<<<<<<<<<<<<<
@@ -6548,7 +6430,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_mx == __pyx_v_gg) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":406
+                                /* "hsv.pyx":482
  *                     h = (60 * ((gg-bb) * df_) + 360) % 360
  *                 elif mx == gg:
  *                     h = (60 * ((bb-rr) * df_) + 120) % 360             # <<<<<<<<<<<<<<
@@ -6557,7 +6439,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                                 __pyx_v_h = fmodf(((60.0 * ((__pyx_v_bb - __pyx_v_rr) * __pyx_v_df_)) + 120.0), 360.0);
 
-                                /* "hsv.pyx":405
+                                /* "hsv.pyx":481
  *                 elif mx == rr:
  *                     h = (60 * ((gg-bb) * df_) + 360) % 360
  *                 elif mx == gg:             # <<<<<<<<<<<<<<
@@ -6567,7 +6449,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 goto __pyx_L22;
                               }
 
-                              /* "hsv.pyx":407
+                              /* "hsv.pyx":483
  *                 elif mx == gg:
  *                     h = (60 * ((bb-rr) * df_) + 120) % 360
  *                 elif mx == bb:             # <<<<<<<<<<<<<<
@@ -6577,7 +6459,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_mx == __pyx_v_bb) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":408
+                                /* "hsv.pyx":484
  *                     h = (60 * ((bb-rr) * df_) + 120) % 360
  *                 elif mx == bb:
  *                     h = (60 * ((rr-gg) * df_) + 240) % 360             # <<<<<<<<<<<<<<
@@ -6586,7 +6468,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                                 __pyx_v_h = fmodf(((60.0 * ((__pyx_v_rr - __pyx_v_gg) * __pyx_v_df_)) + 240.0), 360.0);
 
-                                /* "hsv.pyx":407
+                                /* "hsv.pyx":483
  *                 elif mx == gg:
  *                     h = (60 * ((bb-rr) * df_) + 120) % 360
  *                 elif mx == bb:             # <<<<<<<<<<<<<<
@@ -6596,7 +6478,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               }
                               __pyx_L22:;
 
-                              /* "hsv.pyx":409
+                              /* "hsv.pyx":485
  *                 elif mx == bb:
  *                     h = (60 * ((rr-gg) * df_) + 240) % 360
  *                 if mx == 0:             # <<<<<<<<<<<<<<
@@ -6606,7 +6488,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_mx == 0.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":410
+                                /* "hsv.pyx":486
  *                     h = (60 * ((rr-gg) * df_) + 240) % 360
  *                 if mx == 0:
  *                     s = 0             # <<<<<<<<<<<<<<
@@ -6615,7 +6497,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                                 __pyx_v_s = 0.0;
 
-                                /* "hsv.pyx":409
+                                /* "hsv.pyx":485
  *                 elif mx == bb:
  *                     h = (60 * ((rr-gg) * df_) + 240) % 360
  *                 if mx == 0:             # <<<<<<<<<<<<<<
@@ -6625,7 +6507,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 goto __pyx_L23;
                               }
 
-                              /* "hsv.pyx":412
+                              /* "hsv.pyx":488
  *                     s = 0
  *                 else:
  *                     s = df/mx             # <<<<<<<<<<<<<<
@@ -6637,7 +6519,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               }
                               __pyx_L23:;
 
-                              /* "hsv.pyx":413
+                              /* "hsv.pyx":489
  *                 else:
  *                     s = df/mx
  *                 v = mx             # <<<<<<<<<<<<<<
@@ -6646,7 +6528,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_v = __pyx_v_mx;
 
-                              /* "hsv.pyx":415
+                              /* "hsv.pyx":491
  *                 v = mx
  * 
  *                 h = h * ONE_360 + shift_             # <<<<<<<<<<<<<<
@@ -6655,7 +6537,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_h = ((__pyx_v_h * 0.002777777777777778) + __pyx_v_shift_);
 
-                              /* "hsv.pyx":417
+                              /* "hsv.pyx":493
  *                 h = h * ONE_360 + shift_
  * 
  *                 if s == 0.0:             # <<<<<<<<<<<<<<
@@ -6665,7 +6547,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_s == 0.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":418
+                                /* "hsv.pyx":494
  * 
  *                 if s == 0.0:
  *                     r, g, b = v, v, v             # <<<<<<<<<<<<<<
@@ -6679,7 +6561,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 __pyx_v_g = __pyx_t_37;
                                 __pyx_v_b = __pyx_t_38;
 
-                                /* "hsv.pyx":417
+                                /* "hsv.pyx":493
  *                 h = h * ONE_360 + shift_
  * 
  *                 if s == 0.0:             # <<<<<<<<<<<<<<
@@ -6688,7 +6570,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               }
 
-                              /* "hsv.pyx":419
+                              /* "hsv.pyx":495
  *                 if s == 0.0:
  *                     r, g, b = v, v, v
  *                 ii = <int>(h * 6.0)             # <<<<<<<<<<<<<<
@@ -6697,7 +6579,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_ii = ((int)(__pyx_v_h * 6.0));
 
-                              /* "hsv.pyx":420
+                              /* "hsv.pyx":496
  *                     r, g, b = v, v, v
  *                 ii = <int>(h * 6.0)
  *                 f = (h * 6.0) - ii             # <<<<<<<<<<<<<<
@@ -6706,7 +6588,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_f = ((__pyx_v_h * 6.0) - __pyx_v_ii);
 
-                              /* "hsv.pyx":421
+                              /* "hsv.pyx":497
  *                 ii = <int>(h * 6.0)
  *                 f = (h * 6.0) - ii
  *                 p = v*(1.0 - s)             # <<<<<<<<<<<<<<
@@ -6715,7 +6597,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_p = (__pyx_v_v * (1.0 - __pyx_v_s));
 
-                              /* "hsv.pyx":422
+                              /* "hsv.pyx":498
  *                 f = (h * 6.0) - ii
  *                 p = v*(1.0 - s)
  *                 q = v*(1.0 - s * f)             # <<<<<<<<<<<<<<
@@ -6724,7 +6606,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_q = (__pyx_v_v * (1.0 - (__pyx_v_s * __pyx_v_f)));
 
-                              /* "hsv.pyx":423
+                              /* "hsv.pyx":499
  *                 p = v*(1.0 - s)
  *                 q = v*(1.0 - s * f)
  *                 t = v*(1.0 - s * (1.0 - f))             # <<<<<<<<<<<<<<
@@ -6733,7 +6615,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_t = (__pyx_v_v * (1.0 - (__pyx_v_s * (1.0 - __pyx_v_f))));
 
-                              /* "hsv.pyx":424
+                              /* "hsv.pyx":500
  *                 q = v*(1.0 - s * f)
  *                 t = v*(1.0 - s * (1.0 - f))
  *                 ii = ii % 6             # <<<<<<<<<<<<<<
@@ -6742,7 +6624,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               __pyx_v_ii = fmodf(__pyx_v_ii, 6.0);
 
-                              /* "hsv.pyx":426
+                              /* "hsv.pyx":502
  *                 ii = ii % 6
  * 
  *                 if ii == 0:             # <<<<<<<<<<<<<<
@@ -6752,7 +6634,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_ii == 0.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":427
+                                /* "hsv.pyx":503
  * 
  *                 if ii == 0:
  *                     r, g, b = v, t, p             # <<<<<<<<<<<<<<
@@ -6766,7 +6648,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 __pyx_v_g = __pyx_t_34;
                                 __pyx_v_b = __pyx_t_35;
 
-                                /* "hsv.pyx":426
+                                /* "hsv.pyx":502
  *                 ii = ii % 6
  * 
  *                 if ii == 0:             # <<<<<<<<<<<<<<
@@ -6775,7 +6657,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               }
 
-                              /* "hsv.pyx":428
+                              /* "hsv.pyx":504
  *                 if ii == 0:
  *                     r, g, b = v, t, p
  *                 if ii == 1:             # <<<<<<<<<<<<<<
@@ -6785,7 +6667,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_ii == 1.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":429
+                                /* "hsv.pyx":505
  *                     r, g, b = v, t, p
  *                 if ii == 1:
  *                     r, g, b = q, v, p             # <<<<<<<<<<<<<<
@@ -6799,7 +6681,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 __pyx_v_g = __pyx_t_38;
                                 __pyx_v_b = __pyx_t_34;
 
-                                /* "hsv.pyx":428
+                                /* "hsv.pyx":504
  *                 if ii == 0:
  *                     r, g, b = v, t, p
  *                 if ii == 1:             # <<<<<<<<<<<<<<
@@ -6808,7 +6690,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               }
 
-                              /* "hsv.pyx":430
+                              /* "hsv.pyx":506
  *                 if ii == 1:
  *                     r, g, b = q, v, p
  *                 if ii == 2:             # <<<<<<<<<<<<<<
@@ -6818,7 +6700,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_ii == 2.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":431
+                                /* "hsv.pyx":507
  *                     r, g, b = q, v, p
  *                 if ii == 2:
  *                     r, g, b = p, v, t             # <<<<<<<<<<<<<<
@@ -6832,7 +6714,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 __pyx_v_g = __pyx_t_38;
                                 __pyx_v_b = __pyx_t_35;
 
-                                /* "hsv.pyx":430
+                                /* "hsv.pyx":506
  *                 if ii == 1:
  *                     r, g, b = q, v, p
  *                 if ii == 2:             # <<<<<<<<<<<<<<
@@ -6841,7 +6723,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               }
 
-                              /* "hsv.pyx":432
+                              /* "hsv.pyx":508
  *                 if ii == 2:
  *                     r, g, b = p, v, t
  *                 if ii == 3:             # <<<<<<<<<<<<<<
@@ -6851,7 +6733,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_ii == 3.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":433
+                                /* "hsv.pyx":509
  *                     r, g, b = p, v, t
  *                 if ii == 3:
  *                     r, g, b = p, q, v             # <<<<<<<<<<<<<<
@@ -6865,7 +6747,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 __pyx_v_g = __pyx_t_34;
                                 __pyx_v_b = __pyx_t_38;
 
-                                /* "hsv.pyx":432
+                                /* "hsv.pyx":508
  *                 if ii == 2:
  *                     r, g, b = p, v, t
  *                 if ii == 3:             # <<<<<<<<<<<<<<
@@ -6874,7 +6756,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               }
 
-                              /* "hsv.pyx":434
+                              /* "hsv.pyx":510
  *                 if ii == 3:
  *                     r, g, b = p, q, v
  *                 if ii == 4:             # <<<<<<<<<<<<<<
@@ -6884,7 +6766,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_ii == 4.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":435
+                                /* "hsv.pyx":511
  *                     r, g, b = p, q, v
  *                 if ii == 4:
  *                     r, g, b = t, p, v             # <<<<<<<<<<<<<<
@@ -6898,7 +6780,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 __pyx_v_g = __pyx_t_35;
                                 __pyx_v_b = __pyx_t_38;
 
-                                /* "hsv.pyx":434
+                                /* "hsv.pyx":510
  *                 if ii == 3:
  *                     r, g, b = p, q, v
  *                 if ii == 4:             # <<<<<<<<<<<<<<
@@ -6907,7 +6789,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               }
 
-                              /* "hsv.pyx":436
+                              /* "hsv.pyx":512
  *                 if ii == 4:
  *                     r, g, b = t, p, v
  *                 if ii == 5:             # <<<<<<<<<<<<<<
@@ -6917,7 +6799,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_2 = ((__pyx_v_ii == 5.0) != 0);
                               if (__pyx_t_2) {
 
-                                /* "hsv.pyx":437
+                                /* "hsv.pyx":513
  *                     r, g, b = t, p, v
  *                 if ii == 5:
  *                     r, g, b = v, p, q             # <<<<<<<<<<<<<<
@@ -6931,7 +6813,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                                 __pyx_v_g = __pyx_t_35;
                                 __pyx_v_b = __pyx_t_34;
 
-                                /* "hsv.pyx":436
+                                /* "hsv.pyx":512
  *                 if ii == 4:
  *                     r, g, b = t, p, v
  *                 if ii == 5:             # <<<<<<<<<<<<<<
@@ -6940,7 +6822,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
                               }
 
-                              /* "hsv.pyx":440
+                              /* "hsv.pyx":516
  * 
  *                 new_array[j, i, 0], new_array[j, i, 1], \
  *                 new_array[j, i, 2], new_array[j, i, 3] = int(r*255.0), int(g*255.0), int(b*255.0), alpha_array[i, j]             # <<<<<<<<<<<<<<
@@ -6951,7 +6833,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_40 = __pyx_v_j;
                               __pyx_t_31 = (*((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_alpha_array.data + __pyx_t_39 * __pyx_v_alpha_array.strides[0]) ) + __pyx_t_40 * __pyx_v_alpha_array.strides[1]) )));
 
-                              /* "hsv.pyx":439
+                              /* "hsv.pyx":515
  *                     r, g, b = v, p, q
  * 
  *                 new_array[j, i, 0], new_array[j, i, 1], \             # <<<<<<<<<<<<<<
@@ -6967,7 +6849,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
                               __pyx_t_46 = 1;
                               *((unsigned char *) ( /* dim=2 */ ((char *) (((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_new_array.data + __pyx_t_44 * __pyx_v_new_array.strides[0]) ) + __pyx_t_45 * __pyx_v_new_array.strides[1]) )) + __pyx_t_46)) )) = ((unsigned char)(__pyx_v_g * 255.0));
 
-                              /* "hsv.pyx":440
+                              /* "hsv.pyx":516
  * 
  *                 new_array[j, i, 0], new_array[j, i, 1], \
  *                 new_array[j, i, 2], new_array[j, i, 3] = int(r*255.0), int(g*255.0), int(b*255.0), alpha_array[i, j]             # <<<<<<<<<<<<<<
@@ -6996,7 +6878,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
         #endif
       }
 
-      /* "hsv.pyx":389
+      /* "hsv.pyx":465
  *         double *rgb
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -7015,7 +6897,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
       }
   }
 
-  /* "hsv.pyx":442
+  /* "hsv.pyx":518
  *                 new_array[j, i, 2], new_array[j, i, 3] = int(r*255.0), int(g*255.0), int(b*255.0), alpha_array[i, j]
  * 
  *     return frombuffer(new_array, (width, height ), 'RGBA')             # <<<<<<<<<<<<<<
@@ -7023,15 +6905,15 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_frombuffer); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_frombuffer); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_new_array, 3, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_char, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_new_array, 3, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_char, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_width); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_width); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_height); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_height); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_53 = PyTuple_New(2); if (unlikely(!__pyx_t_53)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_53 = PyTuple_New(2); if (unlikely(!__pyx_t_53)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_53);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_53, 0, __pyx_t_3);
@@ -7054,7 +6936,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_9)) {
     PyObject *__pyx_temp[4] = {__pyx_t_8, __pyx_t_1, __pyx_t_53, __pyx_n_s_RGBA};
-    __pyx_t_7 = __Pyx_PyFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_16, 3+__pyx_t_16); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 442, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_16, 3+__pyx_t_16); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 518, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -7064,7 +6946,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_9)) {
     PyObject *__pyx_temp[4] = {__pyx_t_8, __pyx_t_1, __pyx_t_53, __pyx_n_s_RGBA};
-    __pyx_t_7 = __Pyx_PyCFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_16, 3+__pyx_t_16); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 442, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyCFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_16, 3+__pyx_t_16); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 518, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -7072,7 +6954,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
   } else
   #endif
   {
-    __pyx_t_3 = PyTuple_New(3+__pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(3+__pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 518, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     if (__pyx_t_8) {
       __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_8); __pyx_t_8 = NULL;
@@ -7086,7 +6968,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
     PyTuple_SET_ITEM(__pyx_t_3, 2+__pyx_t_16, __pyx_n_s_RGBA);
     __pyx_t_1 = 0;
     __pyx_t_53 = 0;
-    __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_3, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 442, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_3, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 518, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
@@ -7095,7 +6977,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":356
+  /* "hsv.pyx":432
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef hue_surface_32c(surface_: Surface, float shift_):             # <<<<<<<<<<<<<<
@@ -7114,7 +6996,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
   __PYX_XDEC_MEMVIEW(&__pyx_t_14, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_15, 1);
   __Pyx_XDECREF(__pyx_t_53);
-  __Pyx_AddTraceback("hsv.hue_surface_32c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hue_surface_32c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_rgb_);
@@ -7127,7 +7009,7 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
   return __pyx_r;
 }
 
-/* "hsv.pyx":448
+/* "hsv.pyx":524
  * import colorsys
  * 
  * def shift_hue(r, g, b, shift_):             # <<<<<<<<<<<<<<
@@ -7136,10 +7018,10 @@ static PyObject *__pyx_f_3hsv_hue_surface_32c(PyObject *__pyx_v_surface_, float 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3hsv_17shift_hue(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_3hsv_16shift_hue[] = " hue shifting algorithm\n        Transform an RGB color into its hsv equivalent and rotate color with shift_ parameter\n        then transform hsv back to RGB.";
-static PyMethodDef __pyx_mdef_3hsv_17shift_hue = {"shift_hue", (PyCFunction)__pyx_pw_3hsv_17shift_hue, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3hsv_16shift_hue};
-static PyObject *__pyx_pw_3hsv_17shift_hue(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3HSV_17shift_hue(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_3HSV_16shift_hue[] = " hue shifting algorithm\n        Transform an RGB color into its hsv equivalent and rotate color with shift_ parameter\n        then transform hsv back to RGB.";
+static PyMethodDef __pyx_mdef_3HSV_17shift_hue = {"shift_hue", (PyCFunction)__pyx_pw_3HSV_17shift_hue, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3HSV_16shift_hue};
+static PyObject *__pyx_pw_3HSV_17shift_hue(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_r = 0;
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_b = 0;
@@ -7174,23 +7056,23 @@ static PyObject *__pyx_pw_3hsv_17shift_hue(PyObject *__pyx_self, PyObject *__pyx
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_g)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("shift_hue", 1, 4, 4, 1); __PYX_ERR(0, 448, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("shift_hue", 1, 4, 4, 1); __PYX_ERR(0, 524, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("shift_hue", 1, 4, 4, 2); __PYX_ERR(0, 448, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("shift_hue", 1, 4, 4, 2); __PYX_ERR(0, 524, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_shift)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("shift_hue", 1, 4, 4, 3); __PYX_ERR(0, 448, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("shift_hue", 1, 4, 4, 3); __PYX_ERR(0, 524, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "shift_hue") < 0)) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "shift_hue") < 0)) __PYX_ERR(0, 524, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -7207,20 +7089,20 @@ static PyObject *__pyx_pw_3hsv_17shift_hue(PyObject *__pyx_self, PyObject *__pyx
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("shift_hue", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 448, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("shift_hue", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 524, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("hsv.shift_hue", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.shift_hue", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_16shift_hue(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b, __pyx_v_shift_);
+  __pyx_r = __pyx_pf_3HSV_16shift_hue(__pyx_self, __pyx_v_r, __pyx_v_g, __pyx_v_b, __pyx_v_shift_);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_r, PyObject *__pyx_v_g, PyObject *__pyx_v_b, PyObject *__pyx_v_shift_) {
+static PyObject *__pyx_pf_3HSV_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_r, PyObject *__pyx_v_g, PyObject *__pyx_v_b, PyObject *__pyx_v_shift_) {
   PyObject *__pyx_v_h = NULL;
   PyObject *__pyx_v_s = NULL;
   PyObject *__pyx_v_v = NULL;
@@ -7239,23 +7121,23 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   PyObject *(*__pyx_t_9)(PyObject *);
   __Pyx_RefNannySetupContext("shift_hue", 0);
 
-  /* "hsv.pyx":453
+  /* "hsv.pyx":529
  *         then transform hsv back to RGB."""
  *     # The HSVA components are in the ranges H = [0, 360], S = [0, 100], V = [0, 100], A = [0, 100].
  *     h, s, v, a = pygame.Color(int(r), int(g), int(b)).hsva             # <<<<<<<<<<<<<<
  *     # shift the hue and revert back to rgb
  *     rgb_color = colorsys.hsv_to_rgb((h + shift_) * 0.002777, s * 0.01, v * 0.01) # (1/360, 1/100, 1/100)
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Color); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Color); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_v_r); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_v_r); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyNumber_Int(__pyx_v_g); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyNumber_Int(__pyx_v_g); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyNumber_Int(__pyx_v_b); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyNumber_Int(__pyx_v_b); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_6 = NULL;
   __pyx_t_7 = 0;
@@ -7272,7 +7154,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[4] = {__pyx_t_6, __pyx_t_2, __pyx_t_4, __pyx_t_5};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -7283,7 +7165,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[4] = {__pyx_t_6, __pyx_t_2, __pyx_t_4, __pyx_t_5};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -7292,7 +7174,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   } else
   #endif
   {
-    __pyx_t_8 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 453, __pyx_L1_error)
+    __pyx_t_8 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 529, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     if (__pyx_t_6) {
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -7306,12 +7188,12 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
     __pyx_t_2 = 0;
     __pyx_t_4 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_hsva); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_hsva); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if ((likely(PyTuple_CheckExact(__pyx_t_3))) || (PyList_CheckExact(__pyx_t_3))) {
@@ -7320,7 +7202,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
     if (unlikely(size != 4)) {
       if (size > 4) __Pyx_RaiseTooManyValuesError(4);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 453, __pyx_L1_error)
+      __PYX_ERR(0, 529, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -7343,7 +7225,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
       Py_ssize_t i;
       PyObject** temps[4] = {&__pyx_t_1,&__pyx_t_8,&__pyx_t_5,&__pyx_t_4};
       for (i=0; i < 4; i++) {
-        PyObject* item = PySequence_ITEM(sequence, i); if (unlikely(!item)) __PYX_ERR(0, 453, __pyx_L1_error)
+        PyObject* item = PySequence_ITEM(sequence, i); if (unlikely(!item)) __PYX_ERR(0, 529, __pyx_L1_error)
         __Pyx_GOTREF(item);
         *(temps[i]) = item;
       }
@@ -7353,7 +7235,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   } else {
     Py_ssize_t index = -1;
     PyObject** temps[4] = {&__pyx_t_1,&__pyx_t_8,&__pyx_t_5,&__pyx_t_4};
-    __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 453, __pyx_L1_error)
+    __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 529, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_9 = Py_TYPE(__pyx_t_2)->tp_iternext;
@@ -7362,7 +7244,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
       __Pyx_GOTREF(item);
       *(temps[index]) = item;
     }
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_2), 4) < 0) __PYX_ERR(0, 453, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_2), 4) < 0) __PYX_ERR(0, 529, __pyx_L1_error)
     __pyx_t_9 = NULL;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     goto __pyx_L4_unpacking_done;
@@ -7370,7 +7252,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_9 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 453, __pyx_L1_error)
+    __PYX_ERR(0, 529, __pyx_L1_error)
     __pyx_L4_unpacking_done:;
   }
   __pyx_v_h = __pyx_t_1;
@@ -7382,26 +7264,26 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   __pyx_v_a = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "hsv.pyx":455
+  /* "hsv.pyx":531
  *     h, s, v, a = pygame.Color(int(r), int(g), int(b)).hsva
  *     # shift the hue and revert back to rgb
  *     rgb_color = colorsys.hsv_to_rgb((h + shift_) * 0.002777, s * 0.01, v * 0.01) # (1/360, 1/100, 1/100)             # <<<<<<<<<<<<<<
  *     return rgb_color[0] * 255, rgb_color[1] * 255, rgb_color[2] * 255
  * 
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_colorsys); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_colorsys); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 531, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_hsv_to_rgb); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_hsv_to_rgb); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 531, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Add(__pyx_v_h, __pyx_v_shift_); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_v_h, __pyx_v_shift_); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 531, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_8 = PyNumber_Multiply(__pyx_t_4, __pyx_float_0_002777); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_8 = PyNumber_Multiply(__pyx_t_4, __pyx_float_0_002777); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 531, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Multiply(__pyx_v_s, __pyx_float_0_01); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Multiply(__pyx_v_s, __pyx_float_0_01); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 531, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_v, __pyx_float_0_01); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_v, __pyx_float_0_01); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 531, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = NULL;
   __pyx_t_7 = 0;
@@ -7418,7 +7300,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_5)) {
     PyObject *__pyx_temp[4] = {__pyx_t_2, __pyx_t_8, __pyx_t_4, __pyx_t_1};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 455, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 531, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -7429,7 +7311,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
     PyObject *__pyx_temp[4] = {__pyx_t_2, __pyx_t_8, __pyx_t_4, __pyx_t_1};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 455, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 531, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -7438,7 +7320,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   } else
   #endif
   {
-    __pyx_t_6 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 455, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 531, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_2) {
       __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_2); __pyx_t_2 = NULL;
@@ -7452,7 +7334,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
     __pyx_t_8 = 0;
     __pyx_t_4 = 0;
     __pyx_t_1 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 455, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 531, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
@@ -7460,7 +7342,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   __pyx_v_rgb_color = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "hsv.pyx":456
+  /* "hsv.pyx":532
  *     # shift the hue and revert back to rgb
  *     rgb_color = colorsys.hsv_to_rgb((h + shift_) * 0.002777, s * 0.01, v * 0.01) # (1/360, 1/100, 1/100)
  *     return rgb_color[0] * 255, rgb_color[1] * 255, rgb_color[2] * 255             # <<<<<<<<<<<<<<
@@ -7468,22 +7350,22 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
  * def hue_surface(surface_: pygame.Surface, shift_: int):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_rgb_color, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_rgb_color, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = PyNumber_Multiply(__pyx_t_3, __pyx_int_255); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Multiply(__pyx_t_3, __pyx_int_255); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_rgb_color, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_rgb_color, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = PyNumber_Multiply(__pyx_t_3, __pyx_int_255); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_6 = PyNumber_Multiply(__pyx_t_3, __pyx_int_255); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_rgb_color, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_rgb_color, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyNumber_Multiply(__pyx_t_3, __pyx_int_255); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_t_3, __pyx_int_255); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
@@ -7498,7 +7380,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":448
+  /* "hsv.pyx":524
  * import colorsys
  * 
  * def shift_hue(r, g, b, shift_):             # <<<<<<<<<<<<<<
@@ -7515,7 +7397,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("hsv.shift_hue", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.shift_hue", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_h);
@@ -7528,7 +7410,7 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
   return __pyx_r;
 }
 
-/* "hsv.pyx":458
+/* "hsv.pyx":534
  *     return rgb_color[0] * 255, rgb_color[1] * 255, rgb_color[2] * 255
  * 
  * def hue_surface(surface_: pygame.Surface, shift_: int):             # <<<<<<<<<<<<<<
@@ -7537,9 +7419,9 @@ static PyObject *__pyx_pf_3hsv_16shift_hue(CYTHON_UNUSED PyObject *__pyx_self, P
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3hsv_19hue_surface(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_3hsv_19hue_surface = {"hue_surface", (PyCFunction)__pyx_pw_3hsv_19hue_surface, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3hsv_19hue_surface(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3HSV_19hue_surface(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_3HSV_19hue_surface = {"hue_surface", (PyCFunction)__pyx_pw_3HSV_19hue_surface, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_3HSV_19hue_surface(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_surface_ = 0;
   PyObject *__pyx_v_shift_ = 0;
   PyObject *__pyx_r = 0;
@@ -7568,11 +7450,11 @@ static PyObject *__pyx_pw_3hsv_19hue_surface(PyObject *__pyx_self, PyObject *__p
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_shift)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("hue_surface", 1, 2, 2, 1); __PYX_ERR(0, 458, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("hue_surface", 1, 2, 2, 1); __PYX_ERR(0, 534, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "hue_surface") < 0)) __PYX_ERR(0, 458, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "hue_surface") < 0)) __PYX_ERR(0, 534, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7585,20 +7467,20 @@ static PyObject *__pyx_pw_3hsv_19hue_surface(PyObject *__pyx_self, PyObject *__p
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("hue_surface", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 458, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("hue_surface", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 534, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("hsv.hue_surface", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hue_surface", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3hsv_18hue_surface(__pyx_self, __pyx_v_surface_, __pyx_v_shift_);
+  __pyx_r = __pyx_pf_3HSV_18hue_surface(__pyx_self, __pyx_v_surface_, __pyx_v_shift_);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, PyObject *__pyx_v_shift_) {
+static PyObject *__pyx_pf_3HSV_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_surface_, PyObject *__pyx_v_shift_) {
   PyObject *__pyx_v_rgb_array = NULL;
   PyObject *__pyx_v_alpha_array = NULL;
   PyObject *__pyx_v_vectorize_ = NULL;
@@ -7617,19 +7499,19 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   PyObject *__pyx_t_9 = NULL;
   __Pyx_RefNannySetupContext("hue_surface", 0);
 
-  /* "hsv.pyx":460
+  /* "hsv.pyx":536
  * def hue_surface(surface_: pygame.Surface, shift_: int):
  * 
  *     rgb_array = pygame.surfarray.pixels3d(surface_)             # <<<<<<<<<<<<<<
  *     alpha_array = pygame.surfarray.pixels_alpha(surface_)
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 460, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_surfarray); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 460, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_surfarray); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_pixels3d); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 460, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_pixels3d); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -7643,13 +7525,13 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_surface_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_surface_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 536, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_v_surface_};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 536, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -7657,19 +7539,19 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_v_surface_};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 536, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 460, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 536, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(__pyx_v_surface_);
       __Pyx_GIVEREF(__pyx_v_surface_);
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_v_surface_);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 536, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -7678,19 +7560,19 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_v_rgb_array = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "hsv.pyx":461
+  /* "hsv.pyx":537
  * 
  *     rgb_array = pygame.surfarray.pixels3d(surface_)
  *     alpha_array = pygame.surfarray.pixels_alpha(surface_)             # <<<<<<<<<<<<<<
  * 
  *     vectorize_ = numpy.vectorize(shift_hue)
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 537, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_surfarray); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_surfarray); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 537, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pixels_alpha); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pixels_alpha); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 537, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -7704,13 +7586,13 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_surface_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_surface_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_v_surface_};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -7718,19 +7600,19 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_v_surface_};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 461, __pyx_L1_error)
+      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 537, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_INCREF(__pyx_v_surface_);
       __Pyx_GIVEREF(__pyx_v_surface_);
       PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_v_surface_);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
@@ -7739,19 +7621,19 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_v_alpha_array = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "hsv.pyx":463
+  /* "hsv.pyx":539
  *     alpha_array = pygame.surfarray.pixels_alpha(surface_)
  * 
  *     vectorize_ = numpy.vectorize(shift_hue)             # <<<<<<<<<<<<<<
  *     source_array_ = vectorize_(rgb_array[:, :, 0], rgb_array[:, :, 1], rgb_array[:, :, 2], shift_)
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_numpy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 463, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_numpy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_vectorize); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 463, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_vectorize); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_shift_hue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 463, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_shift_hue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -7764,14 +7646,14 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 463, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 539, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 463, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 539, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -7780,20 +7662,20 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 463, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 539, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 463, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 539, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 463, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 539, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -7802,18 +7684,18 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_v_vectorize_ = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "hsv.pyx":464
+  /* "hsv.pyx":540
  * 
  *     vectorize_ = numpy.vectorize(shift_hue)
  *     source_array_ = vectorize_(rgb_array[:, :, 0], rgb_array[:, :, 1], rgb_array[:, :, 2], shift_)             # <<<<<<<<<<<<<<
  * 
  *     source_array_ = numpy.array(source_array_).transpose(1, 2, 0)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_rgb_array, __pyx_tuple__5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_rgb_array, __pyx_tuple__5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_rgb_array, __pyx_tuple__8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_rgb_array, __pyx_tuple__8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_rgb_array, __pyx_tuple__11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_rgb_array, __pyx_tuple__11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_vectorize_);
   __pyx_t_4 = __pyx_v_vectorize_; __pyx_t_6 = NULL;
@@ -7831,7 +7713,7 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[5] = {__pyx_t_6, __pyx_t_3, __pyx_t_5, __pyx_t_2, __pyx_v_shift_};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 464, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 540, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7842,7 +7724,7 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[5] = {__pyx_t_6, __pyx_t_3, __pyx_t_5, __pyx_t_2, __pyx_v_shift_};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 464, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 540, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7851,7 +7733,7 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   } else
   #endif
   {
-    __pyx_t_8 = PyTuple_New(4+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 464, __pyx_L1_error)
+    __pyx_t_8 = PyTuple_New(4+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 540, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     if (__pyx_t_6) {
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -7868,7 +7750,7 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
     __pyx_t_2 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 464, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 540, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   }
@@ -7876,16 +7758,16 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_v_source_array_ = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "hsv.pyx":466
+  /* "hsv.pyx":542
  *     source_array_ = vectorize_(rgb_array[:, :, 0], rgb_array[:, :, 1], rgb_array[:, :, 2], shift_)
  * 
  *     source_array_ = numpy.array(source_array_).transpose(1, 2, 0)             # <<<<<<<<<<<<<<
  *     #array = make_array(source_array_, alpha_array)
  *     #return make_surface(array).convert_alpha()
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_numpy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_numpy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -7899,13 +7781,13 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_v_source_array_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_v_source_array_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_8)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_v_source_array_};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -7913,46 +7795,46 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_v_source_array_};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 466, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 542, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_INCREF(__pyx_v_source_array_);
       __Pyx_GIVEREF(__pyx_v_source_array_);
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_v_source_array_);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_transpose); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_transpose); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF_SET(__pyx_v_source_array_, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "hsv.pyx":469
+  /* "hsv.pyx":545
  *     #array = make_array(source_array_, alpha_array)
  *     #return make_surface(array).convert_alpha()
  *     array = numpy.dstack((source_array_, alpha_array))             # <<<<<<<<<<<<<<
  *     return pygame.image.frombuffer((array.transpose(1, 0, 2)).copy(order='C').astype(numpy.uint8),
  *                                    (array.shape[:2][0], array.shape[:2][1]), 'RGBA').convert_alpha()
  */
-  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_numpy); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 469, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_numpy); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_dstack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 469, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_dstack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = PyTuple_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 469, __pyx_L1_error)
+  __pyx_t_8 = PyTuple_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_INCREF(__pyx_v_source_array_);
   __Pyx_GIVEREF(__pyx_v_source_array_);
@@ -7971,14 +7853,14 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 469, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_8};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 469, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -7987,20 +7869,20 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_8};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 469, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 469, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 545, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_8);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_8);
       __pyx_t_8 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 469, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -8009,7 +7891,7 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_v_array = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "hsv.pyx":470
+  /* "hsv.pyx":546
  *     #return make_surface(array).convert_alpha()
  *     array = numpy.dstack((source_array_, alpha_array))
  *     return pygame.image.frombuffer((array.transpose(1, 0, 2)).copy(order='C').astype(numpy.uint8),             # <<<<<<<<<<<<<<
@@ -8017,47 +7899,47 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
  */
   __Pyx_XDECREF(__pyx_r);
 
-  /* "hsv.pyx":471
+  /* "hsv.pyx":547
  *     array = numpy.dstack((source_array_, alpha_array))
  *     return pygame.image.frombuffer((array.transpose(1, 0, 2)).copy(order='C').astype(numpy.uint8),
  *                                    (array.shape[:2][0], array.shape[:2][1]), 'RGBA').convert_alpha()             # <<<<<<<<<<<<<<
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pygame); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "hsv.pyx":470
+  /* "hsv.pyx":546
  *     #return make_surface(array).convert_alpha()
  *     array = numpy.dstack((source_array_, alpha_array))
  *     return pygame.image.frombuffer((array.transpose(1, 0, 2)).copy(order='C').astype(numpy.uint8),             # <<<<<<<<<<<<<<
  *                                    (array.shape[:2][0], array.shape[:2][1]), 'RGBA').convert_alpha()
  */
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_image); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_image); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_frombuffer); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_frombuffer); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_array, __pyx_n_s_transpose); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_array, __pyx_n_s_transpose); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 470, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 470, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 546, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_astype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_astype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_numpy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_numpy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_uint8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_uint8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_6 = NULL;
@@ -8071,14 +7953,14 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     }
   }
   if (!__pyx_t_6) {
-    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 470, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_8);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_6, __pyx_t_4};
-      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 470, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 546, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8087,48 +7969,48 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_6, __pyx_t_4};
-      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 470, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 546, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else
     #endif
     {
-      __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 470, __pyx_L1_error)
+      __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 546, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_6); __pyx_t_6 = NULL;
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_9, 0+1, __pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_9, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 470, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_9, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 546, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "hsv.pyx":471
+  /* "hsv.pyx":547
  *     array = numpy.dstack((source_array_, alpha_array))
  *     return pygame.image.frombuffer((array.transpose(1, 0, 2)).copy(order='C').astype(numpy.uint8),
  *                                    (array.shape[:2][0], array.shape[:2][1]), 'RGBA').convert_alpha()             # <<<<<<<<<<<<<<
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_array, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_array, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_9 = __Pyx_PyObject_GetSlice(__pyx_t_3, 0, 2, NULL, NULL, &__pyx_slice__14, 0, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetSlice(__pyx_t_3, 0, 2, NULL, NULL, &__pyx_slice__14, 0, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_9, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_9, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_array, __pyx_n_s_shape); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_array, __pyx_n_s_shape); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_4 = __Pyx_PyObject_GetSlice(__pyx_t_9, 0, 2, NULL, NULL, &__pyx_slice__15, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetSlice(__pyx_t_9, 0, 2, NULL, NULL, &__pyx_slice__15, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_GetItemInt(__pyx_t_4, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_GetItemInt(__pyx_t_4, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3);
@@ -8151,7 +8033,7 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_5)) {
     PyObject *__pyx_temp[4] = {__pyx_t_9, __pyx_t_8, __pyx_t_4, __pyx_n_s_RGBA};
-    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 470, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -8161,7 +8043,7 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
     PyObject *__pyx_temp[4] = {__pyx_t_9, __pyx_t_8, __pyx_t_4, __pyx_n_s_RGBA};
-    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 470, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -8169,7 +8051,7 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   } else
   #endif
   {
-    __pyx_t_3 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 470, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     if (__pyx_t_9) {
       __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_9); __pyx_t_9 = NULL;
@@ -8183,12 +8065,12 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     PyTuple_SET_ITEM(__pyx_t_3, 2+__pyx_t_7, __pyx_n_s_RGBA);
     __pyx_t_8 = 0;
     __pyx_t_4 = 0;
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 470, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_convert_alpha); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_convert_alpha); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -8202,10 +8084,10 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
     }
   }
   if (__pyx_t_2) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 471, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 547, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 471, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 547, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -8213,7 +8095,7 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "hsv.pyx":458
+  /* "hsv.pyx":534
  *     return rgb_color[0] * 255, rgb_color[1] * 255, rgb_color[2] * 255
  * 
  * def hue_surface(surface_: pygame.Surface, shift_: int):             # <<<<<<<<<<<<<<
@@ -8231,7 +8113,7 @@ static PyObject *__pyx_pf_3hsv_18hue_surface(CYTHON_UNUSED PyObject *__pyx_self,
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("hsv.hue_surface", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("HSV.hue_surface", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_rgb_array);
@@ -21282,7 +21164,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "hsv.array", /*tp_name*/
+  "HSV.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -21390,7 +21272,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "hsv.Enum", /*tp_name*/
+  "HSV.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -21640,7 +21522,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "hsv.memoryview", /*tp_name*/
+  "HSV.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -21767,7 +21649,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "hsv._memoryviewslice", /*tp_name*/
+  "HSV._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -21832,31 +21714,31 @@ static PyTypeObject __pyx_type___pyx_memoryviewslice = {
 };
 
 static PyMethodDef __pyx_methods[] = {
-  {"hsv2rgb", (PyCFunction)__pyx_pw_3hsv_1hsv2rgb, METH_VARARGS|METH_KEYWORDS, 0},
-  {"rgb2hsv", (PyCFunction)__pyx_pw_3hsv_3rgb2hsv, METH_VARARGS|METH_KEYWORDS, 0},
-  {"rgb_to_hsv_c", (PyCFunction)__pyx_pw_3hsv_5rgb_to_hsv_c, METH_VARARGS|METH_KEYWORDS, 0},
-  {"hsv_to_rgb_c", (PyCFunction)__pyx_pw_3hsv_7hsv_to_rgb_c, METH_VARARGS|METH_KEYWORDS, 0},
-  {"struct_rgb_to_hsv_c", (PyCFunction)__pyx_pw_3hsv_9struct_rgb_to_hsv_c, METH_VARARGS|METH_KEYWORDS, 0},
-  {"struct_hsv_to_rgb_c", (PyCFunction)__pyx_pw_3hsv_11struct_hsv_to_rgb_c, METH_VARARGS|METH_KEYWORDS, 0},
-  {"hue_surface_24", (PyCFunction)__pyx_pw_3hsv_13hue_surface_24, METH_VARARGS|METH_KEYWORDS, 0},
-  {"hue_surface_32", (PyCFunction)__pyx_pw_3hsv_15hue_surface_32, METH_VARARGS|METH_KEYWORDS, 0},
+  {"hsv2rgb", (PyCFunction)__pyx_pw_3HSV_1hsv2rgb, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3HSV_hsv2rgb},
+  {"rgb2hsv", (PyCFunction)__pyx_pw_3HSV_3rgb2hsv, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3HSV_2rgb2hsv},
+  {"rgb_to_hsv_c", (PyCFunction)__pyx_pw_3HSV_5rgb_to_hsv_c, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3HSV_4rgb_to_hsv_c},
+  {"hsv_to_rgb_c", (PyCFunction)__pyx_pw_3HSV_7hsv_to_rgb_c, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3HSV_6hsv_to_rgb_c},
+  {"struct_rgb_to_hsv_c", (PyCFunction)__pyx_pw_3HSV_9struct_rgb_to_hsv_c, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3HSV_8struct_rgb_to_hsv_c},
+  {"struct_hsv_to_rgb_c", (PyCFunction)__pyx_pw_3HSV_11struct_hsv_to_rgb_c, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3HSV_10struct_hsv_to_rgb_c},
+  {"hue_surface_24", (PyCFunction)__pyx_pw_3HSV_13hue_surface_24, METH_VARARGS|METH_KEYWORDS, 0},
+  {"hue_surface_32", (PyCFunction)__pyx_pw_3HSV_15hue_surface_32, METH_VARARGS|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_hsv(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_HSV(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_hsv},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_HSV},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "hsv",
+    "HSV",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -21876,10 +21758,8 @@ static struct PyModuleDef __pyx_moduledef = {
 #endif
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
+  {&__pyx_kp_s_1_0_1, __pyx_k_1_0_1, sizeof(__pyx_k_1_0_1), 0, 0, 1, 0},
   {&__pyx_n_s_ASCII, __pyx_k_ASCII, sizeof(__pyx_k_ASCII), 0, 0, 1, 1},
-  {&__pyx_n_s_BLEND_RGB_ADD, __pyx_k_BLEND_RGB_ADD, sizeof(__pyx_k_BLEND_RGB_ADD), 0, 0, 1, 1},
-  {&__pyx_n_s_BLEND_RGB_MAX, __pyx_k_BLEND_RGB_MAX, sizeof(__pyx_k_BLEND_RGB_MAX), 0, 0, 1, 1},
-  {&__pyx_n_s_BLEND_RGB_MULT, __pyx_k_BLEND_RGB_MULT, sizeof(__pyx_k_BLEND_RGB_MULT), 0, 0, 1, 1},
   {&__pyx_kp_s_Buffer_view_does_not_expose_stri, __pyx_k_Buffer_view_does_not_expose_stri, sizeof(__pyx_k_Buffer_view_does_not_expose_stri), 0, 0, 1, 0},
   {&__pyx_n_s_C, __pyx_k_C, sizeof(__pyx_k_C), 0, 0, 1, 1},
   {&__pyx_kp_s_Can_only_create_a_buffer_that_is, __pyx_k_Can_only_create_a_buffer_that_is, sizeof(__pyx_k_Can_only_create_a_buffer_that_is), 0, 0, 1, 0},
@@ -21893,7 +21773,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_Expecting_Surface_for_argument_s, __pyx_k_Expecting_Surface_for_argument_s, sizeof(__pyx_k_Expecting_Surface_for_argument_s), 0, 0, 1, 0},
   {&__pyx_kp_s_Expecting_double_for_argument_sh, __pyx_k_Expecting_double_for_argument_sh, sizeof(__pyx_k_Expecting_double_for_argument_sh), 0, 0, 1, 0},
   {&__pyx_kp_s_Expecting_float_for_argument_shi, __pyx_k_Expecting_float_for_argument_shi, sizeof(__pyx_k_Expecting_float_for_argument_shi), 0, 0, 1, 0},
-  {&__pyx_n_s_HWACCEL, __pyx_k_HWACCEL, sizeof(__pyx_k_HWACCEL), 0, 0, 1, 1},
+  {&__pyx_n_s_HSV, __pyx_k_HSV, sizeof(__pyx_k_HSV), 0, 0, 1, 1},
   {&__pyx_n_s_ImportError, __pyx_k_ImportError, sizeof(__pyx_k_ImportError), 0, 0, 1, 1},
   {&__pyx_kp_s_Incompatible_checksums_s_vs_0xb0, __pyx_k_Incompatible_checksums_s_vs_0xb0, sizeof(__pyx_k_Incompatible_checksums_s_vs_0xb0), 0, 0, 1, 0},
   {&__pyx_n_s_IndexError, __pyx_k_IndexError, sizeof(__pyx_k_IndexError), 0, 0, 1, 1},
@@ -21912,14 +21792,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_Pygame_library_is_missing_on_yo, __pyx_k_Pygame_library_is_missing_on_yo, sizeof(__pyx_k_Pygame_library_is_missing_on_yo), 0, 0, 1, 0},
   {&__pyx_n_s_RGB, __pyx_k_RGB, sizeof(__pyx_k_RGB), 0, 0, 1, 1},
   {&__pyx_n_s_RGBA, __pyx_k_RGBA, sizeof(__pyx_k_RGBA), 0, 0, 1, 1},
-  {&__pyx_n_s_RLEACCEL, __pyx_k_RLEACCEL, sizeof(__pyx_k_RLEACCEL), 0, 0, 1, 1},
-  {&__pyx_n_s_Rect, __pyx_k_Rect, sizeof(__pyx_k_Rect), 0, 0, 1, 1},
-  {&__pyx_n_s_SRCALPHA, __pyx_k_SRCALPHA, sizeof(__pyx_k_SRCALPHA), 0, 0, 1, 1},
   {&__pyx_n_s_Surface, __pyx_k_Surface, sizeof(__pyx_k_Surface), 0, 0, 1, 1},
   {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
   {&__pyx_kp_s_Unable_to_convert_item_to_object, __pyx_k_Unable_to_convert_item_to_object, sizeof(__pyx_k_Unable_to_convert_item_to_object), 0, 0, 1, 0},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
-  {&__pyx_n_s_Vector2, __pyx_k_Vector2, sizeof(__pyx_k_Vector2), 0, 0, 1, 1},
   {&__pyx_n_s_View_MemoryView, __pyx_k_View_MemoryView, sizeof(__pyx_k_View_MemoryView), 0, 0, 1, 1},
   {&__pyx_n_s_a, __pyx_k_a, sizeof(__pyx_k_a), 0, 0, 1, 1},
   {&__pyx_n_s_allocate_buffer, __pyx_k_allocate_buffer, sizeof(__pyx_k_allocate_buffer), 0, 0, 1, 1},
@@ -21945,11 +21821,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_e, __pyx_k_e, sizeof(__pyx_k_e), 0, 0, 1, 1},
   {&__pyx_n_s_empty, __pyx_k_empty, sizeof(__pyx_k_empty), 0, 0, 1, 1},
   {&__pyx_n_s_encode, __pyx_k_encode, sizeof(__pyx_k_encode), 0, 0, 1, 1},
-  {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
   {&__pyx_n_s_enumerate, __pyx_k_enumerate, sizeof(__pyx_k_enumerate), 0, 0, 1, 1},
   {&__pyx_n_s_error, __pyx_k_error, sizeof(__pyx_k_error), 0, 0, 1, 1},
-  {&__pyx_n_s_event, __pyx_k_event, sizeof(__pyx_k_event), 0, 0, 1, 1},
-  {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
   {&__pyx_n_s_flags, __pyx_k_flags, sizeof(__pyx_k_flags), 0, 0, 1, 1},
   {&__pyx_n_s_format, __pyx_k_format, sizeof(__pyx_k_format), 0, 0, 1, 1},
   {&__pyx_n_s_fortran, __pyx_k_fortran, sizeof(__pyx_k_fortran), 0, 0, 1, 1},
@@ -21960,7 +21833,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_getstate, __pyx_k_getstate, sizeof(__pyx_k_getstate), 0, 0, 1, 1},
   {&__pyx_kp_s_got_differing_extents_in_dimensi, __pyx_k_got_differing_extents_in_dimensi, sizeof(__pyx_k_got_differing_extents_in_dimensi), 0, 0, 1, 0},
   {&__pyx_n_s_h, __pyx_k_h, sizeof(__pyx_k_h), 0, 0, 1, 1},
-  {&__pyx_n_s_hsv, __pyx_k_hsv, sizeof(__pyx_k_hsv), 0, 0, 1, 1},
   {&__pyx_kp_s_hsv_pyx, __pyx_k_hsv_pyx, sizeof(__pyx_k_hsv_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_hsv_to_rgb, __pyx_k_hsv_to_rgb, sizeof(__pyx_k_hsv_to_rgb), 0, 0, 1, 1},
   {&__pyx_n_s_hsva, __pyx_k_hsva, sizeof(__pyx_k_hsva), 0, 0, 1, 1},
@@ -21971,7 +21843,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_itemsize, __pyx_k_itemsize, sizeof(__pyx_k_itemsize), 0, 0, 1, 1},
   {&__pyx_kp_s_itemsize_0_for_cython_array, __pyx_k_itemsize_0_for_cython_array, sizeof(__pyx_k_itemsize_0_for_cython_array), 0, 0, 1, 0},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
-  {&__pyx_n_s_mask, __pyx_k_mask, sizeof(__pyx_k_mask), 0, 0, 1, 1},
   {&__pyx_n_s_memview, __pyx_k_memview, sizeof(__pyx_k_memview), 0, 0, 1, 1},
   {&__pyx_n_s_mode, __pyx_k_mode, sizeof(__pyx_k_mode), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
@@ -21986,12 +21857,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_pickle, __pyx_k_pickle, sizeof(__pyx_k_pickle), 0, 0, 1, 1},
   {&__pyx_n_s_pixels3d, __pyx_k_pixels3d, sizeof(__pyx_k_pixels3d), 0, 0, 1, 1},
   {&__pyx_n_s_pixels_alpha, __pyx_k_pixels_alpha, sizeof(__pyx_k_pixels_alpha), 0, 0, 1, 1},
-  {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
   {&__pyx_n_s_pygame, __pyx_k_pygame, sizeof(__pyx_k_pygame), 0, 0, 1, 1},
   {&__pyx_n_s_pygame_image, __pyx_k_pygame_image, sizeof(__pyx_k_pygame_image), 0, 0, 1, 1},
-  {&__pyx_n_s_pygame_math, __pyx_k_pygame_math, sizeof(__pyx_k_pygame_math), 0, 0, 1, 1},
   {&__pyx_n_s_pygame_surfarray, __pyx_k_pygame_surfarray, sizeof(__pyx_k_pygame_surfarray), 0, 0, 1, 1},
-  {&__pyx_n_s_pygame_transform, __pyx_k_pygame_transform, sizeof(__pyx_k_pygame_transform), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_PickleError, __pyx_k_pyx_PickleError, sizeof(__pyx_k_pyx_PickleError), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_checksum, __pyx_k_pyx_checksum, sizeof(__pyx_k_pyx_checksum), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_getbuffer, __pyx_k_pyx_getbuffer, sizeof(__pyx_k_pyx_getbuffer), 0, 0, 1, 1},
@@ -22007,16 +21875,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_reduce_ex, __pyx_k_reduce_ex, sizeof(__pyx_k_reduce_ex), 0, 0, 1, 1},
   {&__pyx_n_s_rgb_array, __pyx_k_rgb_array, sizeof(__pyx_k_rgb_array), 0, 0, 1, 1},
   {&__pyx_n_s_rgb_color, __pyx_k_rgb_color, sizeof(__pyx_k_rgb_color), 0, 0, 1, 1},
-  {&__pyx_n_s_rotate, __pyx_k_rotate, sizeof(__pyx_k_rotate), 0, 0, 1, 1},
   {&__pyx_n_s_s, __pyx_k_s, sizeof(__pyx_k_s), 0, 0, 1, 1},
-  {&__pyx_n_s_scale, __pyx_k_scale, sizeof(__pyx_k_scale), 0, 0, 1, 1},
   {&__pyx_n_s_setstate, __pyx_k_setstate, sizeof(__pyx_k_setstate), 0, 0, 1, 1},
   {&__pyx_n_s_setstate_cython, __pyx_k_setstate_cython, sizeof(__pyx_k_setstate_cython), 0, 0, 1, 1},
   {&__pyx_n_s_shape, __pyx_k_shape, sizeof(__pyx_k_shape), 0, 0, 1, 1},
   {&__pyx_n_s_shift, __pyx_k_shift, sizeof(__pyx_k_shift), 0, 0, 1, 1},
   {&__pyx_n_s_shift_hue, __pyx_k_shift_hue, sizeof(__pyx_k_shift_hue), 0, 0, 1, 1},
   {&__pyx_n_s_size, __pyx_k_size, sizeof(__pyx_k_size), 0, 0, 1, 1},
-  {&__pyx_n_s_smoothscale, __pyx_k_smoothscale, sizeof(__pyx_k_smoothscale), 0, 0, 1, 1},
   {&__pyx_n_s_source_array, __pyx_k_source_array, sizeof(__pyx_k_source_array), 0, 0, 1, 1},
   {&__pyx_n_s_start, __pyx_k_start, sizeof(__pyx_k_start), 0, 0, 1, 1},
   {&__pyx_n_s_step, __pyx_k_step, sizeof(__pyx_k_step), 0, 0, 1, 1},
@@ -22029,7 +21894,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_surface, __pyx_k_surface, sizeof(__pyx_k_surface), 0, 0, 1, 1},
   {&__pyx_n_s_surfarray, __pyx_k_surfarray, sizeof(__pyx_k_surfarray), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
-  {&__pyx_n_s_transform, __pyx_k_transform, sizeof(__pyx_k_transform), 0, 0, 1, 1},
   {&__pyx_n_s_transpose, __pyx_k_transpose, sizeof(__pyx_k_transpose), 0, 0, 1, 1},
   {&__pyx_n_s_uint8, __pyx_k_uint8, sizeof(__pyx_k_uint8), 0, 0, 1, 1},
   {&__pyx_kp_s_unable_to_allocate_array_data, __pyx_k_unable_to_allocate_array_data, sizeof(__pyx_k_unable_to_allocate_array_data), 0, 0, 1, 0},
@@ -22039,12 +21903,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_v, __pyx_k_v, sizeof(__pyx_k_v), 0, 0, 1, 1},
   {&__pyx_n_s_vectorize, __pyx_k_vectorize, sizeof(__pyx_k_vectorize), 0, 0, 1, 1},
   {&__pyx_n_s_vectorize_2, __pyx_k_vectorize_2, sizeof(__pyx_k_vectorize_2), 0, 0, 1, 1},
+  {&__pyx_n_s_version, __pyx_k_version, sizeof(__pyx_k_version), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(0, 12, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 281, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 357, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 375, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 147, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 150, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(1, 2, __pyx_L1_error)
@@ -22060,93 +21925,93 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "hsv.pyx":285
+  /* "hsv.pyx":361
  *             rgb_ = array3d(surface_)
  *         except:
  *             raise ValueError('\nInvalid pixel format.')             # <<<<<<<<<<<<<<
  * 
  *     cdef:
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_Invalid_pixel_format); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 285, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_Invalid_pixel_format); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "hsv.pyx":369
+  /* "hsv.pyx":445
  *         alpha_ = pixels_alpha(surface_)
  *     except (pygame.error, ValueError):
  *        raise ValueError('\nCompatible only for 32-bit format with per-pixel transparency.')             # <<<<<<<<<<<<<<
  * 
  *     cdef int width, height
  */
-  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_Compatible_only_for_32_bit_form); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 369, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_Compatible_only_for_32_bit_form); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 445, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "hsv.pyx":464
+  /* "hsv.pyx":540
  * 
  *     vectorize_ = numpy.vectorize(shift_hue)
  *     source_array_ = vectorize_(rgb_array[:, :, 0], rgb_array[:, :, 1], rgb_array[:, :, 2], shift_)             # <<<<<<<<<<<<<<
  * 
  *     source_array_ = numpy.array(source_array_).transpose(1, 2, 0)
  */
-  __pyx_slice__3 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__3)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_slice__3 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__3)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
-  __pyx_slice__4 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__4)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_slice__4 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__4)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__4);
   __Pyx_GIVEREF(__pyx_slice__4);
-  __pyx_tuple__5 = PyTuple_Pack(3, __pyx_slice__3, __pyx_slice__4, __pyx_int_0); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(3, __pyx_slice__3, __pyx_slice__4, __pyx_int_0); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_slice__6 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__6)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_slice__6 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__6)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__6);
   __Pyx_GIVEREF(__pyx_slice__6);
-  __pyx_slice__7 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__7)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_slice__7 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__7)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__7);
   __Pyx_GIVEREF(__pyx_slice__7);
-  __pyx_tuple__8 = PyTuple_Pack(3, __pyx_slice__6, __pyx_slice__7, __pyx_int_1); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(3, __pyx_slice__6, __pyx_slice__7, __pyx_int_1); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_slice__9 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__9)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_slice__9 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__9)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__9);
   __Pyx_GIVEREF(__pyx_slice__9);
-  __pyx_slice__10 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__10)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_slice__10 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__10)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__10);
   __Pyx_GIVEREF(__pyx_slice__10);
-  __pyx_tuple__11 = PyTuple_Pack(3, __pyx_slice__9, __pyx_slice__10, __pyx_int_2); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(3, __pyx_slice__9, __pyx_slice__10, __pyx_int_2); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "hsv.pyx":466
+  /* "hsv.pyx":542
  *     source_array_ = vectorize_(rgb_array[:, :, 0], rgb_array[:, :, 1], rgb_array[:, :, 2], shift_)
  * 
  *     source_array_ = numpy.array(source_array_).transpose(1, 2, 0)             # <<<<<<<<<<<<<<
  *     #array = make_array(source_array_, alpha_array)
  *     #return make_surface(array).convert_alpha()
  */
-  __pyx_tuple__12 = PyTuple_Pack(3, __pyx_int_1, __pyx_int_2, __pyx_int_0); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(3, __pyx_int_1, __pyx_int_2, __pyx_int_0); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "hsv.pyx":470
+  /* "hsv.pyx":546
  *     #return make_surface(array).convert_alpha()
  *     array = numpy.dstack((source_array_, alpha_array))
  *     return pygame.image.frombuffer((array.transpose(1, 0, 2)).copy(order='C').astype(numpy.uint8),             # <<<<<<<<<<<<<<
  *                                    (array.shape[:2][0], array.shape[:2][1]), 'RGBA').convert_alpha()
  */
-  __pyx_tuple__13 = PyTuple_Pack(3, __pyx_int_1, __pyx_int_0, __pyx_int_2); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(3, __pyx_int_1, __pyx_int_0, __pyx_int_2); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "hsv.pyx":471
+  /* "hsv.pyx":547
  *     array = numpy.dstack((source_array_, alpha_array))
  *     return pygame.image.frombuffer((array.transpose(1, 0, 2)).copy(order='C').astype(numpy.uint8),
  *                                    (array.shape[:2][0], array.shape[:2][1]), 'RGBA').convert_alpha()             # <<<<<<<<<<<<<<
  */
-  __pyx_slice__14 = PySlice_New(Py_None, __pyx_int_2, Py_None); if (unlikely(!__pyx_slice__14)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_slice__14 = PySlice_New(Py_None, __pyx_int_2, Py_None); if (unlikely(!__pyx_slice__14)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__14);
   __Pyx_GIVEREF(__pyx_slice__14);
-  __pyx_slice__15 = PySlice_New(Py_None, __pyx_int_2, Py_None); if (unlikely(!__pyx_slice__15)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_slice__15 = PySlice_New(Py_None, __pyx_int_2, Py_None); if (unlikely(!__pyx_slice__15)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__15);
   __Pyx_GIVEREF(__pyx_slice__15);
 
@@ -22375,51 +22240,51 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
 
-  /* "hsv.pyx":14
+  /* "hsv.pyx":44
+ *     import pygame
  * except ImportError as e:
- *     print(e)
  *     raise ImportError("\n<Pygame> library is missing on your system."             # <<<<<<<<<<<<<<
  *           "\nTry: \n   C:\\pip install pygame on a window command prompt.")
  * 
  */
-  __pyx_tuple__37 = PyTuple_Pack(1, __pyx_kp_s_Pygame_library_is_missing_on_yo); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_tuple__37 = PyTuple_Pack(1, __pyx_kp_s_Pygame_library_is_missing_on_yo); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
 
-  /* "hsv.pyx":27
+  /* "hsv.pyx":62
  *     import numpy
  * except ImportError:
  *     raise ImportError("\n<Numpy> library is missing on your system."             # <<<<<<<<<<<<<<
  *           "\nTry: \n   C:\\pip install numpy on a window command prompt.")
  * 
  */
-  __pyx_tuple__38 = PyTuple_Pack(1, __pyx_kp_s_Numpy_library_is_missing_on_you); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_tuple__38 = PyTuple_Pack(1, __pyx_kp_s_Numpy_library_is_missing_on_you); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__38);
   __Pyx_GIVEREF(__pyx_tuple__38);
 
-  /* "hsv.pyx":448
+  /* "hsv.pyx":524
  * import colorsys
  * 
  * def shift_hue(r, g, b, shift_):             # <<<<<<<<<<<<<<
  *     """ hue shifting algorithm
  *         Transform an RGB color into its hsv equivalent and rotate color with shift_ parameter
  */
-  __pyx_tuple__39 = PyTuple_Pack(9, __pyx_n_s_r, __pyx_n_s_g, __pyx_n_s_b, __pyx_n_s_shift, __pyx_n_s_h, __pyx_n_s_s, __pyx_n_s_v, __pyx_n_s_a, __pyx_n_s_rgb_color); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_tuple__39 = PyTuple_Pack(9, __pyx_n_s_r, __pyx_n_s_g, __pyx_n_s_b, __pyx_n_s_shift, __pyx_n_s_h, __pyx_n_s_s, __pyx_n_s_v, __pyx_n_s_a, __pyx_n_s_rgb_color); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 524, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__39);
   __Pyx_GIVEREF(__pyx_tuple__39);
-  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_hsv_pyx, __pyx_n_s_shift_hue, 448, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_hsv_pyx, __pyx_n_s_shift_hue, 524, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 524, __pyx_L1_error)
 
-  /* "hsv.pyx":458
+  /* "hsv.pyx":534
  *     return rgb_color[0] * 255, rgb_color[1] * 255, rgb_color[2] * 255
  * 
  * def hue_surface(surface_: pygame.Surface, shift_: int):             # <<<<<<<<<<<<<<
  * 
  *     rgb_array = pygame.surfarray.pixels3d(surface_)
  */
-  __pyx_tuple__41 = PyTuple_Pack(7, __pyx_n_s_surface, __pyx_n_s_shift, __pyx_n_s_rgb_array, __pyx_n_s_alpha_array, __pyx_n_s_vectorize_2, __pyx_n_s_source_array, __pyx_n_s_array); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 458, __pyx_L1_error)
+  __pyx_tuple__41 = PyTuple_Pack(7, __pyx_n_s_surface, __pyx_n_s_shift, __pyx_n_s_rgb_array, __pyx_n_s_alpha_array, __pyx_n_s_vectorize_2, __pyx_n_s_source_array, __pyx_n_s_array); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__41);
   __Pyx_GIVEREF(__pyx_tuple__41);
-  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_hsv_pyx, __pyx_n_s_hue_surface, 458, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 458, __pyx_L1_error)
+  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_hsv_pyx, __pyx_n_s_hue_surface, 534, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 534, __pyx_L1_error)
 
   /* "View.MemoryView":285
  *         return self.name
@@ -22657,11 +22522,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC inithsv(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC inithsv(void)
+__Pyx_PyMODINIT_FUNC initHSV(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initHSV(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_hsv(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_hsv(void)
+__Pyx_PyMODINIT_FUNC PyInit_HSV(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_HSV(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -22701,7 +22566,7 @@ bad:
 }
 
 
-static int __pyx_pymod_exec_hsv(PyObject *__pyx_pyinit_module)
+static int __pyx_pymod_exec_HSV(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -22709,8 +22574,8 @@ static int __pyx_pymod_exec_hsv(PyObject *__pyx_pyinit_module)
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  int __pyx_t_6;
+  int __pyx_t_5;
+  PyObject *__pyx_t_6 = NULL;
   PyObject *__pyx_t_7 = NULL;
   PyObject *__pyx_t_8 = NULL;
   static PyThread_type_lock __pyx_t_9[8];
@@ -22729,7 +22594,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_hsv(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_HSV(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -22765,7 +22630,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("hsv", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("HSV", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -22784,14 +22649,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_hsv) {
+  if (__pyx_module_is_main_HSV) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "hsv")) {
-      if (unlikely(PyDict_SetItemString(modules, "hsv", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "HSV")) {
+      if (unlikely(PyDict_SetItemString(modules, "HSV", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -22812,12 +22677,21 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "hsv.pyx":4
+  /* "hsv.pyx":3
+ * ###cython: boundscheck=False, wraparound=False, nonecheck=False, optimize.use_switch=True
+ * 
+ * __version__ = "1.0.1"             # <<<<<<<<<<<<<<
+ * 
+ * # COMPILATION
+ */
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_version, __pyx_kp_s_1_0_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
+
+  /* "hsv.pyx":41
  * 
  * 
  * try:             # <<<<<<<<<<<<<<
  *     import pygame
- *     from pygame.math import Vector2
+ * except ImportError as e:
  */
   {
     __Pyx_PyThreadState_declare
@@ -22828,241 +22702,24 @@ if (!__Pyx_RefNanny) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "hsv.pyx":5
+      /* "hsv.pyx":42
  * 
  * try:
  *     import pygame             # <<<<<<<<<<<<<<
- *     from pygame.math import Vector2
- *     from pygame import Rect, BLEND_RGB_ADD, HWACCEL, BLEND_RGB_MAX, BLEND_RGB_MULT, transform
- */
-      __pyx_t_4 = __Pyx_Import(__pyx_n_s_pygame, 0, -1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 5, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_pygame, __pyx_t_4) < 0) __PYX_ERR(0, 5, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-      /* "hsv.pyx":6
- * try:
- *     import pygame
- *     from pygame.math import Vector2             # <<<<<<<<<<<<<<
- *     from pygame import Rect, BLEND_RGB_ADD, HWACCEL, BLEND_RGB_MAX, BLEND_RGB_MULT, transform
- *     from pygame import Surface, SRCALPHA, mask, event, RLEACCEL
- */
-      __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 6, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_INCREF(__pyx_n_s_Vector2);
-      __Pyx_GIVEREF(__pyx_n_s_Vector2);
-      PyList_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_Vector2);
-      __pyx_t_5 = __Pyx_Import(__pyx_n_s_pygame_math, __pyx_t_4, -1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 6, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_Vector2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 6, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_Vector2, __pyx_t_4) < 0) __PYX_ERR(0, 6, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "hsv.pyx":7
- *     import pygame
- *     from pygame.math import Vector2
- *     from pygame import Rect, BLEND_RGB_ADD, HWACCEL, BLEND_RGB_MAX, BLEND_RGB_MULT, transform             # <<<<<<<<<<<<<<
- *     from pygame import Surface, SRCALPHA, mask, event, RLEACCEL
- *     from pygame.transform import rotate, scale, smoothscale
- */
-      __pyx_t_5 = PyList_New(6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_INCREF(__pyx_n_s_Rect);
-      __Pyx_GIVEREF(__pyx_n_s_Rect);
-      PyList_SET_ITEM(__pyx_t_5, 0, __pyx_n_s_Rect);
-      __Pyx_INCREF(__pyx_n_s_BLEND_RGB_ADD);
-      __Pyx_GIVEREF(__pyx_n_s_BLEND_RGB_ADD);
-      PyList_SET_ITEM(__pyx_t_5, 1, __pyx_n_s_BLEND_RGB_ADD);
-      __Pyx_INCREF(__pyx_n_s_HWACCEL);
-      __Pyx_GIVEREF(__pyx_n_s_HWACCEL);
-      PyList_SET_ITEM(__pyx_t_5, 2, __pyx_n_s_HWACCEL);
-      __Pyx_INCREF(__pyx_n_s_BLEND_RGB_MAX);
-      __Pyx_GIVEREF(__pyx_n_s_BLEND_RGB_MAX);
-      PyList_SET_ITEM(__pyx_t_5, 3, __pyx_n_s_BLEND_RGB_MAX);
-      __Pyx_INCREF(__pyx_n_s_BLEND_RGB_MULT);
-      __Pyx_GIVEREF(__pyx_n_s_BLEND_RGB_MULT);
-      PyList_SET_ITEM(__pyx_t_5, 4, __pyx_n_s_BLEND_RGB_MULT);
-      __Pyx_INCREF(__pyx_n_s_transform);
-      __Pyx_GIVEREF(__pyx_n_s_transform);
-      PyList_SET_ITEM(__pyx_t_5, 5, __pyx_n_s_transform);
-      __pyx_t_4 = __Pyx_Import(__pyx_n_s_pygame, __pyx_t_5, -1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_4, __pyx_n_s_Rect); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_Rect, __pyx_t_5) < 0) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_4, __pyx_n_s_BLEND_RGB_ADD); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_BLEND_RGB_ADD, __pyx_t_5) < 0) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_4, __pyx_n_s_HWACCEL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_HWACCEL, __pyx_t_5) < 0) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_4, __pyx_n_s_BLEND_RGB_MAX); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_BLEND_RGB_MAX, __pyx_t_5) < 0) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_4, __pyx_n_s_BLEND_RGB_MULT); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_BLEND_RGB_MULT, __pyx_t_5) < 0) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_4, __pyx_n_s_transform); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_transform, __pyx_t_5) < 0) __PYX_ERR(0, 7, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-      /* "hsv.pyx":8
- *     from pygame.math import Vector2
- *     from pygame import Rect, BLEND_RGB_ADD, HWACCEL, BLEND_RGB_MAX, BLEND_RGB_MULT, transform
- *     from pygame import Surface, SRCALPHA, mask, event, RLEACCEL             # <<<<<<<<<<<<<<
- *     from pygame.transform import rotate, scale, smoothscale
- *     from pygame.surfarray import pixels3d, array3d, pixels_alpha
- */
-      __pyx_t_4 = PyList_New(5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_INCREF(__pyx_n_s_Surface);
-      __Pyx_GIVEREF(__pyx_n_s_Surface);
-      PyList_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_Surface);
-      __Pyx_INCREF(__pyx_n_s_SRCALPHA);
-      __Pyx_GIVEREF(__pyx_n_s_SRCALPHA);
-      PyList_SET_ITEM(__pyx_t_4, 1, __pyx_n_s_SRCALPHA);
-      __Pyx_INCREF(__pyx_n_s_mask);
-      __Pyx_GIVEREF(__pyx_n_s_mask);
-      PyList_SET_ITEM(__pyx_t_4, 2, __pyx_n_s_mask);
-      __Pyx_INCREF(__pyx_n_s_event);
-      __Pyx_GIVEREF(__pyx_n_s_event);
-      PyList_SET_ITEM(__pyx_t_4, 3, __pyx_n_s_event);
-      __Pyx_INCREF(__pyx_n_s_RLEACCEL);
-      __Pyx_GIVEREF(__pyx_n_s_RLEACCEL);
-      PyList_SET_ITEM(__pyx_t_4, 4, __pyx_n_s_RLEACCEL);
-      __pyx_t_5 = __Pyx_Import(__pyx_n_s_pygame, __pyx_t_4, -1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_Surface); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_Surface, __pyx_t_4) < 0) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_SRCALPHA); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_SRCALPHA, __pyx_t_4) < 0) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_mask); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_mask, __pyx_t_4) < 0) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_event); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_event, __pyx_t_4) < 0) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_RLEACCEL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_RLEACCEL, __pyx_t_4) < 0) __PYX_ERR(0, 8, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "hsv.pyx":9
- *     from pygame import Rect, BLEND_RGB_ADD, HWACCEL, BLEND_RGB_MAX, BLEND_RGB_MULT, transform
- *     from pygame import Surface, SRCALPHA, mask, event, RLEACCEL
- *     from pygame.transform import rotate, scale, smoothscale             # <<<<<<<<<<<<<<
- *     from pygame.surfarray import pixels3d, array3d, pixels_alpha
- *     from pygame.image import frombuffer
- */
-      __pyx_t_5 = PyList_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 9, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_INCREF(__pyx_n_s_rotate);
-      __Pyx_GIVEREF(__pyx_n_s_rotate);
-      PyList_SET_ITEM(__pyx_t_5, 0, __pyx_n_s_rotate);
-      __Pyx_INCREF(__pyx_n_s_scale);
-      __Pyx_GIVEREF(__pyx_n_s_scale);
-      PyList_SET_ITEM(__pyx_t_5, 1, __pyx_n_s_scale);
-      __Pyx_INCREF(__pyx_n_s_smoothscale);
-      __Pyx_GIVEREF(__pyx_n_s_smoothscale);
-      PyList_SET_ITEM(__pyx_t_5, 2, __pyx_n_s_smoothscale);
-      __pyx_t_4 = __Pyx_Import(__pyx_n_s_pygame_transform, __pyx_t_5, -1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 9, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_4, __pyx_n_s_rotate); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 9, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_rotate, __pyx_t_5) < 0) __PYX_ERR(0, 9, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_4, __pyx_n_s_scale); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 9, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_scale, __pyx_t_5) < 0) __PYX_ERR(0, 9, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_4, __pyx_n_s_smoothscale); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 9, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_smoothscale, __pyx_t_5) < 0) __PYX_ERR(0, 9, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-      /* "hsv.pyx":10
- *     from pygame import Surface, SRCALPHA, mask, event, RLEACCEL
- *     from pygame.transform import rotate, scale, smoothscale
- *     from pygame.surfarray import pixels3d, array3d, pixels_alpha             # <<<<<<<<<<<<<<
- *     from pygame.image import frombuffer
  * except ImportError as e:
+ *     raise ImportError("\n<Pygame> library is missing on your system."
  */
-      __pyx_t_4 = PyList_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 10, __pyx_L2_error)
+      __pyx_t_4 = __Pyx_Import(__pyx_n_s_pygame, 0, -1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L2_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_INCREF(__pyx_n_s_pixels3d);
-      __Pyx_GIVEREF(__pyx_n_s_pixels3d);
-      PyList_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_pixels3d);
-      __Pyx_INCREF(__pyx_n_s_array3d);
-      __Pyx_GIVEREF(__pyx_n_s_array3d);
-      PyList_SET_ITEM(__pyx_t_4, 1, __pyx_n_s_array3d);
-      __Pyx_INCREF(__pyx_n_s_pixels_alpha);
-      __Pyx_GIVEREF(__pyx_n_s_pixels_alpha);
-      PyList_SET_ITEM(__pyx_t_4, 2, __pyx_n_s_pixels_alpha);
-      __pyx_t_5 = __Pyx_Import(__pyx_n_s_pygame_surfarray, __pyx_t_4, -1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 10, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_pixels3d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 10, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_pixels3d, __pyx_t_4) < 0) __PYX_ERR(0, 10, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_array3d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 10, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_array3d, __pyx_t_4) < 0) __PYX_ERR(0, 10, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_pixels_alpha); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 10, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_pixels_alpha, __pyx_t_4) < 0) __PYX_ERR(0, 10, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "hsv.pyx":11
- *     from pygame.transform import rotate, scale, smoothscale
- *     from pygame.surfarray import pixels3d, array3d, pixels_alpha
- *     from pygame.image import frombuffer             # <<<<<<<<<<<<<<
- * except ImportError as e:
- *     print(e)
- */
-      __pyx_t_5 = PyList_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 11, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_INCREF(__pyx_n_s_frombuffer);
-      __Pyx_GIVEREF(__pyx_n_s_frombuffer);
-      PyList_SET_ITEM(__pyx_t_5, 0, __pyx_n_s_frombuffer);
-      __pyx_t_4 = __Pyx_Import(__pyx_n_s_pygame_image, __pyx_t_5, -1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 11, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_4, __pyx_n_s_frombuffer); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 11, __pyx_L2_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_frombuffer, __pyx_t_5) < 0) __PYX_ERR(0, 11, __pyx_L2_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      if (PyDict_SetItem(__pyx_d, __pyx_n_s_pygame, __pyx_t_4) < 0) __PYX_ERR(0, 42, __pyx_L2_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "hsv.pyx":4
+      /* "hsv.pyx":41
  * 
  * 
  * try:             # <<<<<<<<<<<<<<
  *     import pygame
- *     from pygame.math import Vector2
+ * except ImportError as e:
  */
     }
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -23070,59 +22727,46 @@ if (!__Pyx_RefNanny) {
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     goto __pyx_L7_try_end;
     __pyx_L2_error:;
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "hsv.pyx":12
- *     from pygame.surfarray import pixels3d, array3d, pixels_alpha
- *     from pygame.image import frombuffer
+    /* "hsv.pyx":43
+ * try:
+ *     import pygame
  * except ImportError as e:             # <<<<<<<<<<<<<<
- *     print(e)
- *     raise ImportError("\n<Pygame> library is missing on your system."
- */
-    __pyx_t_6 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ImportError);
-    if (__pyx_t_6) {
-      __Pyx_AddTraceback("hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_5, &__pyx_t_7) < 0) __PYX_ERR(0, 12, __pyx_L4_except_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_GOTREF(__pyx_t_7);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_e, __pyx_t_5) < 0) __PYX_ERR(0, 12, __pyx_L4_except_error)
-
-      /* "hsv.pyx":13
- *     from pygame.image import frombuffer
- * except ImportError as e:
- *     print(e)             # <<<<<<<<<<<<<<
  *     raise ImportError("\n<Pygame> library is missing on your system."
  *           "\nTry: \n   C:\\pip install pygame on a window command prompt.")
  */
-      __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_e); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 13, __pyx_L4_except_error)
-      __Pyx_GOTREF(__pyx_t_8);
-      if (__Pyx_PrintOne(0, __pyx_t_8) < 0) __PYX_ERR(0, 13, __pyx_L4_except_error)
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __pyx_t_5 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ImportError);
+    if (__pyx_t_5) {
+      __Pyx_AddTraceback("HSV", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 43, __pyx_L4_except_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_GOTREF(__pyx_t_7);
+      if (PyDict_SetItem(__pyx_d, __pyx_n_s_e, __pyx_t_6) < 0) __PYX_ERR(0, 43, __pyx_L4_except_error)
 
-      /* "hsv.pyx":14
+      /* "hsv.pyx":44
+ *     import pygame
  * except ImportError as e:
- *     print(e)
  *     raise ImportError("\n<Pygame> library is missing on your system."             # <<<<<<<<<<<<<<
  *           "\nTry: \n   C:\\pip install pygame on a window command prompt.")
  * 
  */
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__37, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 14, __pyx_L4_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__37, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 44, __pyx_L4_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_Raise(__pyx_t_8, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __PYX_ERR(0, 14, __pyx_L4_except_error)
+      __PYX_ERR(0, 44, __pyx_L4_except_error)
     }
     goto __pyx_L4_except_error;
     __pyx_L4_except_error:;
 
-    /* "hsv.pyx":4
+    /* "hsv.pyx":41
  * 
  * 
  * try:             # <<<<<<<<<<<<<<
  *     import pygame
- *     from pygame.math import Vector2
+ * except ImportError as e:
  */
     __Pyx_XGIVEREF(__pyx_t_1);
     __Pyx_XGIVEREF(__pyx_t_2);
@@ -23132,8 +22776,85 @@ if (!__Pyx_RefNanny) {
     __pyx_L7_try_end:;
   }
 
-  /* "hsv.pyx":17
- *           "\nTry: \n   C:\\pip install pygame on a window command prompt.")
+  /* "hsv.pyx":48
+ * 
+ * 
+ * from pygame import Surface             # <<<<<<<<<<<<<<
+ * from pygame.surfarray import pixels3d, array3d, pixels_alpha
+ * from pygame.image import frombuffer
+ */
+  __pyx_t_7 = PyList_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  __Pyx_INCREF(__pyx_n_s_Surface);
+  __Pyx_GIVEREF(__pyx_n_s_Surface);
+  PyList_SET_ITEM(__pyx_t_7, 0, __pyx_n_s_Surface);
+  __pyx_t_6 = __Pyx_Import(__pyx_n_s_pygame, __pyx_t_7, -1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __pyx_t_7 = __Pyx_ImportFrom(__pyx_t_6, __pyx_n_s_Surface); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Surface, __pyx_t_7) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+
+  /* "hsv.pyx":49
+ * 
+ * from pygame import Surface
+ * from pygame.surfarray import pixels3d, array3d, pixels_alpha             # <<<<<<<<<<<<<<
+ * from pygame.image import frombuffer
+ * 
+ */
+  __pyx_t_6 = PyList_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_INCREF(__pyx_n_s_pixels3d);
+  __Pyx_GIVEREF(__pyx_n_s_pixels3d);
+  PyList_SET_ITEM(__pyx_t_6, 0, __pyx_n_s_pixels3d);
+  __Pyx_INCREF(__pyx_n_s_array3d);
+  __Pyx_GIVEREF(__pyx_n_s_array3d);
+  PyList_SET_ITEM(__pyx_t_6, 1, __pyx_n_s_array3d);
+  __Pyx_INCREF(__pyx_n_s_pixels_alpha);
+  __Pyx_GIVEREF(__pyx_n_s_pixels_alpha);
+  PyList_SET_ITEM(__pyx_t_6, 2, __pyx_n_s_pixels_alpha);
+  __pyx_t_7 = __Pyx_Import(__pyx_n_s_pygame_surfarray, __pyx_t_6, -1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = __Pyx_ImportFrom(__pyx_t_7, __pyx_n_s_pixels3d); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pixels3d, __pyx_t_6) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = __Pyx_ImportFrom(__pyx_t_7, __pyx_n_s_array3d); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_array3d, __pyx_t_6) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = __Pyx_ImportFrom(__pyx_t_7, __pyx_n_s_pixels_alpha); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pixels_alpha, __pyx_t_6) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+
+  /* "hsv.pyx":50
+ * from pygame import Surface
+ * from pygame.surfarray import pixels3d, array3d, pixels_alpha
+ * from pygame.image import frombuffer             # <<<<<<<<<<<<<<
+ * 
+ * try:
+ */
+  __pyx_t_7 = PyList_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  __Pyx_INCREF(__pyx_n_s_frombuffer);
+  __Pyx_GIVEREF(__pyx_n_s_frombuffer);
+  PyList_SET_ITEM(__pyx_t_7, 0, __pyx_n_s_frombuffer);
+  __pyx_t_6 = __Pyx_Import(__pyx_n_s_pygame_image, __pyx_t_7, -1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __pyx_t_7 = __Pyx_ImportFrom(__pyx_t_6, __pyx_n_s_frombuffer); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_frombuffer, __pyx_t_7) < 0) __PYX_ERR(0, 50, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+
+  /* "hsv.pyx":52
+ * from pygame.image import frombuffer
  * 
  * try:             # <<<<<<<<<<<<<<
  *     cimport cython
@@ -23143,7 +22864,7 @@ if (!__Pyx_RefNanny) {
     (void)__pyx_t_3; (void)__pyx_t_2; (void)__pyx_t_1; /* mark used */
     /*try:*/ {
 
-      /* "hsv.pyx":19
+      /* "hsv.pyx":54
  * try:
  *     cimport cython
  *     from cython.parallel cimport prange             # <<<<<<<<<<<<<<
@@ -23153,7 +22874,7 @@ if (!__Pyx_RefNanny) {
     }
   }
 
-  /* "hsv.pyx":24
+  /* "hsv.pyx":59
  *           "\nTry: \n   C:\\pip install cython on a window command prompt.")
  * 
  * try:             # <<<<<<<<<<<<<<
@@ -23169,19 +22890,19 @@ if (!__Pyx_RefNanny) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "hsv.pyx":25
+      /* "hsv.pyx":60
  * 
  * try:
  *     import numpy             # <<<<<<<<<<<<<<
  * except ImportError:
  *     raise ImportError("\n<Numpy> library is missing on your system."
  */
-      __pyx_t_7 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 25, __pyx_L16_error)
-      __Pyx_GOTREF(__pyx_t_7);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_numpy, __pyx_t_7) < 0) __PYX_ERR(0, 25, __pyx_L16_error)
-      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __pyx_t_6 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 60, __pyx_L16_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      if (PyDict_SetItem(__pyx_d, __pyx_n_s_numpy, __pyx_t_6) < 0) __PYX_ERR(0, 60, __pyx_L16_error)
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "hsv.pyx":24
+      /* "hsv.pyx":59
  *           "\nTry: \n   C:\\pip install cython on a window command prompt.")
  * 
  * try:             # <<<<<<<<<<<<<<
@@ -23196,41 +22917,41 @@ if (!__Pyx_RefNanny) {
     __pyx_L16_error:;
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "hsv.pyx":26
+    /* "hsv.pyx":61
  * try:
  *     import numpy
  * except ImportError:             # <<<<<<<<<<<<<<
  *     raise ImportError("\n<Numpy> library is missing on your system."
  *           "\nTry: \n   C:\\pip install numpy on a window command prompt.")
  */
-    __pyx_t_6 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ImportError);
-    if (__pyx_t_6) {
-      __Pyx_AddTraceback("hsv", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_5, &__pyx_t_4) < 0) __PYX_ERR(0, 26, __pyx_L18_except_error)
+    __pyx_t_5 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ImportError);
+    if (__pyx_t_5) {
+      __Pyx_AddTraceback("HSV", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_7, &__pyx_t_4) < 0) __PYX_ERR(0, 61, __pyx_L18_except_error)
+      __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
-      __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
 
-      /* "hsv.pyx":27
+      /* "hsv.pyx":62
  *     import numpy
  * except ImportError:
  *     raise ImportError("\n<Numpy> library is missing on your system."             # <<<<<<<<<<<<<<
  *           "\nTry: \n   C:\\pip install numpy on a window command prompt.")
  * 
  */
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__38, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 27, __pyx_L18_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__38, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 62, __pyx_L18_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_Raise(__pyx_t_8, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __PYX_ERR(0, 27, __pyx_L18_except_error)
+      __PYX_ERR(0, 62, __pyx_L18_except_error)
     }
     goto __pyx_L18_except_error;
     __pyx_L18_except_error:;
 
-    /* "hsv.pyx":24
+    /* "hsv.pyx":59
  *           "\nTry: \n   C:\\pip install cython on a window command prompt.")
  * 
  * try:             # <<<<<<<<<<<<<<
@@ -23245,14 +22966,14 @@ if (!__Pyx_RefNanny) {
     __pyx_L21_try_end:;
   }
 
-  /* "hsv.pyx":30
+  /* "hsv.pyx":65
  *           "\nTry: \n   C:\\pip install numpy on a window command prompt.")
  * 
  * from numpy import empty, uint8             # <<<<<<<<<<<<<<
- * from libc.stdlib cimport srand, rand, RAND_MAX, qsort, malloc, free, abs
+ * from libc.stdlib cimport malloc, free
  * 
  */
-  __pyx_t_4 = PyList_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_n_s_empty);
   __Pyx_GIVEREF(__pyx_n_s_empty);
@@ -23260,64 +22981,64 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_uint8);
   __Pyx_GIVEREF(__pyx_n_s_uint8);
   PyList_SET_ITEM(__pyx_t_4, 1, __pyx_n_s_uint8);
-  __pyx_t_5 = __Pyx_Import(__pyx_n_s_numpy, __pyx_t_4, -1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 30, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = __Pyx_Import(__pyx_n_s_numpy, __pyx_t_4, -1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_empty); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_7, __pyx_n_s_empty); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_empty, __pyx_t_4) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_empty, __pyx_t_4) < 0) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_uint8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_7, __pyx_n_s_uint8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_uint8, __pyx_t_4) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_uint8, __pyx_t_4) < 0) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "hsv.pyx":446
+  /* "hsv.pyx":522
  * 
  * 
  * import colorsys             # <<<<<<<<<<<<<<
  * 
  * def shift_hue(r, g, b, shift_):
  */
-  __pyx_t_5 = __Pyx_Import(__pyx_n_s_colorsys, 0, -1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 446, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_colorsys, __pyx_t_5) < 0) __PYX_ERR(0, 446, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_7 = __Pyx_Import(__pyx_n_s_colorsys, 0, -1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 522, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_colorsys, __pyx_t_7) < 0) __PYX_ERR(0, 522, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "hsv.pyx":448
+  /* "hsv.pyx":524
  * import colorsys
  * 
  * def shift_hue(r, g, b, shift_):             # <<<<<<<<<<<<<<
  *     """ hue shifting algorithm
  *         Transform an RGB color into its hsv equivalent and rotate color with shift_ parameter
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_3hsv_17shift_hue, NULL, __pyx_n_s_hsv); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 448, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_shift_hue, __pyx_t_5) < 0) __PYX_ERR(0, 448, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_7 = PyCFunction_NewEx(&__pyx_mdef_3HSV_17shift_hue, NULL, __pyx_n_s_HSV); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 524, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_shift_hue, __pyx_t_7) < 0) __PYX_ERR(0, 524, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "hsv.pyx":458
+  /* "hsv.pyx":534
  *     return rgb_color[0] * 255, rgb_color[1] * 255, rgb_color[2] * 255
  * 
  * def hue_surface(surface_: pygame.Surface, shift_: int):             # <<<<<<<<<<<<<<
  * 
  *     rgb_array = pygame.surfarray.pixels3d(surface_)
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_3hsv_19hue_surface, NULL, __pyx_n_s_hsv); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 458, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_hue_surface, __pyx_t_5) < 0) __PYX_ERR(0, 458, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_7 = PyCFunction_NewEx(&__pyx_mdef_3HSV_19hue_surface, NULL, __pyx_n_s_HSV); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 534, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_hue_surface, __pyx_t_7) < 0) __PYX_ERR(0, 534, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
   /* "hsv.pyx":1
  * ###cython: boundscheck=False, wraparound=False, nonecheck=False, optimize.use_switch=True             # <<<<<<<<<<<<<<
  * 
- * 
+ * __version__ = "1.0.1"
  */
-  __pyx_t_5 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_5) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_7 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_7) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
   /* "View.MemoryView":208
  *         info.obj = self
@@ -23326,10 +23047,10 @@ if (!__Pyx_RefNanny) {
  * 
  *     def __dealloc__(array self):
  */
-  __pyx_t_5 = __pyx_capsule_create(((void *)(&__pyx_array_getbuffer)), ((char *)"getbuffer(obj, view, flags)")); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 208, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem((PyObject *)__pyx_array_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_5) < 0) __PYX_ERR(1, 208, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_7 = __pyx_capsule_create(((void *)(&__pyx_array_getbuffer)), ((char *)"getbuffer(obj, view, flags)")); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 208, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem((PyObject *)__pyx_array_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_7) < 0) __PYX_ERR(1, 208, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_array_type);
 
   /* "View.MemoryView":285
@@ -23339,12 +23060,12 @@ if (!__Pyx_RefNanny) {
  * cdef strided = Enum("<strided and direct>") # default
  * cdef indirect = Enum("<strided and indirect>")
  */
-  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__43, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 285, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__43, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 285, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
   __Pyx_XGOTREF(generic);
-  __Pyx_DECREF_SET(generic, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  __pyx_t_5 = 0;
+  __Pyx_DECREF_SET(generic, __pyx_t_7);
+  __Pyx_GIVEREF(__pyx_t_7);
+  __pyx_t_7 = 0;
 
   /* "View.MemoryView":286
  * 
@@ -23353,12 +23074,12 @@ if (!__Pyx_RefNanny) {
  * cdef indirect = Enum("<strided and indirect>")
  * 
  */
-  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__44, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 286, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__44, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 286, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
   __Pyx_XGOTREF(strided);
-  __Pyx_DECREF_SET(strided, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  __pyx_t_5 = 0;
+  __Pyx_DECREF_SET(strided, __pyx_t_7);
+  __Pyx_GIVEREF(__pyx_t_7);
+  __pyx_t_7 = 0;
 
   /* "View.MemoryView":287
  * cdef generic = Enum("<strided and direct or indirect>")
@@ -23367,12 +23088,12 @@ if (!__Pyx_RefNanny) {
  * 
  * 
  */
-  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__45, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 287, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__45, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 287, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
   __Pyx_XGOTREF(indirect);
-  __Pyx_DECREF_SET(indirect, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  __pyx_t_5 = 0;
+  __Pyx_DECREF_SET(indirect, __pyx_t_7);
+  __Pyx_GIVEREF(__pyx_t_7);
+  __pyx_t_7 = 0;
 
   /* "View.MemoryView":290
  * 
@@ -23381,12 +23102,12 @@ if (!__Pyx_RefNanny) {
  * cdef indirect_contiguous = Enum("<contiguous and indirect>")
  * 
  */
-  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__46, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 290, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__46, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 290, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
   __Pyx_XGOTREF(contiguous);
-  __Pyx_DECREF_SET(contiguous, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  __pyx_t_5 = 0;
+  __Pyx_DECREF_SET(contiguous, __pyx_t_7);
+  __Pyx_GIVEREF(__pyx_t_7);
+  __pyx_t_7 = 0;
 
   /* "View.MemoryView":291
  * 
@@ -23395,12 +23116,12 @@ if (!__Pyx_RefNanny) {
  * 
  * 
  */
-  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__47, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 291, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__47, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 291, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
   __Pyx_XGOTREF(indirect_contiguous);
-  __Pyx_DECREF_SET(indirect_contiguous, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  __pyx_t_5 = 0;
+  __Pyx_DECREF_SET(indirect_contiguous, __pyx_t_7);
+  __Pyx_GIVEREF(__pyx_t_7);
+  __pyx_t_7 = 0;
 
   /* "View.MemoryView":315
  * 
@@ -23435,10 +23156,10 @@ if (!__Pyx_RefNanny) {
  * 
  * 
  */
-  __pyx_t_5 = __pyx_capsule_create(((void *)(&__pyx_memoryview_getbuffer)), ((char *)"getbuffer(obj, view, flags)")); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 544, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem((PyObject *)__pyx_memoryview_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_5) < 0) __PYX_ERR(1, 544, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_7 = __pyx_capsule_create(((void *)(&__pyx_memoryview_getbuffer)), ((char *)"getbuffer(obj, view, flags)")); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 544, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem((PyObject *)__pyx_memoryview_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_7) < 0) __PYX_ERR(1, 544, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_memoryview_type);
 
   /* "View.MemoryView":990
@@ -23448,10 +23169,10 @@ if (!__Pyx_RefNanny) {
  * 
  * 
  */
-  __pyx_t_5 = __pyx_capsule_create(((void *)(&__pyx_memoryview_getbuffer)), ((char *)"getbuffer(obj, view, flags)")); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 990, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem((PyObject *)__pyx_memoryviewslice_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_5) < 0) __PYX_ERR(1, 990, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_7 = __pyx_capsule_create(((void *)(&__pyx_memoryview_getbuffer)), ((char *)"getbuffer(obj, view, flags)")); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 990, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem((PyObject *)__pyx_memoryviewslice_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_7) < 0) __PYX_ERR(1, 990, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_memoryviewslice_type);
 
   /* "(tree fragment)":1
@@ -23459,10 +23180,10 @@ if (!__Pyx_RefNanny) {
  *     if __pyx_checksum != 0xb068931:
  *         from pickle import PickleError as __pyx_PickleError
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_15View_dot_MemoryView_1__pyx_unpickle_Enum, NULL, __pyx_n_s_View_MemoryView); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_Enum, __pyx_t_5) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_7 = PyCFunction_NewEx(&__pyx_mdef_15View_dot_MemoryView_1__pyx_unpickle_Enum, NULL, __pyx_n_s_View_MemoryView); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_Enum, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
   /* "(tree fragment)":9
  *         __pyx_unpickle_Enum__set_state(<Enum> __pyx_result, __pyx_state)
@@ -23477,16 +23198,16 @@ if (!__Pyx_RefNanny) {
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init hsv", 0, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init HSV", 0, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init hsv");
+    PyErr_SetString(PyExc_ImportError, "init HSV");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -25766,112 +25487,6 @@ __pyx_capsule_create(void *p, CYTHON_UNUSED const char *sig)
     return cobj;
 }
 
-/* Print */
-        #if !CYTHON_COMPILING_IN_PYPY && PY_MAJOR_VERSION < 3
-static PyObject *__Pyx_GetStdout(void) {
-    PyObject *f = PySys_GetObject((char *)"stdout");
-    if (!f) {
-        PyErr_SetString(PyExc_RuntimeError, "lost sys.stdout");
-    }
-    return f;
-}
-static int __Pyx_Print(PyObject* f, PyObject *arg_tuple, int newline) {
-    int i;
-    if (!f) {
-        if (!(f = __Pyx_GetStdout()))
-            return -1;
-    }
-    Py_INCREF(f);
-    for (i=0; i < PyTuple_GET_SIZE(arg_tuple); i++) {
-        PyObject* v;
-        if (PyFile_SoftSpace(f, 1)) {
-            if (PyFile_WriteString(" ", f) < 0)
-                goto error;
-        }
-        v = PyTuple_GET_ITEM(arg_tuple, i);
-        if (PyFile_WriteObject(v, f, Py_PRINT_RAW) < 0)
-            goto error;
-        if (PyString_Check(v)) {
-            char *s = PyString_AsString(v);
-            Py_ssize_t len = PyString_Size(v);
-            if (len > 0) {
-                switch (s[len-1]) {
-                    case ' ': break;
-                    case '\f': case '\r': case '\n': case '\t': case '\v':
-                        PyFile_SoftSpace(f, 0);
-                        break;
-                    default:  break;
-                }
-            }
-        }
-    }
-    if (newline) {
-        if (PyFile_WriteString("\n", f) < 0)
-            goto error;
-        PyFile_SoftSpace(f, 0);
-    }
-    Py_DECREF(f);
-    return 0;
-error:
-    Py_DECREF(f);
-    return -1;
-}
-#else
-static int __Pyx_Print(PyObject* stream, PyObject *arg_tuple, int newline) {
-    PyObject* kwargs = 0;
-    PyObject* result = 0;
-    PyObject* end_string;
-    if (unlikely(!__pyx_print)) {
-        __pyx_print = PyObject_GetAttr(__pyx_b, __pyx_n_s_print);
-        if (!__pyx_print)
-            return -1;
-    }
-    if (stream) {
-        kwargs = PyDict_New();
-        if (unlikely(!kwargs))
-            return -1;
-        if (unlikely(PyDict_SetItem(kwargs, __pyx_n_s_file, stream) < 0))
-            goto bad;
-        if (!newline) {
-            end_string = PyUnicode_FromStringAndSize(" ", 1);
-            if (unlikely(!end_string))
-                goto bad;
-            if (PyDict_SetItem(kwargs, __pyx_n_s_end, end_string) < 0) {
-                Py_DECREF(end_string);
-                goto bad;
-            }
-            Py_DECREF(end_string);
-        }
-    } else if (!newline) {
-        if (unlikely(!__pyx_print_kwargs)) {
-            __pyx_print_kwargs = PyDict_New();
-            if (unlikely(!__pyx_print_kwargs))
-                return -1;
-            end_string = PyUnicode_FromStringAndSize(" ", 1);
-            if (unlikely(!end_string))
-                return -1;
-            if (PyDict_SetItem(__pyx_print_kwargs, __pyx_n_s_end, end_string) < 0) {
-                Py_DECREF(end_string);
-                return -1;
-            }
-            Py_DECREF(end_string);
-        }
-        kwargs = __pyx_print_kwargs;
-    }
-    result = PyObject_Call(__pyx_print, arg_tuple, kwargs);
-    if (unlikely(kwargs) && (kwargs != __pyx_print_kwargs))
-        Py_DECREF(kwargs);
-    if (!result)
-        return -1;
-    Py_DECREF(result);
-    return 0;
-bad:
-    if (kwargs != __pyx_print_kwargs)
-        Py_XDECREF(kwargs);
-    return -1;
-}
-#endif
-
 /* CIntFromPyVerify */
         #define __PYX_VERIFY_RETURN_INT(target_type, func_type, func_value)\
     __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 0)
@@ -26065,43 +25680,6 @@ no_fail:
     __Pyx_RefNannyFinishContext();
     return new_mvs;
 }
-
-/* PrintOne */
-        #if !CYTHON_COMPILING_IN_PYPY && PY_MAJOR_VERSION < 3
-static int __Pyx_PrintOne(PyObject* f, PyObject *o) {
-    if (!f) {
-        if (!(f = __Pyx_GetStdout()))
-            return -1;
-    }
-    Py_INCREF(f);
-    if (PyFile_SoftSpace(f, 0)) {
-        if (PyFile_WriteString(" ", f) < 0)
-            goto error;
-    }
-    if (PyFile_WriteObject(o, f, Py_PRINT_RAW) < 0)
-        goto error;
-    if (PyFile_WriteString("\n", f) < 0)
-        goto error;
-    Py_DECREF(f);
-    return 0;
-error:
-    Py_DECREF(f);
-    return -1;
-    /* the line below is just to avoid C compiler
-     * warnings about unused functions */
-    return __Pyx_Print(f, NULL, 0);
-}
-#else
-static int __Pyx_PrintOne(PyObject* stream, PyObject *o) {
-    int res;
-    PyObject* arg_tuple = PyTuple_Pack(1, o);
-    if (unlikely(!arg_tuple))
-        return -1;
-    res = __Pyx_Print(stream, arg_tuple, 1);
-    Py_DECREF(arg_tuple);
-    return res;
-}
-#endif
 
 /* CIntFromPy */
         static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *x) {

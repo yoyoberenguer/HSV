@@ -56,21 +56,34 @@ If you change the file hsv_c you will also need to recompile the project
 ```
 ## How to:
 ```
-import the code in your program:
-
 import HSV
 
 # This will import the cython version 
-from HSV import hsv2rgb, rgb2hsv
+from HSV import rgb2hsv, hsv2rgb
 
 # This will import the C version 
-from HSV import rgb_to_hsv_c, hsv_to_rgb_c
+from HSV import rgb_to_hsv_c, hsv_to_rgb_c, struct_rgb_to_hsv_c, struct_hsv_to_rgb_c
 
 if __name__ == '__main__':
+
   r, g, b = 25, 60, 128
-  rgb = rgb_to_hsv_c(r/255.0, g/255.0, b/255.0)
-
-
+  
+  # BELOW TESTING RGB TO HSV AND HSV TO RGB (METHOD WITH POINTER)
+  # hls values are normalized if you wish to convert it to a colorys format 
+  # multiply h * 360, s * 100 and l * 100
+  h, s, l = rgb2hsv(r / 255.0, g / 255.0, b / 255.0)
+  # return rgb values normalized!
+  r, g, b = hsv2rgb(h, s, l) 
+  print("RGB (25, 60, 128) ", r * 255, g * 255, b * 255)
+  
+  # BELOW TESTING RGB TO HSV AND HSV TO RGB (METHOD C STRUCT)
+  # THIS METHOD IS SLIGHTLY FASTER AND WE DO NOT HAVE TO WORRY ABOUT
+  # FREEING THE POINTER MEMORY
+  r, g, b = 25, 60, 128
+  h, s, l = struct_rgb_to_hsv_c(r/255.0, g/255.0, b/255.0)
+  r, g, b = struct_hsv_to_rgb_c(h, s, l)
+  print("RGB (25, 60, 128) ", r * 255, g * 255, b * 255)
+  
 ```
 ## Timings:
 ```

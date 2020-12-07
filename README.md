@@ -1,3 +1,8 @@
+<p align="center">
+    <img src="https://github.com/yoyoberenguer/HSV/blob/master/hue.gif" width="200">
+</p>
+
+
 # HSV algorithm
 
 ## RGB to HSV and HSV to RGB colors system converstion tools.

@@ -1,12 +1,3 @@
-===========
-pygame-menu
-===========
-
-.. image:: docs/_static/pygame_menu_small.png
-    :align: center
-    :alt:
-
-
 # HSV algorithm
 
 ## RGB to HSV and HSV to RGB colors system converstion tools.

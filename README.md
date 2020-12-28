@@ -59,7 +59,7 @@ This will translates Cython source code into efficient C code
 If you change the file hsv_c you will also need to recompile the project 
 ```
 ## How to:
-```
+```python
 import HSV
 
 # This will import the cython version 
@@ -89,6 +89,7 @@ if __name__ == '__main__':
   print("RGB (25, 60, 128) ", r * 255, g * 255, b * 255)
   
 ```
+
 ## Timings:
 ```
 for 1000000 iterations

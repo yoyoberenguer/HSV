@@ -1,0 +1,15 @@
+include example.py
+include hsv.pxd
+include hsv.pyx
+include testing.pyx
+include hsv_c.c
+include LICENSE
+include MANIFEST.in
+include requirements.txt
+include setup_hsv.py
+graft test
+include __init__.pxd
+include __init__.py
+pyproject.toml
+
+ 

@@ -3,99 +3,113 @@
 </p>
 
 
-# HSV algorithm
+# HSV project
 
-## RGB to HSV and HSV to RGB colors system converstion tools.
+##  Why installing HSV :
 ```
-This project provides the cython methods and C versions of the 
-HSV conversion algorithms.
+This library offers fast conversion tools such as (HSV to RGB ) and (RGB to HSV) 
+ported into cython for better performances 
+```
+ 
 
-The code is based on the current python COLORSYS library, adapted and improved 
-for an good increase in speed compare to the original model.
+## Project description :
+```
+Conversions between color systems (cython library)
+This module defines bidirectional conversions of color values between colors
+expressed in the RGB (Red Green Blue) color space used in computer monitors and three
+HLS (Hue Lightness Saturation).
 ```
 
-## Requirements: 
+## Installation 
 ```
-python >=3.0  
-Cython 
-
-Unlike most Python software, Cython requires a C compiler to be present on the system. 
-The details of getting a C compiler varies according to the system used:
-
-Linux The GNU C Compiler (gcc) is usually present, or easily available through the package system. 
-On Ubuntu or Debian, for instance, the command sudo apt-get install build-essential will fetch 
-everything you need.
-Mac OS X To retrieve gcc, one option is to install Apple’s XCode, which can be retrieved from 
-the Mac OS X’s install DVDs or from https://developer.apple.com/.
-Windows A popular option is to use the open source MinGW (a Windows distribution of gcc). 
-See the appendix for instructions for setting up MinGW manually. 
-Enthought Canopy and Python(x,y) bundle MinGW, but some of the configuration steps in the 
-appendix might still be necessary. 
-Another option is to use Microsoft’s Visual C. One must then use the same version which the 
-installed Python was compiled with.
-The simplest way of installing Cython is by using pip:
-
-pip install Cython
-The newest Cython release can always be downloaded from https://cython.org/. 
-Unpack the tarball or zip file, enter the directory, and then run:
-
-python setup.py install
-For one-time builds, e.g. for CI/testing, on platforms that are not covered by one of the 
-wheel packages provided on PyPI,
-it is substantially faster than a full source build to install an uncompiled (slower) 
-version of Cython with
-
-pip install Cython --install-option="--no-cython-compile"
-
+pip install HSV
 ```
-## Compilation:
-```
-You need to re-compile the file hsv.pyx after any change(s). 
-Use the following:
-C:\>python setup_hsv.py build_ext --inplace
 
-This will translates Cython source code into efficient C code
-
-If you change the file hsv_c you will also need to recompile the project 
-```
-## How to:
-```python
-import HSV
-
-# This will import the cython version 
-from HSV import rgb2hsv, hsv2rgb
-
-# This will import the C version 
-from HSV import rgb_to_hsv_c, hsv_to_rgb_c, struct_rgb_to_hsv_c, struct_hsv_to_rgb_c
+## How to?
+``` python
+from HSV.hsv import rgb_to_hsv, hsv_to_rgb
 
 if __name__ == '__main__':
-
-  r, g, b = 25, 60, 128
-  
-  # BELOW TESTING RGB TO HSV AND HSV TO RGB (METHOD WITH POINTER)
-  # hls values are normalized if you wish to convert it to a colorys format 
-  # multiply h * 360, s * 100 and l * 100
-  h, s, l = rgb2hsv(r / 255.0, g / 255.0, b / 255.0)
-  # return rgb values normalized!
-  r, g, b = hsv2rgb(h, s, l) 
-  print("RGB (25, 60, 128) ", r * 255, g * 255, b * 255)
-  
-  # BELOW TESTING RGB TO HSV AND HSV TO RGB (METHOD C STRUCT)
-  # THIS METHOD IS SLIGHTLY FASTER AND WE DO NOT HAVE TO WORRY ABOUT
-  # FREEING THE POINTER MEMORY
-  r, g, b = 25, 60, 128
-  h, s, l = struct_rgb_to_hsv_c(r/255.0, g/255.0, b/255.0)
-  r, g, b = struct_hsv_to_rgb_c(h, s, l)
-  print("RGB (25, 60, 128) ", r * 255, g * 255, b * 255)
-  
+    ONE_255 = 1.0 / 255.0
+    r, g, b = 25, 60, 128
+    print("\nOriginal RGB values (R:%s, G:%s, B:%s)\n" % (r, g, b))
+    
+    h, s, v = rgb_to_hsv(r * ONE_255, g * ONE_255, b * ONE_255)
+    
+    print("HSV values (H:%s, S:%s, V:%s)" % (h * 360.0, s * 100.0, v * 100.0))
+    
+    r, g, b = hsv_to_rgb(h, s, v)
+    
+    print("Retrieved RGB values (R:%s, G:%s, B:%s)\n" % (r * 255.0, g * 255.0, b * 255.0))
 ```
 
-## Timings:
+## Building cython code
 ```
-for 1000000 iterations
-- cython   0.5401s  5.4e-07 (single)
-- C        0.5241s  5.2e-07 (single) 
-- Pure C   0.1540s  1.5e-07    -
-- colorsys 2.1610s  2.1e-06    -
+If you need to compile the Cython code after changing the files hsv.pyx or hsv.pxd or
+the external C code please proceed as follow:
+
+1) open a terminal window
+2) Go in the main project directory where (hsv.pyx & hsv.pxd files are located)
+3) run : python setup_hsv.py build_ext --inplace
+
+If you have to compile the code with a specific python version, make sure
+to reference the right python version in (c:\python setup_hsv.py build_ext --inplace)
+
+If the compilation fail, refers to the requirement section and make sure cython
+and a C-compiler are correctly install on your system.
+- A compiler such visual studio, MSVC, CGYWIN setup correctly on your system.
+  - a C compiler for windows (Visual Studio, MinGW etc) install on your system
+  and linked to your windows environment.
+  Note that some adjustment might be needed once a compiler is install on your system,
+  refer to external documentation or tutorial in order to setup this process.
+  e.g https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/
 ```
 
+## Credit
+Yoann Berenguer 
+
+## Dependencies :
+```
+cython >= 0.28
+setuptools>=49.2.1
+```
+
+## License :
+```
+MIT License
+
+Copyright (c) 2019 Yoann Berenguer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## Timing :
+```
+python
+Test with 1000000 iterations
+
+This library
+rgb_to_hsv per call 2.22e-07 overall time 0.22196 for 1000000
+hsv_to_rgb per call 1.156e-07 overall time 0.11563 for 1000000
+
+Colorsys library
+rgb_to_hsv per call 9.631e-07 overall time 0.96312 for 1000000
+hsv_to_rgb per call 4.587e-07 overall time 0.45866 for 1000000
+
+```

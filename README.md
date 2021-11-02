@@ -17,7 +17,7 @@ ported into cython for better performances
 Conversions between color systems (cython library)
 This module defines bidirectional conversions of color values between colors
 expressed in the RGB (Red Green Blue) color space used in computer monitors and three
-HLS (Hue Lightness Saturation).
+HSV (Hue Saturation, Value).
 ```
 
 ## Installation 

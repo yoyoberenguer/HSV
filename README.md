@@ -6,10 +6,10 @@
 # HSV project
 
 ##  Why installing HSV :
-```
-This library offers fast conversion tools such as (HSV to RGB ) and (RGB to HSV) 
+
+This library offers fast conversion tools such as `HSV to RGB` and `RGB to HSV`
 ported into cython for better performances 
-```
+
  
 
 ## Project description :
@@ -26,7 +26,7 @@ pip install HSV
 ```
 
 ## How to?
-``` python
+```python
 from HSV.hsv import rgb_to_hsv, hsv_to_rgb
 
 if __name__ == '__main__':
@@ -44,13 +44,13 @@ if __name__ == '__main__':
 ```
 
 ## Building cython code
-```
-If you need to compile the Cython code after changing the files hsv.pyx or hsv.pxd or
-the external C code please proceed as follow:
 
+If you need to compile the Cython code after changing the files `hsv.pyx` or `hsv.pxd` or
+the external C code please proceed as follow:
+```
 1) open a terminal window
 2) Go in the main project directory where (hsv.pyx & hsv.pxd files are located)
-3) run : python setup_hsv.py build_ext --inplace
+3) run : python setup_hsv.py build_ext `--inplace`
 
 If you have to compile the code with a specific python version, make sure
 to reference the right python version in (c:\python setup_hsv.py build_ext --inplace)
@@ -66,7 +66,7 @@ and a C-compiler are correctly install on your system.
 ```
 
 ## Credit
-Yoann Berenguer 
+`Yoann Berenguer` 
 
 ## Dependencies :
 ```
@@ -100,16 +100,17 @@ SOFTWARE.
 ```
 
 ## Timing :
-```
-python
-Test with 1000000 iterations
 
+python
+Test with `1000000` iterations
+```
 This library
-rgb_to_hsv per call 2.22e-07 overall time 0.22196 for 1000000
-hsv_to_rgb per call 1.156e-07 overall time 0.11563 for 1000000
+`rgb_to_hsv` per call 2.22e-07 overall time 0.22196 for 1000000
+`hsv_to_rgb` per call 1.156e-07 overall time 0.11563 for 1000000
 
 Colorsys library
-rgb_to_hsv per call 9.631e-07 overall time 0.96312 for 1000000
-hsv_to_rgb per call 4.587e-07 overall time 0.45866 for 1000000
-
+`rgb_to_hsv` per call 9.631e-07 overall time 0.96312 for 1000000
+`hsv_to_rgb` per call 4.587e-07 overall time 0.45866 for 1000000
 ```
+
+
